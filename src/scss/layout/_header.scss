@@ -1,0 +1,25 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 820px;
+  background-image: linear-gradient(
+    rgba(241, 241, 241, 1),
+    rgba(240, 242, 241, 1),
+    rgba(235, 237, 236, 1),
+    rgba(230, 232, 231, 1),
+    rgba(222, 226, 225, 1)
+  );
+
+  &::after {
+    content: '';
+    top: 0;
+    right: 0px;
+    position: absolute;
+    display: inline-block;
+    width: 810px;
+    height: 100%;
+    background-size: cover;
+    background-image: url('/images/bg/leavesInCircle.png');
+    background-repeat: no-repeat;
+  }
+}
