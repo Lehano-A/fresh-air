@@ -1,0 +1,23 @@
+.logo {
+  position: relative;
+  width: 196px;
+  height: 61px;
+
+  img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 45px;
+  }
+
+  img:nth-child(3) {
+    position: absolute;
+    top: 14px;
+    left: 73px;
+  }
+}

@@ -1,2 +1,3 @@
-@use 'global.scss';
-@use 'layout/header.scss';
+@import 'core/all';
+@import 'layout/all';
+@import 'components/all';
