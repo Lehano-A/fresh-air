@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 19px 45px 0;
   }
 
   &::after {
@@ -37,9 +38,9 @@
     background-repeat: no-repeat;
   }
 
-  .logo {
-    margin: 26px 0 0 45px;
-  }
+  // .logo {
+  //   margin: 26px 0 0 45px;
+  // }
 
   .slogan {
     margin: 72px 0 0 135px;

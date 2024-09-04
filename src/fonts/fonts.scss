@@ -15,3 +15,12 @@
     url('./Ruberoid/Ruberoid-Regular.woff') format('woff');
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Ruberoid Medium';
+  src:
+    local('Ruberoid-Medium'),
+    url('./Ruberoid/Ruberoid-Medium.woff2') format('woff2'),
+    url('./Ruberoid/Ruberoid-Medium.woff') format('woff');
+  font-weight: normal;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../Logo/Logo';
 import Slogan from '../Slogan/Slogan';
 import Navigation from '../Navigation/Navigation';
+import ButtonContact from '../ButtonContact/ButtonContact';
 
 function Header() {
   return (
@@ -10,6 +11,7 @@ function Header() {
         <div className='header__logo-nav-actions'>
           <Logo />
           <Navigation />
+          <ButtonContact />
         </div>
         <Slogan />
       </div>
