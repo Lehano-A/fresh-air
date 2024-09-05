@@ -1,0 +1,51 @@
+@use './../abstracts/mixins/mixins';
+@use './../palette/palette' as *;
+@use 'sass:map';
+
+.company-activities {
+  display: flex;
+
+  & &__decoration-box {
+    margin-right: 12px;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 1.45;
+    margin: 0;
+    color: $green-neutral-500;
+  }
+
+  &__decoration-box {
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    top: 5px;
+  }
+
+  &__decoration-figure {
+    &:nth-child(1n):not(:last-child) {
+      margin-right: 10px;
+    }
+    &:nth-child(1) {
+      @include mixins.donut-figure(
+        rgba($green-secondary-500, 0.45),
+        rgba($green-secondary-500, 0)
+      );
+    }
+
+    &:nth-child(2) {
+      @include mixins.donut-figure(
+        rgba($green-secondary-500, 0.75),
+        rgba($green-secondary-500, 0.45)
+      );
+    }
+
+    &:nth-child(3) {
+      @include mixins.donut-figure(
+        rgba($green-secondary-500, 1),
+        rgba($green-secondary-500, 0.75)
+      );
+    }
+  }
+}
