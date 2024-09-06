@@ -13,13 +13,20 @@ function Header() {
         <div className='header__logo-nav-actions'>
           <Logo />
           <Navigation />
-          <ButtonContact />
+          <ButtonContact
+            name='связаться'
+            variant='medium'
+          />
         </div>
 
         <section className='header__info'>
           <Slogan />
           <CompanyActivities />
           <Contacts />
+          <ButtonContact
+            name='оставить заявку'
+            variant='large'
+          />
         </section>
       </div>
     </div>

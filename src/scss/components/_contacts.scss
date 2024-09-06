@@ -11,10 +11,14 @@
     margin-right: 22px;
   }
 
+  &__box-contact:first-child {
+    margin-left: 15px;
+    width: 250px;
+  }
+
   &__box-contact {
     display: flex;
     align-items: center;
-    width: 206px;
   }
 
   &__text {
@@ -25,7 +29,6 @@
     font-style: normal;
     color: $green-neutral-700;
     margin: 0;
-
     & a {
       text-decoration: none;
       color: $green-neutral-700;

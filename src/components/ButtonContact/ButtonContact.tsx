@@ -1,13 +1,20 @@
 import React from 'react';
 
-function ButtonContact() {
+interface ButtonContactProps {
+  name: string;
+  variant: string;
+}
+
+function ButtonContact({ name, variant }: ButtonContactProps) {
+  const buttonSizeClass = `button-contact--${variant}`;
+
   return (
-    <div className='button-contact'>
+    <div className={`button-contact ${buttonSizeClass || ''}`}>
       <button
-        className='button-contact__button'
+        className={`button-contact__button`}
         type='button'
       >
-        связаться
+        {name}
       </button>
     </div>
   );

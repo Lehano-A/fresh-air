@@ -4,10 +4,7 @@
 .button-contact {
   flex-shrink: 0;
   position: relative;
-  width: 210px;
-  height: 75px;
   background-color: rgba($white, 0.45);
-  border-radius: 20px;
 
   &__button {
     opacity: 100%;
@@ -16,8 +13,6 @@
     left: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
-    width: 190px;
-    height: 55px;
     background-color: $green-primary-500;
     border: none;
     font-size: 15px;
@@ -25,9 +20,34 @@
     color: $white;
     line-height: 1.37;
     letter-spacing: 0.5px;
-    border-radius: 17px;
     box-shadow: 2px -2px 12px 0px rgba($green-secondary-800, 0.36) inset;
     text-transform: uppercase;
     cursor: pointer;
+  }
+
+  &--medium {
+    width: 210px;
+    height: 75px;
+    border-radius: 20px;
+
+    & > button {
+      width: 190px;
+      height: 55px;
+      border-radius: 17px;
+    }
+  }
+
+  &--large {
+    width: 477px;
+    height: 115px;
+    border-radius: 40px;
+    background-color: rgba($green-secondary-500, 0.25);
+
+    & > button {
+      width: 447px;
+      height: 85px;
+      border-radius: 30px;
+      font-size: 17px;
+    }
   }
 }
