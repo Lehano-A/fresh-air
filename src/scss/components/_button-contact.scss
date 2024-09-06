@@ -1,29 +1,32 @@
-@use '../abstracts/variables';
+@use './../palette/palette' as *;
+@use 'sass:map';
 
 .button-contact {
+  flex-shrink: 0;
   position: relative;
   width: 210px;
   height: 75px;
-  background-color: rgba(255,255,255, 0.45);
+  background-color: rgba($white, 0.45);
   border-radius: 20px;
 
   &__button {
     opacity: 100%;
     position: absolute;
     top: 50%;
-    left: 50%;z-index: 1;
+    left: 50%;
+    z-index: 1;
     transform: translate(-50%, -50%);
     width: 190px;
     height: 55px;
-    background-color: variables.$main-green;
+    background-color: $green-primary-500;
     border: none;
     font-size: 15px;
     font-family: 'Ruberoid Medium';
-    color: #fff;
+    color: $white;
     line-height: 1.37;
     letter-spacing: 0.5px;
     border-radius: 17px;
-    box-shadow: 2px -2px 12px 0px rgba(34, 111, 33, 0.36) inset;
+    box-shadow: 2px -2px 12px 0px rgba($green-secondary-800, 0.36) inset;
     text-transform: uppercase;
     cursor: pointer;
   }

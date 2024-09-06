@@ -1,11 +1,12 @@
-@use '../abstracts/variables.scss';
+@use './../palette/palette' as *;
+@use 'sass:map';
 
 .slogan {
+  width: 100%;
   font-family: 'Ruberoid Regular';
-  max-width: 520px;
 
   &__title {
-    color: variables.$forest-green;
+    color: $green-primary-900;
     word-break: break-all;
     letter-spacing: -0.6px;
     font-size: 64px;
@@ -15,18 +16,18 @@
 
   &__long-line {
     &::before {
+      background-color: $green-secondary-500;
       content: '';
       display: inline-block;
       width: 148px;
       height: 3px;
-      background-color: variables.$light-green;
       margin: 0 45px 20px 0;
       border-radius: 1.5px;
     }
   }
 
   &__company-name {
-    color: variables.$light-green;
+    color: $green-secondary-500;
     line-height: 1.3;
     letter-spacing: 1.55px;
   }

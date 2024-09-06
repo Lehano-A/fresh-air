@@ -1,4 +1,5 @@
-@use 'logo.scss';
-@use 'slogan.scss';
-@use 'navigation.scss';
-@use 'button-contact.scss';
+@forward 'logo.scss';
+@forward 'slogan.scss';
+@forward 'navigation.scss';
+@forward 'button-contact.scss';
+@forward 'company-activities.scss';

@@ -1,6 +1,8 @@
-@use '../abstracts/variables.scss';
+@use './../palette/palette' as *;
+@use 'sass:map';
 
 .navigation {
+  flex-shrink: 0;
   max-width: 646px;
   width: 100%;
 
@@ -18,7 +20,7 @@
 
     & a {
       text-decoration: none;
-      color: variables.$forest-green;
+      color: $green-primary-900;
     }
   }
 }

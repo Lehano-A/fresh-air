@@ -1,1 +1,2 @@
-@use 'variables.scss';
+@forward 'variables';
+@forward 'mixins/mixins';

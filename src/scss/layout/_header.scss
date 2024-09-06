@@ -24,6 +24,13 @@
     margin: 19px 45px 0;
   }
 
+  &__info {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    margin: 72px 0 0 135px;
+  }
+
   &::after {
     content: '';
     z-index: 0;
@@ -42,7 +49,7 @@
   //   margin: 26px 0 0 45px;
   // }
 
-  .slogan {
-    margin: 72px 0 0 135px;
-  }
+  // .slogan {
+  //   margin: 72px 0 0 135px;
+  // }
 }

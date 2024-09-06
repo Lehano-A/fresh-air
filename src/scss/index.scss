@@ -1,5 +1,7 @@
-@import '/src/fonts/fonts.scss';
-@import 'core/all';
-@import 'layout/all';
-@import 'components/all';
-@import 'abstracts/all';
+@forward './../fonts/fonts';
+@forward 'palette/palette';
+@forward 'core/all';
+@forward 'abstracts/all';
+@forward 'layout/all';
+@forward 'components/all';
+

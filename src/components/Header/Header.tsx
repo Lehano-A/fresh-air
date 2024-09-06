@@ -3,6 +3,7 @@ import Logo from '../Logo/Logo';
 import Slogan from '../Slogan/Slogan';
 import Navigation from '../Navigation/Navigation';
 import ButtonContact from '../ButtonContact/ButtonContact';
+import CompanyActivities from '../CompanyActivities/CompanyActivities';
 
 function Header() {
   return (
@@ -13,7 +14,11 @@ function Header() {
           <Navigation />
           <ButtonContact />
         </div>
-        <Slogan />
+
+        <section className='header__info'>
+          <Slogan />
+          <CompanyActivities />
+        </section>
       </div>
     </div>
   );
