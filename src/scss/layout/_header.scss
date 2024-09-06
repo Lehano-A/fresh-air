@@ -27,6 +27,7 @@
   &__info {
     max-width: 520px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     margin: 72px 0 0 135px;
   }
@@ -45,11 +46,11 @@
     background-repeat: no-repeat;
   }
 
-  // .logo {
-  //   margin: 26px 0 0 45px;
-  // }
+  & .slogan {
+    margin-bottom: 20px;
+  }
 
-  // .slogan {
-  //   margin: 72px 0 0 135px;
-  // }
+  & .company-activities {
+    margin-bottom: 52px;
+  }
 }

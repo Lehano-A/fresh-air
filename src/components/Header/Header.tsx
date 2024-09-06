@@ -4,6 +4,7 @@ import Slogan from '../Slogan/Slogan';
 import Navigation from '../Navigation/Navigation';
 import ButtonContact from '../ButtonContact/ButtonContact';
 import CompanyActivities from '../CompanyActivities/CompanyActivities';
+import Contacts from '../Contacts/Contacts';
 
 function Header() {
   return (
@@ -18,6 +19,7 @@ function Header() {
         <section className='header__info'>
           <Slogan />
           <CompanyActivities />
+          <Contacts />
         </section>
       </div>
     </div>
