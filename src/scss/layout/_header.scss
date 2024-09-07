@@ -3,7 +3,6 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 820px;
   background-image: linear-gradient(
     rgba(241, 241, 241, 1),
     rgba(240, 242, 241, 1),
@@ -28,7 +27,8 @@
     max-width: 520px;
     display: flex;
     flex-direction: column;
-    margin: 72px 0 0 135px;
+    margin-top: 72px;
+    margin-bottom: 66px;
   }
 
   &::after {
@@ -37,7 +37,7 @@
     top: 0;
     right: 0;
     position: absolute;
-    display: inline-block;
+    display: block;
     width: 810px;
     height: 100%;
     background-size: cover;
@@ -54,6 +54,6 @@
   }
 
   & .contacts {
-   margin-bottom: 63px;
+    margin-bottom: 63px;
   }
 }
