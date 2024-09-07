@@ -1,0 +1,27 @@
+@use '../abstracts/mixins/mixins';
+
+.services-provided {
+  &__box-text {
+    @include mixins.text();
+
+    max-width: 444px;
+
+    & p {
+      margin-top: 27px;
+    }
+  }
+
+  &__subtitle {
+    @include mixins.subtitle();
+    margin: 0;
+
+    & span {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      @include mixins.long-hyphen(245px, 2px, 0 0 10px 35px);
+    }
+  }
+}
