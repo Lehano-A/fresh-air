@@ -1,7 +1,7 @@
 import React from 'react';
-import iconLungs from '../../images/logo/lungs.svg';
-import iconOval from '../../images/logo/oval.svg';
-import iconNameCompany from '../../images/logo/nameCompany.svg';
+import iconLungs from '../../../images/logo/lungs.svg';
+import iconOval from '../../../images/logo/oval.svg';
+import iconNameCompany from '../../../images/logo/nameCompany.svg';
 
 function Logo() {
   return (

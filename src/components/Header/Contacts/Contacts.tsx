@@ -1,6 +1,6 @@
 import React from 'react';
-import iconPin from '../../images/icons/pin.svg';
-import iconTelephoneHandle from '../../images/icons/telephone-handle.svg';
+import iconPin from '../../../images/icons/pin.svg';
+import iconTelephoneHandle from '../../../images/icons/telephone-handle.svg';
 
 function Contacts() {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
-import Logo from '../Logo/Logo';
-import Slogan from '../Slogan/Slogan';
-import Navigation from '../Navigation/Navigation';
+import Logo from './Logo/Logo';
+import Slogan from './Slogan/Slogan';
+import Navigation from './Navigation/Navigation';
 import ButtonContact from '../ButtonContact/ButtonContact';
-import CompanyActivities from '../CompanyActivities/CompanyActivities';
-import Contacts from '../Contacts/Contacts';
+import CompanyActivities from './CompanyActivities/CompanyActivities';
+import Contacts from './Contacts/Contacts';
 
 function Header() {
   return (
