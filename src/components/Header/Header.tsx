@@ -8,7 +8,7 @@ import Contacts from './Contacts/Contacts';
 
 function Header() {
   return (
-    <div className='header'>
+    <header className='header'>
       <div className='header__box'>
         <div className='header__logo-nav-actions'>
           <Logo />
@@ -29,7 +29,7 @@ function Header() {
           />
         </section>
       </div>
-    </div>
+    </header>
   );
 }
 
