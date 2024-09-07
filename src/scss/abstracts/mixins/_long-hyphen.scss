@@ -1,0 +1,11 @@
+@use './../../palette/palette' as *;
+
+@mixin long-hyphen($width, $height, $margin) {
+  background-color: $green-secondary-500;
+  content: '';
+  display: inline-block;
+  width: $width;
+  height: $height;
+  margin: $margin;
+  border-radius: 1.5px;
+}

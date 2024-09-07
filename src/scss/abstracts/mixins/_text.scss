@@ -1,0 +1,7 @@
+@use '../../palette/palette' as *;
+
+@mixin text() {
+  font-size: 16px;
+  line-height: 1.62;
+  color: $gray-700;
+}
