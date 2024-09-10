@@ -2,10 +2,12 @@
 
 .services-provided {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-  &__box-text {
+  &__info-text {
     @include mixins.text();
-
+    margin-right: auto;
     max-width: 444px;
 
     & p {
