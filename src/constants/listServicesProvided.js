@@ -16,7 +16,7 @@ import contentImageConditioning from '../images/Components/ListServices/conditio
 const listForSystemVentilation = {
   contentImage: {
     path: contentImageSystemVentilation,
-    alt: "Изображение, на котором рабочий монтирует вентиляцию"
+    alt: 'Изображение, на котором рабочий монтирует вентиляцию',
   },
 
   data: [
@@ -56,14 +56,13 @@ const listForSystemVentilation = {
       icon: iconVentilation,
       alt: 'Иконка - вентиляционная решётка',
     },
-  ]
+  ],
 };
-
 
 const listForConditioning = {
   contentImage: {
     path: contentImageConditioning,
-    alt: 'Изображение смонтированного блока за окном квартиры в новостройке'
+    alt: 'Изображение смонтированного блока за окном квартиры в новостройке',
   },
   data: [
     {
@@ -102,10 +101,7 @@ const listForConditioning = {
       icon: iconAirFilter,
       alt: 'Иконка - блок воздушного фильтра',
     },
+  ],
+};
 
-  ]
-}
-
-
-
-export { listForSystemVentilation, listForConditioning }
+export { listForSystemVentilation, listForConditioning };

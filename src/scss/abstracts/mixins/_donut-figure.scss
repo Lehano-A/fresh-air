@@ -3,11 +3,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: linear-gradient(
-    to left,
-    $color-1,
-    $color-2,
-  );
+  background: linear-gradient(to left, $color-1, $color-2);
   -webkit-mask: radial-gradient(circle, transparent 48%, black 50%);
   mask: radial-gradient(circle, transparent 48%, black 50%);
 }
