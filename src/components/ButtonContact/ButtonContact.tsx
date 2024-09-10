@@ -6,12 +6,12 @@ interface ButtonContactProps {
 }
 
 function ButtonContact({ name, variant }: ButtonContactProps) {
-  const buttonSizeClass = `button-contact--${variant}`;
+  const buttonSizeClass = `button-action--${variant}`;
 
   return (
-    <div className={`button-contact ${buttonSizeClass || ''}`}>
+    <div className={`button-action ${buttonSizeClass || ''}`}>
       <button
-        className={`button-contact__button`}
+        className={`button-action__button`}
         type='button'
       >
         {name}

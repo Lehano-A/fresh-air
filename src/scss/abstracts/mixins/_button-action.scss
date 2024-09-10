@@ -1,0 +1,17 @@
+@use '../../palette/palette' as *;
+@use '../../abstracts/variables' as *;
+
+@mixin active-button-action() {
+  color: $white;
+  background-color: $green-primary-500;
+  box-shadow: $box-shadow-button-accent;
+  transition: background-color $transition-time-change-color;
+}
+
+@mixin hover-button-action() {
+  background-color: $green-accent-500;
+}
+
+@mixin disabled-button-action() {
+  background-color: $green-neutral-300;
+}

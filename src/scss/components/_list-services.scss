@@ -1,0 +1,159 @@
+@use '../palette/palette' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins/mixins' as *;
+
+$corner-radius: 65px;
+$corner-radius-bookmark: 40px;
+
+@mixin icon-button() {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 33px;
+}
+
+.list-services {
+  display: flex;
+  align-items: center;
+
+  &__bookmarks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 486px;
+    border-top-left-radius: $corner-radius-bookmark;
+    border-bottom-left-radius: $corner-radius-bookmark;
+    background-color: $green-light-200;
+    width: 75px;
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      width: 65px;
+      height: 233px;
+      padding: 25px 0;
+      color: $green-neutral-500;
+      background-color: $white;
+      border: none;
+      cursor: pointer;
+
+      & span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        white-space: nowrap;
+        transform: rotate(180deg);
+        writing-mode: vertical-lr;
+        font-size: 13px;
+        line-height: 1.21;
+      }
+
+      /* первая закладка */
+      &:first-child {
+        border-top-left-radius: $corner-radius-bookmark;
+        letter-spacing: 0.3px;
+
+        & span::after {
+          @include icon-button();
+          content: '';
+          background-image: url('../../images/icons/listServices/systemVentilation/fan-2.svg');
+        }
+      }
+
+      /* вторая закладка */
+      &:last-child {
+        border-bottom-left-radius: $corner-radius-bookmark;
+        letter-spacing: 0.6px;
+
+        & span::after {
+          @include icon-button();
+          content: '';
+          background-image: url('../../images/icons/listServices/conditioning/air-conditioning.svg');
+          transform: rotate(180deg);
+        }
+      }
+
+      /* выбранная закладка */
+      &--active {
+        @include active-button-action();
+        & > span {
+          color: $white;
+
+          &:last-child::after {
+            filter: $filter-white;
+          }
+        }
+      }
+
+      /* неактивная закладка */
+      &:not(&--active) > span {
+        color: $green-neutral-500;
+
+        &:last-child::after {
+          filter: $filter-green-neutral-500;
+        }
+      }
+
+      /* ховер неактивной закладки */
+      &:hover:not(&--active) > span {
+        color: $green-accent-500;
+
+        &:last-child::after {
+          filter: $filter-green-accent-500;
+        }
+      }
+    }
+  }
+
+  &__box-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 676px;
+    background-color: $green-light-200;
+    border-radius: $corner-radius 0px 0px $corner-radius;
+
+    &-image {
+      width: 240px;
+      height: 655px;
+      border-radius: $corner-radius 0px 0px $corner-radius;
+      box-shadow: -4px 0px 8px 0px rgba($green-dark-800, 0.3);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+    height: 428px;
+    list-style: none;
+    font-size: 20px;
+    margin: 0;
+    color: $green-primary-900;
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      white-space: pre-line;
+      line-height: 1.5;
+
+      &-icon {
+        position: relative;
+        width: 34px;
+        height: 34px;
+        top: -2px;
+        background-color: $white;
+        object-fit: contain;
+        margin-right: 15px;
+        padding: 7px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

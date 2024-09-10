@@ -1,6 +1,8 @@
 @use '../abstracts/mixins/mixins';
 
 .services-provided {
+  display: flex;
+
   &__box-text {
     @include mixins.text();
 

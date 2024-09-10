@@ -8,9 +8,19 @@ $green-primary-500: #5ccd6a; // основные кнопки
 $green-secondary-800: #226f21; // тени кнопок
 $green-secondary-500: #78c081; // подзаголовки, вторичные элементы
 
+$green-dark-800: #0f2c0f;
+
 $green-light-200: #d9fadd; // фон
 
 $green-accent-500: #54e165; // ховер
 
 $white: #fff; // текст, фон
 $gray-700: #848484; // текст
+
+$filter-green-accent-500: invert(64%) sepia(92%) saturate(3431%)
+  hue-rotate(89deg) brightness(117%) contrast(120%);
+
+$filter-green-neutral-500: invert(48%) sepia(12%) saturate(837%)
+  hue-rotate(50deg) brightness(120%) contrast(81%);
+
+$filter-white: brightness(0) invert(1);

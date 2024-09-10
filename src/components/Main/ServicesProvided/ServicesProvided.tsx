@@ -1,4 +1,5 @@
 import React from 'react';
+import ListServices from './ListServices/ListServices';
 
 function ServicesProvided() {
   return (
@@ -26,6 +27,8 @@ function ServicesProvided() {
           документации.
         </p>
       </div>
+
+      <ListServices />
     </section>
   );
 }

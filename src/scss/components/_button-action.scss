@@ -1,28 +1,32 @@
-@use './../palette/palette' as *;
+@use '../palette/palette' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins/mixins' as *;
 @use 'sass:map';
 
-.button-contact {
+.button-action {
   flex-shrink: 0;
   position: relative;
   background-color: rgba($white, 0.45);
 
   &__button {
+    @include active-button-action();
     opacity: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
-    background-color: $green-primary-500;
     border: none;
     font-size: 15px;
     font-family: 'Ruberoid Medium';
-    color: $white;
     line-height: 1.37;
     letter-spacing: 0.5px;
-    box-shadow: 2px -2px 12px 0px rgba($green-secondary-800, 0.36) inset;
     text-transform: uppercase;
     cursor: pointer;
+
+    &:hover {
+      @include hover-button-action();
+    }
   }
 
   &--medium {
