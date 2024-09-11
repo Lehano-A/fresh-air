@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: 'Proxima Nova Semibold';
+  src:
+    local('ProximaNova-Semibold'),
+    url('./ProximaNova/ProximaNova-Semibold.woff2') format('woff2'),
+    url('./ProximaNova/ProximaNova-Semibold.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
   font-family: 'Ruberoid Regular';
   src:
     local('Ruberoid-Regular'),
@@ -22,5 +31,23 @@
     local('Ruberoid-Medium'),
     url('./Ruberoid/Ruberoid-Medium.woff2') format('woff2'),
     url('./Ruberoid/Ruberoid-Medium.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Ruberoid Light';
+  src:
+    local('Ruberoid-Light'),
+    url('./Ruberoid/Ruberoid-Light.woff2') format('woff2'),
+    url('./Ruberoid/Ruberoid-Light.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Ruberoid ExtraLight';
+  src:
+    local('Ruberoid-ExtraLight'),
+    url('./Ruberoid/Ruberoid-ExtraLight.woff2') format('woff2'),
+    url('./Ruberoid/Ruberoid-ExtraLight.woff') format('woff');
   font-weight: normal;
 }
