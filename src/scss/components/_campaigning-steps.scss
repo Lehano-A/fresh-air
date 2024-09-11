@@ -1,0 +1,148 @@
+@use '../abstracts/mixins/mixins' as *;
+@use '../palette/palette' as *;
+
+$width-pseudo: 100%;
+$height-pseudo: 100%;
+
+.campaigning-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0 135px;
+
+  &__subtitle {
+    @include subtitle();
+    max-width: 516px;
+    margin: 0 93px 0 0;
+    line-height: 1.21;
+    height: 130px;
+
+    & span {
+      display: inline-block;
+      margin-bottom: 15px;
+
+      &::after {
+        @include long-hyphen(100px, 2px, 0 0 10px 25px);
+      }
+    }
+  }
+
+  &__box-agitation {
+    display: flex;
+  }
+
+  &__agitation-subtitle {
+    font-size: 26px;
+    font-family: 'Ruberoid ExtraLight';
+    color: $green-secondary-500;
+    text-transform: capitalize;
+    letter-spacing: -0.3px;
+    margin: 0 0 16px 0;
+  }
+
+  & ul {
+    font-size: 16px;
+    line-height: 1.21;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: $green-neutral-500;
+
+    & > li {
+      position: relative;
+      padding-left: 27px;
+
+      &:nth-child(1) {
+        margin-bottom: 10px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 8px;
+      }
+
+      &:nth-child(3) {
+        line-height: 1.51;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background-image: url('../../images/Components/CampaigningSteps/icons/cooling.svg');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__steps {
+    display: flex;
+    justify-content: space-between;
+    width: 1095px;
+    padding: 84px 80px 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -165px;
+      width: $width-pseudo;
+      height: $height-pseudo;
+      background-image: url('../../images/Components/CampaigningSteps/icons/arrow-1.svg'),
+        url('../../images/Components/CampaigningSteps/icons/arrow-3.svg');
+      background-size:
+        277px 44px,
+        277px 44px;
+      background-repeat: no-repeat;
+      background-position:
+        0px 111px,
+        783px 150px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -164px;
+      width: $width-pseudo;
+      height: $height-pseudo;
+      background-image: url('../../images/Components/CampaigningSteps/icons/arrow-2.svg'),
+        url('../../images/Components/CampaigningSteps/icons/arrow-4.svg');
+      background-size:
+        285px 44px,
+        285px 58px;
+      background-repeat: no-repeat;
+      background-position:
+        55px 100px,
+        825px 65px;
+    }
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: scale-down;
+      background-color: $green-light-200;
+    }
+
+    &-text {
+      margin-top: 25px;
+      font-size: 24px;
+      font-family: 'Proxima Nova Semibold';
+      line-height: 1.21;
+      color: $green-primary-900;
+    }
+  }
+}

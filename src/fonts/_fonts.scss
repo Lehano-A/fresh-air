@@ -1,18 +1,17 @@
 @font-face {
-  font-family: 'Proxima Nova Regular';
-  src:
-    local('ProximaNova-Regular'),
-    url('./ProximaNova/ProximaNova-Regular.woff2') format('woff2'),
-    url('./ProximaNova/ProximaNova-Regular.woff') format('woff');
-  font-weight: normal;
-}
-
-@font-face {
   font-family: 'Proxima Nova Semibold';
   src:
     local('ProximaNova-Semibold'),
     url('./ProximaNova/ProximaNova-Semibold.woff2') format('woff2'),
     url('./ProximaNova/ProximaNova-Semibold.woff') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src:
+    local('ProximaNova-Regular'),
+    url('./ProximaNova/ProximaNova-Regular.woff2') format('woff2'),
+    url('./ProximaNova/ProximaNova-Regular.woff') format('woff');
   font-weight: normal;
 }
 
