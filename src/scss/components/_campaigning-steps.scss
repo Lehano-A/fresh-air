@@ -10,10 +10,11 @@ $height-pseudo: 100%;
   align-items: center;
   margin: 0;
   padding: 0 135px;
+  overflow: hidden;
 
   &__subtitle {
     @include subtitle();
-    max-width: 516px;
+    width: 516px;
     margin: 0 93px 0 0;
     line-height: 1.21;
     height: 130px;
@@ -42,6 +43,7 @@ $height-pseudo: 100%;
   }
 
   & ul {
+    width: 563px;
     font-size: 16px;
     line-height: 1.21;
     list-style: none;
@@ -80,11 +82,11 @@ $height-pseudo: 100%;
   }
 
   &__steps {
+    position: relative;
+    padding: 84px 80px 0;
     display: flex;
     justify-content: space-between;
     width: 1095px;
-    padding: 84px 80px 0;
-    position: relative;
 
     &::before {
       content: '';
@@ -115,11 +117,11 @@ $height-pseudo: 100%;
         url('../../images/Components/CampaigningSteps/icons/arrow-4.svg');
       background-size:
         285px 44px,
-        285px 58px;
+        255px 58px;
       background-repeat: no-repeat;
       background-position:
         55px 100px,
-        825px 65px;
+        840px 65px;
     }
   }
 
@@ -127,7 +129,6 @@ $height-pseudo: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 
     &-icon {
       width: 100px;
