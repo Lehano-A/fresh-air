@@ -20,13 +20,15 @@ function Header() {
         </div>
 
         <section className='header__info'>
-          <Slogan />
-          <CompanyActivities />
-          <Contacts />
-          <ButtonContact
-            name='оставить заявку'
-            variant='large'
-          />
+          <div>
+            <Slogan />
+            <CompanyActivities />
+            <Contacts />
+            <ButtonContact
+              name='оставить заявку'
+              variant='large'
+            />
+          </div>
         </section>
       </div>
     </header>
