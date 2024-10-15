@@ -3,6 +3,7 @@ import ServicesProvided from './ServicesProvided/ServicesProvided';
 import GalleryWorkingObjects from './GalleryWorkingObjects/GalleryWorkingObjects';
 import CampaigningSteps from './CampaigningSteps/CampaigningSteps';
 import SubmitApplication from './SubmitApplication/SubmitApplication';
+import About from './About/About';
 
 function Main() {
   return (
@@ -11,6 +12,7 @@ function Main() {
       <GalleryWorkingObjects />
       <CampaigningSteps />
       <SubmitApplication />
+      <About />
     </main>
   );
 }
