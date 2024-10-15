@@ -1,11 +1,13 @@
 import React from 'react';
 import Features from './Features/Features';
+import Achievements from './Achievements';
 
 function About() {
   return (
-    <div className='about'>
+    <section className='about'>
       <Features />
-    </div>
+      <Achievements />
+    </section>
   );
 }
 
