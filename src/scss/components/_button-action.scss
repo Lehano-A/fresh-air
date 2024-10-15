@@ -27,6 +27,11 @@
     &:hover {
       @include hover-button-action();
     }
+
+    &:disabled {
+      background-color: $green-neutral-300;
+      box-shadow: 2px -2px 12px 0px rgba(34, 111, 33, 0.36) inset;
+    }
   }
 
   &--medium {

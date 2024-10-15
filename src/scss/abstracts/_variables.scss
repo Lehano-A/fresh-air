@@ -1,4 +1,10 @@
-$main-margin-side-page: 135px;
+@use '/src/scss/palette/palette' as *;
+
 $font-family-subtitle: 'Ruberoid Regular';
-$box-shadow-button-accent: 2px 2px 12px 0px rgba(34, 111, 33, 0.36) inset;
 $transition-time-change-color: 0.15s;
+
+$main-margin-side-page: 135px;
+$width-page: 1095px;
+
+$box-shadow-button-accent: 2px 2px 12px 0px $rgba-green-secondary-800 inset;
+$box-shadow-button-disabled: 2px -2px 12px 0px $rgba-green-secondary-800 inset;

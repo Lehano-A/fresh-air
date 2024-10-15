@@ -11,6 +11,7 @@ function ButtonContact({ name, variant }: ButtonContactProps) {
   return (
     <div className={`button-action ${buttonSizeClass || ''}`}>
       <button
+        disabled
         className={`button-action__button`}
         type='button'
       >

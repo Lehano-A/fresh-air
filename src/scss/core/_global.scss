@@ -1,5 +1,3 @@
-@use '../abstracts//variables' as *;
-
 * {
   box-sizing: border-box;
 }
@@ -7,8 +5,4 @@
 body {
   margin: 0 auto;
   font-family: 'Proxima Nova Regular';
-}
-
-section {
-  margin-left: $main-margin-side-page;
 }
