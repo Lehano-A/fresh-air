@@ -21,6 +21,7 @@ function SubmitApplication() {
           <ButtonContact
             name='отправить'
             variant='medium'
+            disabled={true}
           ></ButtonContact>
         </form>
       </div>
