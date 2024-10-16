@@ -4,6 +4,7 @@ import GalleryWorkingObjects from './GalleryWorkingObjects/GalleryWorkingObjects
 import CampaigningSteps from './CampaigningSteps/CampaigningSteps';
 import SubmitApplication from './SubmitApplication/SubmitApplication';
 import About from './About/About';
+import Advantages from './Advantages/Advantages';
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
       <CampaigningSteps />
       <SubmitApplication />
       <About />
+      <Advantages />
     </main>
   );
 }

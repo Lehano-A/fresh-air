@@ -1,0 +1,128 @@
+@use '../palette/palette' as *;
+@use '../abstracts/mixins/mixins' as *;
+
+.advantages {
+  display: flex;
+  width: 498px;
+  margin-left: 135px;
+
+  &__info {
+    margin-top: 56px;
+  }
+
+  &__subtitle {
+    @include subtitle();
+    white-space: pre;
+  }
+
+  &__icons-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 33px 0 30px 0;
+
+    & :nth-child(1n):not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__icon {
+    width: 70px;
+    height: 40px;
+    object-fit: contain;
+    padding: 6px 19px;
+    border: 1px $green-secondary-500 solid;
+    border-radius: 20px;
+  }
+
+  &__details-list {
+    list-style: none;
+    padding-left: 25px;
+  }
+
+  &__details-item {
+    position: relative;
+    white-space: pre;
+    color: $green-neutral-500;
+    line-height: 1.35;
+
+    &:nth-child(1n):not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      left: -25px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 1px solid $green-secondary-500;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 6px;
+      left: -21px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $green-secondary-500;
+    }
+  }
+
+  &__text {
+    margin: 28px 0 49px;
+    line-height: 1.62;
+    color: $gray-700;
+
+    & > span {
+      font-weight: 600;
+    }
+  }
+
+  &__product-images {
+    position: relative;
+    display: flex;
+    width: 572px;
+    height: 802px;
+    margin-left: 100px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 83px;
+      transform: translateY(-50%);
+      width: 718px;
+      height: 718px;
+      filter: blur(175px);
+      background-color: $green-light-500;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    & > div:nth-child(1) {
+      & > img:first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    & > div:nth-child(2) {
+      margin: 68px 0 0 35px;
+
+      & > img:first-child {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 39px;
+    box-shadow: 0px 0px 10px 0px rgba(26, 26, 26, 0.5);
+  }
+}
