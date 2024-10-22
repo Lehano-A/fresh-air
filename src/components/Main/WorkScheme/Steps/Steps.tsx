@@ -2,6 +2,7 @@ import React from 'react';
 import ReceivingApplication from './ReceivingApplication/ReceivingApplication';
 import Consultation from './Consultation/Consultation';
 import VisitObject from './VisitObject/VisitObject';
+import Graphic from './Graphic/Graphic';
 
 function Steps() {
   return (
@@ -9,6 +10,7 @@ function Steps() {
       <ReceivingApplication />
       <Consultation />
       <VisitObject />
+      <Graphic />
     </div>
   );
 }

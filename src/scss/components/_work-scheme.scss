@@ -9,6 +9,10 @@
 
   &__step {
     position: relative;
+
+    &_align-right {
+      text-align: end;
+    }
   }
 
   &__title {
@@ -137,6 +141,37 @@
       height: 95px;
       background-image: url('../../images/Components/WorkScheme/pathes/path-3.svg');
       background-repeat: no-repeat;
+    }
+  }
+
+  &__graphic {
+    grid-column: 6/13;
+    grid-row: 5/7;
+    justify-self: self-end;
+    width: 625px;
+    text-align: end;
+    margin-top: 75px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -69px;
+      left: 101px;
+      width: 288.71px;
+      height: 274.13px;
+      background-image: url('../../images/Components/WorkScheme/calendar.svg');
+      z-index: -1;
+      opacity: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -92px;
+      left: -158px;
+      width: 587px;
+      height: 139px;
+      background-image: url('../../images/Components/WorkScheme/pathes/path-4.svg');
     }
   }
 }
