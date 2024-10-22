@@ -3,10 +3,10 @@
 .work-scheme {
   &__steps {
     display: grid;
-
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
   }
+
   &__step {
     position: relative;
   }
@@ -37,24 +37,24 @@
 
   &__receiving-application {
     grid-row: 1/4;
-    grid-column: 1/7;
+    grid-column: 1/6;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 496px;
-    height: 300px;
+    // max-width: 496px;
+    min-height: 300px;
 
     /* письмо */
     &::before {
       content: '';
       position: absolute;
-      top: 1.5%;
-      right: 11.5%;
+      top: 2%;
+      right: 15.5%;
       width: 238px;
       height: 100%;
       background-image: url('../../images/Components/WorkScheme/letter.svg');
       background-repeat: no-repeat;
-      background-position: center;
+      // background-position: center;
       z-index: -1;
     }
 
@@ -63,7 +63,7 @@
       content: '';
       position: absolute;
       top: 67%;
-      right: -36.5%;
+      right: -42%;
       width: 527px;
       height: 78px;
       background-image: url('../../images/Components/WorkScheme/pathes/path-1.svg');
@@ -71,24 +71,25 @@
   }
 
   &__consultation {
-    position: relative;
-    grid-row: 3/7;
+    grid-row: 3/5;
     grid-column: 7/13;
-    height: 272px;
-    margin-top: 14px;
+    min-height: 272px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
 
     /* мозг */
     &::before {
       content: '';
       position: absolute;
-      top: -29%;
-      left: 17.6%;
-      width: 279px;
+      top: 0.8%;
+      left: 17.7%;
+      width: 100%;
       height: 100%;
       background-image: url('../../images/Components/WorkScheme/brain.svg');
       background-repeat: no-repeat;
       background-size: max-content;
-      // background-position: center;
       z-index: -1;
     }
 
@@ -96,12 +97,46 @@
     &::after {
       content: '';
       position: absolute;
-      left: -40.3%;
-      bottom: 6%;
+      left: -40.5%;
+      bottom: -15%;
       width: 506.29px;
       height: 80.15px;
       background-image: url('../../images/Components/WorkScheme/pathes/path-2.svg');
       background-size: cover;
+    }
+  }
+
+  &__visit-object {
+    grid-column: 1/7;
+    grid-row: 4/6;
+    max-width: 496px;
+    min-height: 254px;
+    margin-top: 119px;
+
+    /* дом и метка */
+    &::before {
+      content: '';
+      position: absolute;
+      top: -33%;
+      right: -13%;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../images/Components/WorkScheme/house.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    /* путь-3 */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 7%;
+      right: -20.5%;
+      width: 219px;
+      height: 95px;
+      background-image: url('../../images/Components/WorkScheme/pathes/path-3.svg');
+      background-repeat: no-repeat;
     }
   }
 }
