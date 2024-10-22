@@ -3,6 +3,7 @@ import ReceivingApplication from './ReceivingApplication/ReceivingApplication';
 import Consultation from './Consultation/Consultation';
 import VisitObject from './VisitObject/VisitObject';
 import Graphic from './Graphic/Graphic';
+import Contract from './Contract/Contract';
 
 function Steps() {
   return (
@@ -11,6 +12,7 @@ function Steps() {
       <Consultation />
       <VisitObject />
       <Graphic />
+      <Contract />
     </div>
   );
 }

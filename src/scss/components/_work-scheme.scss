@@ -152,6 +152,7 @@
     text-align: end;
     margin-top: 75px;
 
+    /* календарь */
     &::before {
       content: '';
       position: absolute;
@@ -164,6 +165,7 @@
       opacity: 50%;
     }
 
+    /* путь-4 */
     &::after {
       content: '';
       position: absolute;
@@ -172,6 +174,36 @@
       width: 587px;
       height: 139px;
       background-image: url('../../images/Components/WorkScheme/pathes/path-4.svg');
+    }
+  }
+
+  &__contract {
+    grid-column: 1/7;
+    grid-row: 6/9;
+    width: 449px;
+    padding-top: 30px;
+
+    /* блокнот */
+    &::before {
+      content: '';
+      position: absolute;
+      top: -19px;
+      left: 120px;
+      width: 275px;
+      height: 290px;
+      background-image: url('../../images/Components/WorkScheme/notepad.svg');
+      z-index: -1;
+    }
+
+    /* путь-5 */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -178px;
+      right: -140px;
+      width: 337px;
+      height: 68px;
+      background-image: url('../../images/Components/WorkScheme/pathes/path-5.svg');
     }
   }
 }
