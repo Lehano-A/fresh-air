@@ -3,10 +3,10 @@
 
 .advantages {
   display: flex;
-  width: 498px;
   margin-left: 135px;
 
   &__info {
+    max-width: 498px;
     margin-top: 56px;
   }
 
