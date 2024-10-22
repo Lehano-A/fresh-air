@@ -16,7 +16,7 @@
   }
 
   &__subtitle {
-    @include subtitle();
+    @include subtitle-h2;
 
     & span {
       display: inline-block;

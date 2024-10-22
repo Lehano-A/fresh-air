@@ -11,7 +11,7 @@
   }
 
   &__subtitle {
-    @include subtitle();
+    @include subtitle-h2;
     white-space: pre;
   }
 

@@ -33,7 +33,7 @@
   }
 
   &__title {
-    @include subtitle;
+    @include subtitle-h2;
     text-transform: none;
     font-size: 35px;
     line-height: 1.28;

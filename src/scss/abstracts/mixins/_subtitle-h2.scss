@@ -1,12 +1,11 @@
 @use '../../palette/palette' as *;
 @use '../../abstracts/variables' as *;
 
-@mixin subtitle {
-  font-family: $font-family-subtitle;
+@mixin subtitle-h2 {
+  font-family: $font-family-title;
   font-size: 45px;
   line-height: 1.33;
   color: $green-primary-900;
-  letter-spacing: -0.5px;
   margin: 0;
   text-transform: capitalize;
 }

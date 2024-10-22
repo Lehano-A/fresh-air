@@ -36,7 +36,7 @@
     margin-bottom: 10px;
 
     & > h2:first-child {
-      @include subtitle;
+      @include subtitle-h2;
       display: inline-block;
       margin-right: 15px;
     }
@@ -53,7 +53,7 @@
 
   &__features {
     & > h2 {
-      @include subtitle;
+      @include subtitle-h2;
       display: inline-block;
       margin-bottom: 10px;
     }

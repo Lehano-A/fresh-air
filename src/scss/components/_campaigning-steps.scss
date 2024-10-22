@@ -13,7 +13,7 @@ $height-pseudo: 100%;
   overflow: hidden;
 
   &__subtitle {
-    @include subtitle();
+    @include subtitle-h2;
     width: 516px;
     margin: 0 93px 0 0;
     line-height: 1.21;
@@ -34,11 +34,7 @@ $height-pseudo: 100%;
   }
 
   &__agitation-subtitle {
-    font-size: 26px;
-    font-family: 'Ruberoid ExtraLight';
-    color: $green-secondary-500;
-    text-transform: capitalize;
-    letter-spacing: -0.3px;
+    @include subtitle-h3;
     margin: 0 0 16px 0;
   }
 

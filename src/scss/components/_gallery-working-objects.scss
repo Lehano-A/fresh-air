@@ -22,7 +22,7 @@
   }
 
   &__subtitle {
-    @include subtitle();
+    @include subtitle-h2;
     max-width: 890px;
     margin: 0;
 

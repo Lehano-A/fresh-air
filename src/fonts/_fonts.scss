@@ -34,6 +34,15 @@
 }
 
 @font-face {
+  font-family: 'Ruberoid SemiBold';
+  src:
+    local('Ruberoid-SemiBold'),
+    url('./Ruberoid/Ruberoid-SemiBold.woff2') format('woff2'),
+    url('./Ruberoid/Ruberoid-SemiBold.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
   font-family: 'Ruberoid Light';
   src:
     local('Ruberoid-Light'),

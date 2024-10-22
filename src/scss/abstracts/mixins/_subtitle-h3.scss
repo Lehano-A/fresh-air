@@ -1,0 +1,9 @@
+@use '../../palette/palette' as *;
+
+@mixin subtitle-h3 {
+  font-size: 26px;
+  font-family: 'Ruberoid Medium';
+  color: $green-secondary-500;
+  text-transform: capitalize;
+  margin: 0;
+}

@@ -1,0 +1,61 @@
+@use '../abstracts/mixins/mixins' as *;
+
+.work-scheme {
+  &__step {
+    position: relative;
+    height: 300px;
+  }
+
+  &__title {
+    @include subtitle-h2;
+    margin-bottom: 17px;
+  }
+
+  &__subtitle {
+    @include subtitle-h3;
+    font-size: 35px;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin: 21px 0 12px;
+    line-height: 1.62;
+  }
+
+  &__receiving-application {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 496px;
+
+    /* письмо */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1.5%;
+      right: 11.5%;
+
+      display: inline-block;
+      width: 238px;
+      height: 100%;
+
+      background-image: url('../../images/Components/WorkScheme/letter.svg');
+      background-repeat: no-repeat;
+      background-size: max-content;
+      background-position: center;
+      z-index: -1;
+    }
+
+    /* путь-1 */
+    &::after {
+      content: '';
+      position: absolute;
+      top: 67%;
+      right: -36.5%;
+      display: inline-block;
+      width: 527px;
+      height: 78px;
+      background-image: url('../../images/Components/WorkScheme/pathes/path-1.svg');
+    }
+  }
+}
