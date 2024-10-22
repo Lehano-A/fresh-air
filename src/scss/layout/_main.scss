@@ -1,4 +1,10 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1170px;
+  margin: 0 auto;
+
   .services-provided {
     padding: 100px 0;
   }
