@@ -1,9 +1,14 @@
 @use '../abstracts/mixins/mixins' as *;
 
 .work-scheme {
+  &__steps {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+  }
   &__step {
     position: relative;
-    height: 300px;
   }
 
   &__title {
@@ -15,18 +20,29 @@
     @include subtitle-h3;
     font-size: 35px;
     font-weight: 400;
+
+    &_align-right {
+      text-align: end;
+    }
   }
 
   &__text {
     margin: 21px 0 12px;
     line-height: 1.62;
+
+    &_align-right {
+      text-align: end;
+    }
   }
 
   &__receiving-application {
+    grid-row: 1/4;
+    grid-column: 1/7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 496px;
+    height: 300px;
 
     /* письмо */
     &::before {
@@ -34,14 +50,10 @@
       position: absolute;
       top: 1.5%;
       right: 11.5%;
-
-      display: inline-block;
       width: 238px;
       height: 100%;
-
       background-image: url('../../images/Components/WorkScheme/letter.svg');
       background-repeat: no-repeat;
-      background-size: max-content;
       background-position: center;
       z-index: -1;
     }
@@ -52,10 +64,44 @@
       position: absolute;
       top: 67%;
       right: -36.5%;
-      display: inline-block;
       width: 527px;
       height: 78px;
       background-image: url('../../images/Components/WorkScheme/pathes/path-1.svg');
+    }
+  }
+
+  &__consultation {
+    position: relative;
+    grid-row: 3/7;
+    grid-column: 7/13;
+    height: 272px;
+    margin-top: 14px;
+
+    /* мозг */
+    &::before {
+      content: '';
+      position: absolute;
+      top: -29%;
+      left: 17.6%;
+      width: 279px;
+      height: 100%;
+      background-image: url('../../images/Components/WorkScheme/brain.svg');
+      background-repeat: no-repeat;
+      background-size: max-content;
+      // background-position: center;
+      z-index: -1;
+    }
+
+    /* путь-2 */
+    &::after {
+      content: '';
+      position: absolute;
+      left: -40.3%;
+      bottom: 6%;
+      width: 506.29px;
+      height: 80.15px;
+      background-image: url('../../images/Components/WorkScheme/pathes/path-2.svg');
+      background-size: cover;
     }
   }
 }
