@@ -206,4 +206,33 @@
       background-image: url('../../images/Components/WorkScheme/pathes/path-5.svg');
     }
   }
+
+  &__delivery-installation {
+    grid-row: 7/11;
+    grid-column: 7/ 13;
+    justify-self: self-end;
+    text-align: end;
+    width: 397px;
+    margin-top: 126px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -179px;
+      width: 301px;
+      height: 189px;
+      background-image: url('../../images/Components/WorkScheme/forklift.svg');
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -75px;
+      left: -72px;
+      width: 250px;
+      height: 37px;
+      background-image: url('../../images/Components/WorkScheme/pathes/path-6.svg');
+    }
+  }
 }
