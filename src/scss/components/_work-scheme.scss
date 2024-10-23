@@ -235,4 +235,28 @@
       background-image: url('../../images/Components/WorkScheme/pathes/path-6.svg');
     }
   }
+
+  &__signing-act {
+    grid-row: 9;
+    grid-column: 3/11;
+    justify-self: center;
+    width: 722px;
+    min-height: 99px;
+    margin-top: 52px;
+
+    /* рукопожатие */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 402px;
+      height: 99px;
+      padding-bottom: 12px;
+      background-image: url('../../images/Components/WorkScheme/shaking-hands.svg');
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
 }

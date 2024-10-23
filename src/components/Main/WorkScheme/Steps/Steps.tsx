@@ -5,6 +5,7 @@ import VisitObject from './VisitObject/VisitObject';
 import Graphic from './Graphic/Graphic';
 import Contract from './Contract/Contract';
 import DeliveryInstallation from './DeliveryInstallation/DeliveryInstallation';
+import SigningAct from './SigningAct/SigningAct';
 
 function Steps() {
   return (
@@ -15,6 +16,7 @@ function Steps() {
       <Graphic />
       <Contract />
       <DeliveryInstallation />
+      <SigningAct />
     </div>
   );
 }
