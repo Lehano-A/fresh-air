@@ -88,9 +88,8 @@
   &__product-images {
     position: relative;
     display: flex;
-    width: 572px;
-    height: 802px;
     margin-left: 100px;
+    gap: 35px;
 
     &::before {
       content: '';
@@ -107,17 +106,16 @@
     }
 
     & > div:nth-child(1) {
-      & > img:first-child {
-        margin-bottom: 20px;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
     & > div:nth-child(2) {
-      margin: 68px 0 0 35px;
-
-      & > img:first-child {
-        margin-bottom: 30px;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 68px 0 0 0px;
     }
   }
 
