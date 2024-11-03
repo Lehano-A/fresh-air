@@ -1,0 +1,41 @@
+.swiper {
+  overflow: hidden;
+  padding-top: 74px;
+  max-width: 1305px;
+  margin: 0;
+
+  &-wrapper {
+    & > :nth-child(1n):not(.swiper-slide-active) {
+      // двигаем влево НЕАКТИВНЫЕ слайды (на ширину активного)
+      transform: translateX(-500px) !important;
+    }
+  }
+}
+
+// все слайды (особенно начиная с третьего, поскольку для первого и второго есть свои селекторы: .swiper-slide-active и .swiper-slide-next)
+.swiper-slide {
+  display: flex;
+  width: 270px;
+  height: 456px;
+  text-align: center;
+  font-size: 18px;
+  transition: width 0.3s ease;
+  // смещение всех слайдов к краю, т.к. установлен пропс "centeredSlides={true}" (без него не будет работать)
+  transform: translateX(-100%) !important;
+
+  & > img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 35px;
+    object-fit: cover;
+  }
+
+  // первый (текущий) слайд
+  &-active {
+    width: 500px !important;
+
+    & > img {
+      width: 100%;
+    }
+  }
+}

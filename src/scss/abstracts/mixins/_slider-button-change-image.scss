@@ -1,0 +1,19 @@
+@mixin slider-button-change-image {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  top: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
