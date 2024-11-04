@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import gallery from './gallery';
@@ -10,22 +10,39 @@ import 'swiper/scss/navigation';
 import './styles.scss';
 
 import { Navigation } from 'swiper/modules';
+import SliderNavigation from './SliderNavigation';
 
 function Slider() {
+  const swiperRef = useRef(null);
+
+  const [currentActiveSlide, setCurrentActiveSlide] = useState(0);
+
+  function handleSlideChange(e) {
+    setCurrentActiveSlide(e.activeIndex);
+  }
+
   return (
-    <div className='portfolio__slider'>
+    <div className='slider'>
+      <SliderNavigation
+        swiperRef={swiperRef}
+        isActivePrev={currentActiveSlide}
+        isLastSlide={gallery.length - 1 === currentActiveSlide}
+      />
+
       <Swiper
-        slidesPerView='4'
+        ref={swiperRef}
+        slidesPerView={4}
         spaceBetween={30}
         navigation
         centeredSlides={true}
         modules={[Navigation]}
+        onSlideChange={handleSlideChange}
       >
         {gallery.map((item, index) => (
           <SwiperSlide key={index}>
             <img
               src={item.image}
-              alt={item.alt}
+              alt='Изображение выполненной работы из портфолио'
             />
           </SwiperSlide>
         ))}

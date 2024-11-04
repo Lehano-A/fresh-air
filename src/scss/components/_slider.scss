@@ -1,0 +1,44 @@
+@use '../abstracts/mixins/mixins' as *;
+@use '../palette/palette' as *;
+
+.slider {
+  &__navigation {
+    display: flex;
+
+    & > :first-child {
+      margin-right: 25px;
+    }
+  }
+
+  &__button-navigation {
+    @include slider-button-change-image;
+    top: 25px;
+    left: 0;
+    cursor: pointer;
+
+    &_prev,
+    &_next {
+      &::after {
+        background-image: url('../../images/Components/Slider/slider-button-active.svg');
+      }
+      background-color: rgba($green-secondary-500, 0.25);
+    }
+
+    &_prev:not(&_disabled) {
+      transform: rotate(180deg); // если есть _prev и нету _disabled
+    }
+
+    &_next:where(&_disabled) {
+      transform: rotate(180deg); // если есть и _next и _disabled
+    }
+
+    &_disabled {
+      background-color: rgba($white, 0.6);
+      cursor: auto;
+
+      &::after {
+        background-image: url('../../images/Components/Slider/slider-button-disabled.svg');
+      }
+    }
+  }
+}
