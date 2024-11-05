@@ -9,7 +9,6 @@ import 'swiper/scss/navigation';
 
 import './styles.scss';
 
-import { Navigation } from 'swiper/modules';
 import SliderNavigation from './SliderNavigation';
 
 function Slider() {
@@ -33,9 +32,7 @@ function Slider() {
         ref={swiperRef}
         slidesPerView={4}
         spaceBetween={30}
-        navigation
         centeredSlides={true}
-        modules={[Navigation]}
         onSlideChange={handleSlideChange}
       >
         {gallery.map((item, index) => (
