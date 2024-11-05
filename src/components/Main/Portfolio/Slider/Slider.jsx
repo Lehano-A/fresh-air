@@ -7,9 +7,7 @@ import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/navigation';
 
-import './styles.scss';
-
-import SliderNavigation from './SliderNavigation';
+import SliderNavigation from './SliderNavigation/SliderNavigation';
 
 function Slider() {
   const swiperRef = useRef(null);
@@ -41,6 +39,11 @@ function Slider() {
               src={item.image}
               alt='Изображение выполненной работы из портфолио'
             />
+
+            <div className='swiper-slide__text-box'>
+              <h2>{item.title}</h2>
+              {currentActiveSlide === index && <p>{item.description}</p>}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
