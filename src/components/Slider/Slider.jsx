@@ -1,15 +1,22 @@
 import React, { useRef, useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import gallery from './gallery';
 
 import 'swiper/scss';
-import 'swiper/scss/pagination';
-import 'swiper/scss/navigation';
 
 import SliderNavigation from './SliderNavigation/SliderNavigation';
 
-function Slider() {
+function Slider({
+  gallery,
+  spaceBetween = 30,
+  navigationClass = '',
+  sliderClass = '',
+  slidesPerView,
+  swiperClass = '',
+  slideClass = '',
+  slideTextBoxClass = '',
+  centeredSlides = true,
+}) {
   const swiperRef = useRef(null);
 
   const [currentActiveSlide, setCurrentActiveSlide] = useState(0);
@@ -19,31 +26,38 @@ function Slider() {
   }
 
   return (
-    <div className='slider'>
+    <div className={`slider ${sliderClass ? sliderClass : ''}`}>
       <SliderNavigation
         swiperRef={swiperRef}
         isActivePrev={currentActiveSlide}
         isLastSlide={gallery.length - 1 === currentActiveSlide}
+        navigationClass={navigationClass}
       />
 
       <Swiper
         ref={swiperRef}
-        slidesPerView={4}
-        spaceBetween={30}
-        centeredSlides={true}
+        slidesPerView={slidesPerView}
+        spaceBetween={spaceBetween}
+        centeredSlides={centeredSlides}
         onSlideChange={handleSlideChange}
+        className={swiperClass}
       >
         {gallery.map((item, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide
+            key={index}
+            className={slideClass}
+          >
             <img
               src={item.image}
               alt='Изображение выполненной работы из портфолио'
             />
 
-            <div className='swiper-slide__text-box'>
-              <h2>{item.title}</h2>
-              {currentActiveSlide === index && <p>{item.description}</p>}
-            </div>
+            {item.title && (
+              <div className={slideTextBoxClass}>
+                <h2>{item.title}</h2>
+                {currentActiveSlide === index && <p>{item.description}</p>}
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

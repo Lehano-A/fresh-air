@@ -1,6 +1,11 @@
 import React from 'react';
 
-function SliderNavigation({ swiperRef, isActivePrev, isLastSlide }) {
+function SliderNavigation({
+  swiperRef,
+  isActivePrev,
+  isLastSlide,
+  navigationClass,
+}) {
   const goToNextSlide = () => {
     if (swiperRef.current) {
       swiperRef.current.swiper.slideNext();
@@ -14,7 +19,9 @@ function SliderNavigation({ swiperRef, isActivePrev, isLastSlide }) {
   };
 
   return (
-    <div className='slider__navigation'>
+    <div
+      className={`slider__navigation ${navigationClass ? navigationClass : ''}`}
+    >
       <button
         className={`${isActivePrev ? '' : 'slider__button-navigation_disabled'} slider__button-navigation slider__button-navigation_prev`}
         onClick={goToPrevSlide}

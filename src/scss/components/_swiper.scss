@@ -5,13 +5,6 @@
   padding-top: 25px;
   max-width: 1305px;
   margin: 0;
-
-  &-wrapper {
-    & > :nth-child(1n):not(.swiper-slide-active) {
-      // двигаем влево НЕАКТИВНЫЕ слайды (на ширину активного)
-      transform: translateX(-500px) !important;
-    }
-  }
 }
 
 // все слайды (особенно начиная с третьего, поскольку для первого и второго есть свои селекторы: .swiper-slide-active и .swiper-slide-next)
@@ -23,62 +16,9 @@
   text-align: center;
   font-size: 18px;
   transition: width 0.3s ease;
-  // смещение всех слайдов к краю, т.к. установлен пропс "centeredSlides={true}" (без него не будет работать)
-  transform: translateX(-100%) !important;
-
-  &__text-box {
-    position: absolute;
-    bottom: 46px;
-    left: 40px;
-    color: $white;
-    text-align: start;
-    transition: 1s ease;
-
-    & > h2 {
-      font-family: 'Ruberoid SemiBold';
-      font-size: 24px;
-      text-transform: capitalize;
-      line-height: 1.41;
-      margin: 0;
-    }
-
-    & > p {
-      width: 400px;
-      color: $white;
-      margin: 10px 0 0 0;
-      font-size: 16px;
-    }
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 35px;
-    left: 0;
-    width: 164px;
-    height: 49px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: $green-light-200;
-    background-image: url('../../images/logo/logo.svg');
-    background-size: 94px 29px;
-    background-repeat: no-repeat;
-    background-position: 40px 50%;
-  }
 
   & > img {
     display: inline-block;
     width: 100%;
-    border-radius: 35px;
-    object-fit: cover;
-  }
-
-  // первый (текущий) слайд
-  &-active {
-    width: 500px !important;
-
-    & > img {
-      width: 100%;
-    }
   }
 }
