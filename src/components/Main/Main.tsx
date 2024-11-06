@@ -6,6 +6,8 @@ import SubmitApplication from './SubmitApplication/SubmitApplication';
 import About from './About/About';
 import Advantages from './Advantages/Advantages';
 import WorkScheme from './WorkScheme/WorkScheme';
+import Portfolio from './Portfolio/Portfolio';
+import Customers from './Сustomers/Сustomers';
 
 function Main() {
   return (
@@ -17,6 +19,8 @@ function Main() {
       <About />
       <Advantages />
       <WorkScheme />
+      <Portfolio />
+      <Customers />
     </main>
   );
 }

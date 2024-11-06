@@ -1,0 +1,110 @@
+@use '../abstracts/mixins/mixins' as *;
+@use '../palette/palette' as *;
+
+.customers {
+  position: relative;
+  display: flex;
+  height: 515px;
+  max-width: 100%;
+  padding-top: 156px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: inline-block;
+
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/Components/Customers/bg/curved-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &__text-box {
+    margin: 0 66px 0 135px;
+
+    & > h2 {
+      @include subtitle-h2;
+      position: relative;
+      width: 622px;
+      margin-bottom: 32px;
+
+      & > span {
+        display: inline-block;
+        margin-bottom: 10px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 27%;
+
+          display: inline-block;
+          width: 105px;
+          height: 2px;
+          background-color: $green-secondary-500;
+        }
+      }
+    }
+
+    & > p {
+      color: $gray-700;
+      max-width: 627px;
+      line-height: 1.62;
+      white-space: pre-line;
+
+      & > span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: start;
+    margin-top: 65px;
+  }
+
+  &__slider-navigation {
+    width: 101px;
+    margin-top: 20px;
+    margin-left: 23px;
+
+    & button {
+      width: 38px;
+      height: 38px;
+
+      &::after {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  &__swiper {
+    padding: 31px 0 0 5px;
+  }
+
+  &__slide {
+    width: 258px;
+    height: 116px;
+
+    transform: translateX(-288px) !important;
+
+    & > img {
+      border-radius: 30px;
+      object-fit: contain;
+      padding: 38px 35px;
+      background-color: $white;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
