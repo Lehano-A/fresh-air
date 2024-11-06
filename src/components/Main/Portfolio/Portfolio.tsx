@@ -1,5 +1,6 @@
 import React from 'react';
-import Slider from './Slider/Slider.jsx';
+import Slider from '../../Slider/Slider';
+import gallery from './gallery';
 
 function Portfolio() {
   return (
@@ -15,7 +16,16 @@ function Portfolio() {
         </p>
       </div>
 
-      <Slider />
+      <Slider
+        gallery={gallery}
+        slidesPerView='auto'
+        sliderClass='portfolio__slider'
+        navigationClass='portfolio__slider-navigation'
+        swiperClass='portfolio__swiper'
+        slideClass='portfolio__slide'
+        slideTextBoxClass='portfolio__slide-text-box'
+        spaceBetween={20}
+      />
     </section>
   );
 }
