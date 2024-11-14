@@ -1,16 +1,12 @@
 import React from 'react';
 
-interface ButtonContactProps {
+interface ButtonSubmitProps {
   name: string;
   variant: string;
   disabled?: boolean;
 }
 
-function ButtonContact({
-  name,
-  variant,
-  disabled = false,
-}: ButtonContactProps) {
+function ButtonSubmit({ name, variant, disabled = false }: ButtonSubmitProps) {
   const buttonSizeClass = `button-action--${variant}`;
 
   return (
@@ -26,4 +22,4 @@ function ButtonContact({
   );
 }
 
-export default ButtonContact;
+export default ButtonSubmit;
