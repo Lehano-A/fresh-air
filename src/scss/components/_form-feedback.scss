@@ -1,0 +1,12 @@
+.form-feedback {
+  display: flex;
+  align-items: center;
+  margin-top: 33px;
+
+  & > :nth-child(1n):not(:last-child) {
+    margin-right: 30px;
+  }
+  & > :last-child {
+    margin-left: 30px;
+  }
+}
