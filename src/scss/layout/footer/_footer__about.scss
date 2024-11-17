@@ -1,0 +1,29 @@
+@use '../../palette/palette' as *;
+
+.footer__about {
+  grid-column: 1/5;
+  grid-row: 2/10;
+  max-width: 406px;
+}
+
+.footer__description {
+  font-size: 14px;
+  line-height: 1.71;
+  color: $green-neutral-500;
+  padding-bottom: 25px;
+  border-bottom: 1px $green-secondary-500 solid;
+  margin: 30px 0 32px 0;
+}
+
+.footer__slogan {
+  font-family: 'Ruberoid Medium';
+  font-size: 18px;
+  color: $green-primary-900;
+  margin: 0;
+
+  & > span {
+    font-size: 22px;
+    font-family: 'Ruberoid Semibold';
+    color: $green-secondary-500;
+  }
+}
