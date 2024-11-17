@@ -4,14 +4,14 @@ import iconExtractor from '../images/icons/listServices/systemVentilation/extrac
 import iconHumidity from '../images/icons/listServices/systemVentilation/humidity.svg';
 import iconAirCooler from '../images/icons/listServices/systemVentilation/air-cooler.svg';
 import iconVentilation from '../images/icons/listServices/systemVentilation/ventilation.svg';
-import contentImageSystemVentilation from '../images/Components/ListServices/system-ventilation.jpg';
+import contentImageSystemVentilation from '../images/components/ListServices/system-ventilation.jpg';
 
 import iconAirConditioner from '../images/icons/listServices/conditioning/air-conditioner.svg';
 import iconAirFilter from '../images/icons/listServices/conditioning/air-filter.svg';
 import iconCeiling from '../images/icons/listServices/conditioning/ceiling.svg';
 import iconCondenser from '../images/icons/listServices/conditioning/condenser.svg';
 import iconSplit from '../images/icons/listServices/conditioning/split.svg';
-import contentImageConditioning from '../images/Components/ListServices/conditioning.jpeg';
+import contentImageConditioning from '../images/components/ListServices/conditioning.jpeg';
 
 const listForSystemVentilation = {
   contentImage: {

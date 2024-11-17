@@ -1,11 +1,11 @@
-import apartmentsAndOffices from '../images/Components/GalleryWorkingObjects/content/apartments-and-offices.png';
-import shopsAndShoppingCenters from '../images/Components/GalleryWorkingObjects/content/shops-and-shopping-centers.png';
-import fitnessCenters from '../images/Components/GalleryWorkingObjects/content/fitness-centers.png';
-import swimmingPools from '../images/Components/GalleryWorkingObjects/content/swimming-pools.png';
-import countryHousesCottagesTownhouses from '../images/Components/GalleryWorkingObjects/content/country-houses-cottages-townhouses.png';
-import restaurantsCafesBars from '../images/Components/GalleryWorkingObjects/content/restaurants-cafes-bars.png';
-import dentistryClinics from '../images/Components/GalleryWorkingObjects/content/dentistry-clinics.png';
-import beautySalonsSpas from '../images/Components/GalleryWorkingObjects/content/beauty-salons-spas.png';
+import apartmentsAndOffices from '../images/components/GalleryWorkingObjects/content/apartments-and-offices.png';
+import shopsAndShoppingCenters from '../images/components/GalleryWorkingObjects/content/shops-and-shopping-centers.png';
+import fitnessCenters from '../images/components/GalleryWorkingObjects/content/fitness-centers.png';
+import swimmingPools from '../images/components/GalleryWorkingObjects/content/swimming-pools.png';
+import countryHousesCottagesTownhouses from '../images/components/GalleryWorkingObjects/content/country-houses-cottages-townhouses.png';
+import restaurantsCafesBars from '../images/components/GalleryWorkingObjects/content/restaurants-cafes-bars.png';
+import dentistryClinics from '../images/components/GalleryWorkingObjects/content/dentistry-clinics.png';
+import beautySalonsSpas from '../images/components/GalleryWorkingObjects/content/beauty-salons-spas.png';
 
 const listGalleryWorkingObjects = [
   {
