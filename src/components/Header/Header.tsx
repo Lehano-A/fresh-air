@@ -1,37 +1,35 @@
-import React from 'react';
-import Logo from './Logo/Logo';
-import Slogan from './Slogan/Slogan';
-import Navigation from './Navigation/Navigation';
-import ButtonContact from '../ButtonContact/ButtonContact';
-import CompanyActivities from './CompanyActivities/CompanyActivities';
-import Contacts from './Contacts/Contacts';
+import { useEffect, useState } from 'react';
+import ButtonSubmit from '../common/ButtonSubmit/ButtonSubmit';
+import Logo from '../common/Logo/Logo';
+import Navigation from '../Main/Hero/Navigation/Navigation';
 
 function Header() {
-  return (
-    <header className='header'>
-      <div className='header__box'>
-        <div className='header__logo-nav-actions'>
-          <Logo />
-          <Navigation />
-          <ButtonContact
-            name='связаться'
-            variant='medium'
-          />
-        </div>
+  const [scrollY, setScrollY] = useState(window.scrollY);
 
-        <section className='header__info'>
-          <div>
-            <Slogan />
-            <CompanyActivities />
-            <Contacts />
-            <ButtonContact
-              name='оставить заявку'
-              variant='large'
-            />
-          </div>
-        </section>
-      </div>
-    </header>
+  useEffect(() => {
+    const changeBgColor = () => {
+      document.addEventListener('scroll', () => {
+        setScrollY(window.scrollY);
+      });
+    };
+
+    changeBgColor();
+    return () => changeBgColor();
+  }, []);
+
+  const bgColorClass = scrollY > 0 ? 'header_bg-color' : '';
+  const outerBgColorButtonSubmit = scrollY > 0 ? 'green' : 'white';
+
+  return (
+    <div className={`header ${bgColorClass}`}>
+      <Logo />
+      <Navigation />
+      <ButtonSubmit
+        name='связаться'
+        variant='s'
+        outerBgColor={outerBgColorButtonSubmit}
+      />
+    </div>
   );
 }
 

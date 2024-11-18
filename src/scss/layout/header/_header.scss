@@ -1,0 +1,21 @@
+@use '../../palette/palette' as *;
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 45px 20px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  z-index: 100;
+  transition: background-color 0.1s ease;
+}
+
+.header_bg-color {
+  background-color: $green-light-200;
+}

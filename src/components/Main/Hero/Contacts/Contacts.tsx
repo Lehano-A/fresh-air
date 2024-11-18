@@ -1,6 +1,6 @@
 import React from 'react';
-import iconPin from '../../../images/icons/pin.svg';
-import iconTelephoneHandle from '../../../images/icons/telephone-handle.svg';
+import iconPin from '../../../../images/common/icons/pin.svg';
+import iconTelephoneHandle from '../../../../images/common/icons/telephone-handle.svg';
 
 function Contacts() {
   return (
@@ -11,7 +11,8 @@ function Contacts() {
           src={iconPin}
           alt='Иконка - метка на карте'
         />
-        <p className='contacts__text'>Московский регион, Москва</p>
+        <p className='contacts__text'>{`Московский регион,
+Москва`}</p>
       </div>
 
       <div className='contacts__box-contact'>
