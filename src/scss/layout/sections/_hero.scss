@@ -1,0 +1,72 @@
+@use '../../../scss/palette/palette' as *;
+@use '../../../scss/abstracts/mixins/mixins';
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(
+    rgba(241, 241, 241, 1),
+    rgba(240, 242, 241, 1),
+    rgba(235, 237, 236, 1),
+    rgba(230, 232, 231, 1),
+    rgba(222, 226, 225, 1)
+  );
+
+  &::after {
+    content: '';
+    z-index: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    width: 810px;
+    height: 100%;
+    background-size: cover;
+    background-image: url('/images/bg/leavesInCircle.png');
+    background-repeat: no-repeat;
+  }
+
+  &__box {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin: 158px auto 66px;
+    max-width: 1170px;
+
+    & > div {
+      width: 520px;
+    }
+  }
+
+  &__title {
+    color: $green-primary-900;
+    word-break: break-all;
+    letter-spacing: 0.1px;
+    font-size: 64px;
+    line-height: 1.16;
+    margin: 0;
+  }
+
+  &__long-line {
+    &::before {
+      @include mixins.long-hyphen(148px, 3px, 0 45px 20px 0);
+    }
+  }
+
+  &__slogan {
+    width: 100%;
+    font-family: 'Ruberoid Bold';
+    margin-bottom: 25px;
+  }
+
+  &__company-name {
+    color: $green-secondary-500;
+    line-height: 1.29;
+    letter-spacing: 1.55px;
+  }
+}

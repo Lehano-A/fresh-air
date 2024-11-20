@@ -1,11 +1,12 @@
-@use '../abstracts/mixins/mixins' as *;
-@use '../palette/palette' as *;
+@use '../../abstracts/mixins/mixins' as *;
+@use '../../palette/palette' as *;
 
 .portfolio {
   position: relative;
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  font-size: 1.6rem;
 
   &::before {
     content: '';
@@ -93,7 +94,7 @@
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       background-color: $green-light-200;
-      background-image: url('../../images/logo/logo.svg');
+      background-image: url('/images/logo/logo.svg');
       background-size: 94px 29px;
       background-repeat: no-repeat;
       background-position: 40px 50%;

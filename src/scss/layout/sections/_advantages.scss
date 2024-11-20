@@ -1,9 +1,14 @@
-@use '../palette/palette' as *;
-@use '../abstracts/mixins/mixins' as *;
+@use '../../palette/palette' as *;
+@use '../../abstracts/mixins/mixins' as *;
 
 .advantages {
   display: flex;
-  margin-left: 135px;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: 1.6rem;
+  padding: 100px 0;
 
   &__info {
     max-width: 498px;
@@ -99,7 +104,7 @@
       transform: translateY(-50%);
       width: 718px;
       height: 718px;
-      filter: blur(175px);
+      filter: blur(100px);
       background-color: $green-light-500;
       border-radius: 50%;
       z-index: -1;

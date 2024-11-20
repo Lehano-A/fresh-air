@@ -1,4 +1,5 @@
-@use '../abstracts/mixins/mixins' as *;
+@use '../../abstracts/mixins/mixins' as *;
+@use '../../palette/palette' as *;
 
 .work-scheme {
   &__steps {
@@ -32,7 +33,9 @@
 
   &__text {
     margin: 21px 0 12px;
+    font-size: 1.6rem;
     line-height: 1.62;
+    color: $green-primary-900;
 
     &_align-right {
       text-align: end;
@@ -54,7 +57,7 @@
       right: 75px;
       width: 238px;
       height: 100%;
-      background-image: url('../../images/Components/WorkScheme/letter.svg');
+      background-image: url('/images/components/WorkScheme/letter.svg');
       background-repeat: no-repeat;
       z-index: -1;
     }
@@ -67,7 +70,7 @@
       right: -42%;
       width: 527px;
       height: 78px;
-      background-image: url('../../images/Components/WorkScheme/pathes/path-1.svg');
+      background-image: url('/images/components/WorkScheme/pathes/path-1.svg');
     }
   }
 
@@ -84,11 +87,12 @@
       position: absolute;
       top: -15px;
       left: 102px;
-      width: 100%;
+      width: 279px;
       height: 100%;
-      background-image: url('../../images/Components/WorkScheme/brain.svg');
+      // height: 246px;
+      background-image: url('/images/components/WorkScheme/brain.svg');
       background-repeat: no-repeat;
-      background-size: max-content;
+      // background-size: 100%;
       z-index: -1;
     }
 
@@ -100,7 +104,7 @@
       bottom: 15px;
       width: 506.29px;
       height: 80.15px;
-      background-image: url('../../images/Components/WorkScheme/pathes/path-2.svg');
+      background-image: url('/images/components/WorkScheme/pathes/path-2.svg');
       background-size: cover;
     }
   }
@@ -121,7 +125,7 @@
       right: 19px;
       width: 413px;
       height: 254px;
-      background-image: url('../../images/Components/WorkScheme/house.svg');
+      background-image: url('/images/components/WorkScheme/house.svg');
       background-size: contain;
       background-repeat: no-repeat;
       z-index: -1;
@@ -135,7 +139,7 @@
       right: -104px;
       width: 219px;
       height: 95px;
-      background-image: url('../../images/Components/WorkScheme/pathes/path-3.svg');
+      background-image: url('/images/components/WorkScheme/pathes/path-3.svg');
       background-repeat: no-repeat;
     }
   }
@@ -157,7 +161,7 @@
       left: 101px;
       width: 288.71px;
       height: 274.13px;
-      background-image: url('../../images/Components/WorkScheme/calendar.svg');
+      background-image: url('/images/components/WorkScheme/calendar.svg');
       z-index: -1;
       opacity: 50%;
     }
@@ -170,7 +174,7 @@
       left: -158px;
       width: 587px;
       height: 139px;
-      background-image: url('../../images/Components/WorkScheme/pathes/path-4.svg');
+      background-image: url('/images/components/WorkScheme/pathes/path-4.svg');
     }
   }
 
@@ -190,7 +194,7 @@
       left: 120px;
       width: 275px;
       height: 290px;
-      background-image: url('../../images/Components/WorkScheme/notepad.svg');
+      background-image: url('/images/components/WorkScheme/notepad.svg');
       z-index: -1;
     }
 
@@ -202,7 +206,7 @@
       right: -140px;
       width: 337px;
       height: 68px;
-      background-image: url('../../images/Components/WorkScheme/pathes/path-5.svg');
+      background-image: url('/images/components/WorkScheme/pathes/path-5.svg');
     }
   }
 
@@ -222,7 +226,8 @@
       left: -179px;
       width: 301px;
       height: 189px;
-      background-image: url('../../images/Components/WorkScheme/forklift.svg');
+      background-image: url('/images/components/WorkScheme/forklift.svg');
+      z-index: -1;
     }
 
     &::after {
@@ -232,7 +237,7 @@
       left: -72px;
       width: 250px;
       height: 37px;
-      background-image: url('../../images/Components/WorkScheme/pathes/path-6.svg');
+      background-image: url('/images/components/WorkScheme/pathes/path-6.svg');
     }
   }
 
@@ -254,7 +259,7 @@
       width: 402px;
       height: 99px;
       padding-bottom: 12px;
-      background-image: url('../../images/Components/WorkScheme/shaking-hands.svg');
+      background-image: url('/images/components/WorkScheme/shaking-hands.svg');
       background-repeat: no-repeat;
       z-index: -1;
     }

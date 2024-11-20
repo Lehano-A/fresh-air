@@ -1,5 +1,5 @@
-@use '../abstracts/mixins/mixins' as *;
-@use '../palette/palette' as *;
+@use '../../abstracts/mixins/mixins' as *;
+@use '../../palette/palette' as *;
 
 $width-pseudo: 100%;
 $height-pseudo: 100%;
@@ -71,7 +71,7 @@ $height-pseudo: 100%;
         display: inline-block;
         width: 17px;
         height: 17px;
-        background-image: url('../../images/Components/CampaigningSteps/icons/cooling.svg');
+        background-image: url('/images/components/CampaigningSteps/icons/cooling.svg');
         background-repeat: no-repeat;
       }
     }
@@ -91,8 +91,8 @@ $height-pseudo: 100%;
       left: -165px;
       width: $width-pseudo;
       height: $height-pseudo;
-      background-image: url('../../images/Components/CampaigningSteps/icons/arrow-1.svg'),
-        url('../../images/Components/CampaigningSteps/icons/arrow-3.svg');
+      background-image: url('/images/components/CampaigningSteps/icons/arrow-1.svg'),
+        url('../../../images/components/CampaigningSteps/icons/arrow-3.svg');
       background-size:
         277px 44px,
         277px 44px;
@@ -109,8 +109,8 @@ $height-pseudo: 100%;
       right: -164px;
       width: $width-pseudo;
       height: $height-pseudo;
-      background-image: url('../../images/Components/CampaigningSteps/icons/arrow-2.svg'),
-        url('../../images/Components/CampaigningSteps/icons/arrow-4.svg');
+      background-image: url('/images/components/CampaigningSteps/icons/arrow-2.svg'),
+        url('../../../images/components/CampaigningSteps/icons/arrow-4.svg');
       background-size:
         285px 44px,
         255px 58px;

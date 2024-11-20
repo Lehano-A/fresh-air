@@ -1,5 +1,5 @@
-@use '../abstracts/mixins/mixins' as *;
-@use '../palette/palette' as *;
+@use '../../abstracts/mixins/mixins' as *;
+@use '../../palette/palette' as *;
 
 .gallery-working-objects {
   position: relative;
@@ -17,7 +17,7 @@
     display: inline-block;
     width: 470px;
     height: 100%;
-    background-image: url('../../images//Components/GalleryWorkingObjects/bg/lung.svg');
+    background-image: url('../../../images//components/GalleryWorkingObjects/bg/lung.svg');
     background-repeat: no-repeat;
   }
 
@@ -47,7 +47,7 @@
       left: 170px;
       width: 100%;
       height: 100%;
-      background-image: url('../../images//Components/GalleryWorkingObjects/bg/leaves.svg');
+      background-image: url('/images/components/GalleryWorkingObjects/bg/leaves.svg');
       background-repeat: no-repeat;
       z-index: -1;
     }
