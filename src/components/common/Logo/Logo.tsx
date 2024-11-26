@@ -10,7 +10,7 @@ function Logo({ styleClass }: logoProps) {
     <img
       src={logo}
       alt='Логотип компании Pascal Vent'
-      className={`${styleClass ? styleClass : ''}`}
+      className={`logo ${styleClass ? styleClass : ''}`}
     />
   );
 }
