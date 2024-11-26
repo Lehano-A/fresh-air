@@ -1,0 +1,10 @@
+@use '../../palette/palette' as *;
+
+.footer-title {
+  font-family: 'Ruberoid Light';
+  font-size: 26px;
+  color: $green-primary-900;
+  letter-spacing: -0.35px;
+  line-height: 1.34;
+  white-space: nowrap;
+}
