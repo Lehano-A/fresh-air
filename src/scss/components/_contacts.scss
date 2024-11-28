@@ -3,17 +3,13 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  width: 477px;
-
+  white-space: pre-line;
+  padding: 0 47px 0 15px;
+  margin-bottom: 62px;
   &__icon {
     width: 32px;
     height: 32px;
-    margin-right: 22px;
-  }
-
-  &__box-contact:first-child {
-    margin-left: 15px;
-    width: 250px;
+    margin-right: 20px;
   }
 
   &__box-contact {

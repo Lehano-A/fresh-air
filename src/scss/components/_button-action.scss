@@ -34,7 +34,15 @@
     }
   }
 
-  &--medium {
+  &_color_white {
+    background-color: rgba($white, 0.45);
+  }
+
+  &_color_green {
+    background-color: rgba($green-secondary-500, 0.25);
+  }
+
+  &_size_s {
     width: 210px;
     height: 75px;
     border-radius: 20px;
@@ -46,7 +54,19 @@
     }
   }
 
-  &--large {
+  &_size_m {
+    width: 229px;
+    height: 75px;
+    border-radius: 20px;
+
+    & > button {
+      width: 209px;
+      height: 55px;
+      border-radius: 17px;
+    }
+  }
+
+  &_size_xl {
     width: 477px;
     height: 115px;
     border-radius: 40px;

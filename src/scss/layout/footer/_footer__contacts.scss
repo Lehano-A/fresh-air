@@ -1,5 +1,5 @@
 @use '../../palette/palette' as *;
-@use '../../abstracts/inheritance/inheritance' as *;
+@use '../../abstracts/inheritance/all' as *;
 @use '../../abstracts/mixins/mixins' as *;
 @use './footer' as *;
 
@@ -28,7 +28,7 @@
   position: relative;
   height: 54px;
   align-items: center;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5;
   border-bottom: 1px $green-light-400 solid;
 
@@ -61,7 +61,7 @@
 .footer__work-time {
   position: relative;
   white-space: pre-line;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.42;
   margin: 13px 0 0 20px;
   padding-left: 17px;
@@ -82,7 +82,7 @@
 .footer__address {
   position: relative;
   white-space: pre-line;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.42;
   margin: 0 0 0 22px;
   padding: 2px 0 0 15px;

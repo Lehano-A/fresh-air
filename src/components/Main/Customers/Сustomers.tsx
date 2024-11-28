@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from '../../Slider/Slider';
+import Slider from '../../common/Slider/Slider';
 
 import gallery from './gallery';
 

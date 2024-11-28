@@ -1,6 +1,6 @@
 @use '../../palette/palette' as *;
 @use '../../abstracts/mixins/mixins' as *;
-@use '../../abstracts/inheritance/inheritance' as *;
+@use '../../abstracts/inheritance/all' as *;
 
 $margin-top-block: 19px;
 
@@ -11,6 +11,7 @@ $margin-top-block: 19px;
   display: grid;
   position: relative;
   column-gap: 20px;
+  font-size: 1.6rem;
   padding: 86px 135px 96px;
 
   &::before {

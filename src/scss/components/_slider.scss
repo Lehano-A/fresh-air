@@ -18,7 +18,7 @@
     &_prev,
     &_next {
       &::after {
-        background-image: url('../../images/Components/Slider/slider-button-active.svg');
+        background-image: url('../../images/components/Slider/slider-button-active.svg');
       }
       background-color: rgba($green-secondary-500, 0.25);
     }
@@ -36,7 +36,7 @@
       cursor: auto;
 
       &::after {
-        background-image: url('../../images/Components/Slider/slider-button-disabled.svg');
+        background-image: url('../../images/components/Slider/slider-button-disabled.svg');
       }
     }
   }

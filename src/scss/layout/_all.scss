@@ -1,2 +1,6 @@
-@forward 'header';
-@forward 'main';
+@forward './header/header';
+
+@forward './main/main';
+
+@forward './sections/all';
+@forward './footer/all';
