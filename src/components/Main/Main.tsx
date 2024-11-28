@@ -7,11 +7,13 @@ import About from './About/About';
 import Advantages from './Advantages/Advantages';
 import WorkScheme from './WorkScheme/WorkScheme';
 import Portfolio from './Portfolio/Portfolio';
-import Customers from './Сustomers/Сustomers';
+import Customers from './Customers/Сustomers';
+import Hero from './Hero/Hero';
 
 function Main() {
   return (
     <main className='main'>
+      <Hero />
       <ServicesProvided />
       <GalleryWorkingObjects />
       <CampaigningSteps />

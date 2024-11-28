@@ -1,7 +1,7 @@
 import React from 'react';
 import IconsList from './IconsList/IconsList';
 import DetailsList from './DetailsList/DetailsList';
-import ButtonContact from '../../ButtonContact/ButtonContact';
+import ButtonSubmit from '../../common/ButtonSubmit/ButtonSubmit';
 import ProductImages from './ProductImages/ProductImages';
 
 function Advantages() {
@@ -21,7 +21,7 @@ function Advantages() {
           близких.
         </p>
 
-        <ButtonContact
+        <ButtonSubmit
           name='заполнить заявку'
           variant='large'
         />

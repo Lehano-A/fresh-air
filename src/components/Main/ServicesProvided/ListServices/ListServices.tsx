@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   listForSystemVentilation,
   listForConditioning,
-} from '../../../../constants/listServicesProvided';
+} from '../listServicesProvided';
 
 interface DataList {
   contentImage: {

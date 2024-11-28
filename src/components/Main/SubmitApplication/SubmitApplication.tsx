@@ -1,5 +1,5 @@
 import React from 'react';
-import FormFeedback from '../../FormFeedback/FormFeedback';
+import FormFeedback from '../../common/FormFeedback/FormFeedback';
 
 function SubmitApplication() {
   return (

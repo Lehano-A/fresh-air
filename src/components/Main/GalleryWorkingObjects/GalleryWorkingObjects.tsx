@@ -1,5 +1,5 @@
 import React from 'react';
-import { listGalleryWorkingObjects } from '../../../constants/listGalleryWorkingObjects';
+import { listGalleryWorkingObjects } from './listGalleryWorkingObjects';
 import Card from './Card/Card';
 
 function GalleryWorkingObjects() {

@@ -1,7 +1,7 @@
 import React from 'react';
-import iconLightBulb from '../../../../images/Components/CampaigningSteps/icons/light-bulb.svg';
-import iconPad from '../../../../images/Components/CampaigningSteps/icons/pad.svg';
-import iconFan from '../../../../images/Components/CampaigningSteps/icons/fan.svg';
+import iconLightBulb from '../../../../images/components/CampaigningSteps/icons/light-bulb.svg';
+import iconPad from '../../../../images/components/CampaigningSteps/icons/pad.svg';
+import iconFan from '../../../../images/components/CampaigningSteps/icons/fan.svg';
 import Step from './Step/Step';
 
 function Steps() {

@@ -1,8 +1,8 @@
 import React from 'react';
-import CeilingSplitSystemImage from '../../../../images/Components/Advantages/content/ceiling-split-system.png';
-import AirFlowSchemeImage from '../../../../images/Components/Advantages/content/air-flow-scheme.png';
-import RoundTubeImage from '../../../../images/Components/Advantages/content/round-tube.png';
-import SquareTubeImage from '../../../../images/Components/Advantages/content/square-tube.png';
+import CeilingSplitSystemImage from '../../../../images/components/Advantages/content/ceiling-split-system.png';
+import AirFlowSchemeImage from '../../../../images/components/Advantages/content/air-flow-scheme.png';
+import RoundTubeImage from '../../../../images/components/Advantages/content/round-tube.png';
+import SquareTubeImage from '../../../../images/components/Advantages/content/square-tube.png';
 
 function ProductImages() {
   return (
