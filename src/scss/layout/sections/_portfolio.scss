@@ -52,10 +52,12 @@
   }
 
   &__slide {
-    position: relative;
     transform: translateX(-403px) !important;
+    width: 270px;
+    height: 456px;
 
     & > img {
+      width: 100%;
       border-radius: 35px;
       object-fit: cover;
     }
