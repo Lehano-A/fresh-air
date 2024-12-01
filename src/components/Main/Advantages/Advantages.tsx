@@ -23,7 +23,7 @@ function Advantages() {
 
         <ButtonSubmit
           name='заполнить заявку'
-          variant='large'
+          variant='xl'
         />
       </div>
 
