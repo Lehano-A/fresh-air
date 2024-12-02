@@ -6,7 +6,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 100px 0 0 135px;
+  justify-content: space-between;
+  width: 1170px;
+  margin: 0 auto;
 
   &::before {
     content: '';

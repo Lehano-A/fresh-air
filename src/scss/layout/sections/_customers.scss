@@ -4,11 +4,12 @@
 .customers {
   position: relative;
   display: flex;
+  justify-content: space-between;
   height: 515px;
   max-width: 100%;
   padding-top: 156px;
   overflow: hidden;
-  border-bottom: 2px solid rgbq$green-neutral-500;
+  border-bottom: 2px solid rgba($green-neutral-500, 0.29);
 
   &::before {
     content: '';
@@ -22,6 +23,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+
+  &__wrapper {
+    display: flex;
   }
 
   &__text-box {

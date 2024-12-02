@@ -2,8 +2,10 @@
 @use './footer' as *;
 
 .footer__application {
-  grid-column: 10/13;
+  grid-column: 9/13;
   grid-row: 1/3;
+  justify-self: end;
+  max-width: 290px;
   margin-top: $margin-top-block;
 }
 

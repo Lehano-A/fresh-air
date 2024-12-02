@@ -117,6 +117,7 @@ $corner-radius-bookmark: 40px;
     width: 676px;
     background-color: $green-light-200;
     border-radius: $corner-radius 0px 0px $corner-radius;
+    padding-left: 40px;
 
     &-image {
       width: 240px;
@@ -130,7 +131,7 @@ $corner-radius-bookmark: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 380px;
+    width: 356px;
     height: 428px;
     list-style: none;
     font-size: 20px;

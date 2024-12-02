@@ -2,6 +2,11 @@
 @use '../../palette/palette' as *;
 
 .work-scheme {
+  &__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
   &__steps {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

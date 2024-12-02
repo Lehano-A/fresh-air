@@ -5,8 +5,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 0;
-  padding-left: 135px;
   overflow: hidden;
 
   &::before {
@@ -19,6 +17,12 @@
     height: 100%;
     background-image: url('../../../images//components/GalleryWorkingObjects/bg/lung.svg');
     background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
   }
 
   &__subtitle {

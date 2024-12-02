@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import Slider from '../../common/Slider/Slider';
 import gallery from './gallery';
+import CommonMarginLeftContext from '../../../context/commonMarginLeftContext';
 
 function Portfolio() {
+  const commonMarginLeft = useContext(CommonMarginLeftContext);
+  const portfolioRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (portfolioRef.current) {
+      portfolioRef.current.style.marginLeft = commonMarginLeft;
+    }
+  }, [commonMarginLeft]);
+
   return (
-    <section className='portfolio'>
+    <section
+      className='portfolio mb-100'
+      ref={portfolioRef}
+    >
       <div className='portfolio__box-title-text'>
         <h2 className='portfolio__title'>Портфолио и процесс работы</h2>
         <p className='portfolio__text'>

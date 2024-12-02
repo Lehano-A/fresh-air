@@ -1,7 +1,7 @@
 @use '../../palette/palette' as *;
 
 .footer__about {
-  grid-column: 1/5;
+  grid-column: 1/6;
   grid-row: 2/10;
   max-width: 406px;
 }
@@ -12,7 +12,7 @@
   color: $green-neutral-500;
   padding-bottom: 25px;
   border-bottom: 1px $green-secondary-500 solid;
-  margin: clamp(10px, 2vw, 32px) 0;
+  margin: clamp(10px, 3vw, 32px) 0;
 }
 
 .footer__slogan {

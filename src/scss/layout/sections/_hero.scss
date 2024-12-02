@@ -2,8 +2,8 @@
 @use '../../../scss/abstracts/mixins/mixins';
 
 .hero {
-  position: relative;
   width: 100%;
+  position: relative;
   overflow: hidden;
   background-image: linear-gradient(
     rgba(241, 241, 241, 1),
@@ -12,6 +12,7 @@
     rgba(230, 232, 231, 1),
     rgba(222, 226, 225, 1)
   );
+  padding: 0 135px;
 
   &::after {
     content: '';
@@ -27,20 +28,19 @@
     background-repeat: no-repeat;
   }
 
-  &__box {
+  &__wrapper {
     position: relative;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
     z-index: 1;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    margin: 158px auto 66px;
-    max-width: 1170px;
-
-    & > div {
-      width: 520px;
-    }
+    margin: 158px 0 66px;
+    width: 520px;
   }
 
   &__title {

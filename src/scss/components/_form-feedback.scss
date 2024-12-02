@@ -10,7 +10,11 @@
   }
 }
 
-.form-feedback_layout_footer {
+.form-feedback_submit-application {
+  flex-direction: row;
+}
+
+.form-feedback_footer {
   flex-direction: column;
   align-items: start;
 

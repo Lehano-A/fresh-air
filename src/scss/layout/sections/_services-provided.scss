@@ -1,18 +1,16 @@
 @use '../../abstracts/mixins/mixins' as *;
+@use '../../abstracts/inheritance/grid-columns-layout';
 
 .services-provided {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: space-between;
+  padding-left: 135px;
 
-  &__info-text {
+  &__description {
     @include text();
-    margin-right: auto;
     max-width: 444px;
-
-    & p {
-      margin-top: 27px;
-    }
+    margin-right: 110px;
   }
 
   &__subtitle {
@@ -26,5 +24,9 @@
     &::after {
       @include long-hyphen(245px, 2px, 0 0 10px 35px);
     }
+  }
+
+  &__text {
+    margin-top: 27px;
   }
 }

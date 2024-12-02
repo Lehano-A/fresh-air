@@ -5,14 +5,16 @@
 $margin-top-block: 19px;
 
 .footer {
-  @extend .grid-columns-layout_large;
-
-  grid-template-rows: repeat(2, auto);
-  display: grid;
   position: relative;
-  column-gap: 20px;
+  display: flex;
+  justify-content: center;
   font-size: 1.6rem;
-  padding: 86px 135px 96px;
+  padding: 86px 0 94px;
+
+  &__box-logo-about {
+    display: flex;
+    flex-direction: column;
+  }
 
   &::before {
     content: '';
@@ -25,5 +27,16 @@ $margin-top-block: 19px;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+  }
+
+  &__wrapper {
+    @extend .grid-columns-layout_large;
+
+    grid-template-rows: repeat(2, auto);
+    display: grid;
+    column-gap: 20px;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 135px;
   }
 }
