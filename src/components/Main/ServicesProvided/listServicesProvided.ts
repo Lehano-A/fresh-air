@@ -5,6 +5,7 @@ import iconHumidity from '../../../images/icons/listServices/systemVentilation/h
 import iconAirCooler from '../../../images/icons/listServices/systemVentilation/air-cooler.svg';
 import iconVentilation from '../../../images/icons/listServices/systemVentilation/ventilation.svg';
 import contentImageSystemVentilation from '../../../images/components/ListServices/system-ventilation.jpg';
+import contentMinImageSystemVentilation from '../../../images/components/ListServices/system-ventilation-min.jpg';
 
 import iconAirConditioner from '../../../images/icons/listServices/conditioning/air-conditioner.svg';
 import iconAirFilter from '../../../images/icons/listServices/conditioning/air-filter.svg';
@@ -12,10 +13,14 @@ import iconCeiling from '../../../images/icons/listServices/conditioning/ceiling
 import iconCondenser from '../../../images/icons/listServices/conditioning/condenser.svg';
 import iconSplit from '../../../images/icons/listServices/conditioning/split.svg';
 import contentImageConditioning from '../../../images/components/ListServices/conditioning.jpeg';
+import contentMinImageConditioning from '../../../images/components/ListServices/conditioning-min.jpg';
 
 const listForSystemVentilation = {
   contentImage: {
-    path: contentImageSystemVentilation,
+    size: {
+      default: contentImageSystemVentilation,
+      min: contentMinImageSystemVentilation,
+    },
     alt: 'Изображение, на котором рабочий монтирует вентиляцию',
   },
 
@@ -61,7 +66,10 @@ const listForSystemVentilation = {
 
 const listForConditioning = {
   contentImage: {
-    path: contentImageConditioning,
+    size: {
+      default: contentImageConditioning,
+      min: contentMinImageConditioning,
+    },
     alt: 'Изображение смонтированного блока за окном квартиры в новостройке',
   },
   data: [

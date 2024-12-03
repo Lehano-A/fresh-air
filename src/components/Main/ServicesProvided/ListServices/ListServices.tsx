@@ -6,7 +6,10 @@ import {
 
 interface DataList {
   contentImage: {
-    path: string;
+    size: {
+      default: string;
+      min: string;
+    };
     alt: string;
   };
 
@@ -43,18 +46,23 @@ function ListServices() {
     <div className='list-services'>
       <div className='list-services__bookmarks'>
         <button
-          className={`list-services__bookmarks-button ${isActive.buttonSystemVentilation ? 'list-services__bookmarks-button--active' : ''}`}
+          className={`list-services__bookmark list-services__bookmark_system-ventilation ${isActive.buttonSystemVentilation ? 'list-services__bookmark_active' : ''}`}
           name='buttonSystemVentilation'
           onClick={handleOnClick}
         >
-          <span> Система Вентиляции</span>
+          <span className='list-services__bookmark-name'>
+            Система Вентиляции
+          </span>
         </button>
+
         <button
-          className={`list-services__bookmarks-button ${isActive.buttonConditioning ? 'list-services__bookmarks-button--active' : ''}`}
+          className={`list-services__bookmark list-services__bookmark_conditioning ${isActive.buttonConditioning ? 'list-services__bookmark_active' : ''}`}
           name='buttonConditioning'
           onClick={handleOnClick}
         >
-          <span>Кондиционирование</span>
+          <span className='list-services__bookmark-name'>
+            Кондиционирование
+          </span>
         </button>
       </div>
 
@@ -78,11 +86,22 @@ function ListServices() {
             );
           })}
         </ul>
-        <img
-          className='list-services__box-list-image'
-          src={dataList.contentImage.path}
-          alt={dataList.contentImage.alt}
-        />
+
+        <picture className='list-services__box-image-list'>
+          <source
+            srcSet={dataList.contentImage.size.default}
+            media='(min-width: 1440px)'
+          />
+          <source
+            srcSet={dataList.contentImage.size.min}
+            media='(min-width: 320px)'
+          />
+          <img
+            className='list-services__image-list'
+            src={dataList.contentImage.size.default}
+            alt={dataList.contentImage.alt}
+          />
+        </picture>
       </div>
     </div>
   );

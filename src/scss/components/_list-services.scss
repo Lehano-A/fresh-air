@@ -10,8 +10,6 @@ $corner-radius-bookmark: 40px;
   width: 33px;
   height: 33px;
   background-repeat: no-repeat;
-  width: 33px;
-  height: 33px;
 }
 
 .list-services {
@@ -20,91 +18,70 @@ $corner-radius-bookmark: 40px;
 
   &__bookmarks {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    height: 486px;
-    border-top-left-radius: $corner-radius-bookmark;
-    border-bottom-left-radius: $corner-radius-bookmark;
     background-color: $green-light-200;
-    width: 75px;
+  }
 
-    &-button {
+  &__bookmark {
+    display: flex;
+    padding: 25px 0;
+    color: $green-neutral-500;
+    background-color: $white;
+    border: none;
+    cursor: pointer;
+
+    &-name {
       display: flex;
-      justify-content: center;
-      width: 65px;
-      height: 233px;
-      padding: 25px 0;
-      color: $green-neutral-500;
-      background-color: $white;
-      border: none;
-      cursor: pointer;
+      align-items: center;
+      font-size: 13px;
+      white-space: nowrap;
+      line-height: 1.21;
+    }
 
-      & span {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        white-space: nowrap;
+    /* первая закладка */
+    &_system-ventilation {
+      letter-spacing: 0.3px;
+
+      &::after {
+        @include icon-button();
+      }
+    }
+
+    /* вторая закладка */
+    &_conditioning {
+      letter-spacing: 0.6px;
+
+      &::after {
+        @include icon-button();
+
         transform: rotate(180deg);
-        writing-mode: vertical-lr;
-        font-size: 13px;
-        line-height: 1.21;
       }
+    }
 
-      /* первая закладка */
-      &:first-child {
-        border-top-left-radius: $corner-radius-bookmark;
-        letter-spacing: 0.3px;
+    /* выбранная закладка */
+    &_active {
+      @include active-button-action();
+      color: $white;
 
-        & span::after {
-          @include icon-button();
-          content: '';
-          background-image: url('../../images/icons/listServices/systemVentilation/fan-2.svg');
-        }
+      &::after {
+        filter: $filter-white;
       }
+    }
 
-      /* вторая закладка */
-      &:last-child {
-        border-bottom-left-radius: $corner-radius-bookmark;
-        letter-spacing: 0.6px;
+    /* неактивная закладка */
+    &:not(&_active) {
+      color: $green-neutral-500;
 
-        & span::after {
-          @include icon-button();
-          content: '';
-          background-image: url('../../images/icons/listServices/conditioning/air-conditioning.svg');
-          transform: rotate(180deg);
-        }
+      &::after {
+        filter: $filter-green-neutral-500;
       }
+    }
 
-      /* выбранная закладка */
-      &--active {
-        @include active-button-action();
-        & > span {
-          color: $white;
+    /* ховер неактивной закладки */
+    &:hover:not(&_active) {
+      color: $green-accent-500;
 
-          &:last-child::after {
-            filter: $filter-white;
-          }
-        }
-      }
-
-      /* неактивная закладка */
-      &:not(&--active) > span {
-        color: $green-neutral-500;
-
-        &:last-child::after {
-          filter: $filter-green-neutral-500;
-        }
-      }
-
-      /* ховер неактивной закладки */
-      &:hover:not(&--active) > span {
-        color: $green-accent-500;
-
-        &:last-child::after {
-          filter: $filter-green-accent-500;
-        }
+      &::after {
+        filter: $filter-green-accent-500;
       }
     }
   }
@@ -118,13 +95,11 @@ $corner-radius-bookmark: 40px;
     background-color: $green-light-200;
     border-radius: $corner-radius 0px 0px $corner-radius;
     padding-left: 40px;
+  }
 
-    &-image {
-      width: 240px;
-      height: 655px;
-      border-radius: $corner-radius 0px 0px $corner-radius;
-      box-shadow: -4px 0px 8px 0px rgba($green-dark-800, 0.3);
-    }
+  &__image-list {
+    width: 100%;
+    height: 100%;
   }
 
   &__list {
@@ -155,6 +130,144 @@ $corner-radius-bookmark: 40px;
         padding: 7px;
         border-radius: 10px;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .list-services {
+    flex-direction: column;
+
+    &__box-list {
+      flex-direction: column;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: $corner-radius-bookmark;
+      padding: 25px 15px 15px 40px;
+    }
+
+    &__bookmarks {
+      flex-direction: row-reverse;
+      width: 100%;
+      height: 80px;
+      border-top-left-radius: $corner-radius-bookmark;
+      border-top-right-radius: $corner-radius-bookmark;
+      padding: 15px 15px 0;
+    }
+
+    &__bookmark {
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 65px;
+
+      &::after {
+        content: none; /* убираем иконки */
+      }
+
+      &-name {
+        transform: rotate(360deg);
+        writing-mode: horizontal-tb;
+      }
+
+      &_system-ventilation {
+        border-top-right-radius: $corner-radius-bookmark;
+      }
+
+      &_conditioning {
+        border-top-left-radius: $corner-radius-bookmark;
+      }
+    }
+
+    &__list {
+      margin-bottom: 20px;
+    }
+
+    &__box-image-list {
+      width: 345px;
+      height: 170px;
+    }
+
+    &__image-list {
+      border-radius: 50px;
+      box-shadow: 0px -4px 8px 0px rgba($green-dark-800, 0.35);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-services {
+    flex-direction: row;
+
+    &__box-list {
+      min-width: 375px;
+      width: 100%;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $corner-radius-bookmark;
+      padding: 30px 30px 15px 30px;
+    }
+
+    &__bookmarks {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      width: 75px;
+      height: 486px;
+      border-top-right-radius: 0;
+      border-top-left-radius: $corner-radius-bookmark;
+      border-bottom-left-radius: $corner-radius-bookmark;
+      padding: 10px 0 10px 10px;
+    }
+
+    &__bookmark {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 65px;
+      height: 233px;
+
+      &-name {
+        transform: rotate(180deg);
+        writing-mode: vertical-lr;
+      }
+
+      &_system-ventilation {
+        border-top-right-radius: 0;
+        border-top-left-radius: $corner-radius-bookmark;
+
+        &::after {
+          content: '';
+          background-image: url('../../images/icons/listServices/systemVentilation/fan-2.svg');
+        }
+      }
+
+      &_conditioning {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: $corner-radius-bookmark;
+
+        &::after {
+          content: '';
+          background-image: url('../../images/icons/listServices/conditioning/air-conditioning.svg');
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list-services {
+    &__box-list {
+      flex-direction: row;
+      padding: 0 0 0 40px;
+    }
+
+    &__box-image-list {
+      width: 240px;
+      height: 655px;
+    }
+
+    &__image-list {
+      box-shadow: -4px 0px 8px 0px rgba($green-dark-800, 0.3);
+      border-radius: $corner-radius 0px 0px $corner-radius;
     }
   }
 }

@@ -10,7 +10,7 @@
   &__description {
     @include text();
     max-width: 444px;
-    margin-right: 110px;
+    margin-right: clamp(70px, 5%, 110px);
   }
 
   &__subtitle {
