@@ -1,6 +1,6 @@
 @use '../../palette/palette' as *;
 @use '../../abstracts/variables' as *;
-@use '../../abstracts/mixins/mixins' as *;
+@use '../../abstracts/inheritance/all' as *;
 
 .submit-application {
   position: relative;
@@ -34,7 +34,7 @@
   }
 
   &__title {
-    @include subtitle-h2;
+    @extend .subtitle-h2;
     text-transform: none;
     font-size: 3.5rem;
     line-height: 1.28;

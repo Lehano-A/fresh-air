@@ -1,3 +1,4 @@
+@use '../../abstracts/inheritance/all' as *;
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../abstracts/inheritance/grid-columns-layout';
 
@@ -9,12 +10,13 @@
 
   &__description {
     @include text();
+
     max-width: 444px;
     margin-right: clamp(70px, 5%, 110px);
   }
 
   &__subtitle {
-    @include subtitle-h2;
+    @extend .subtitle-h2;
 
     & span {
       display: inline-block;

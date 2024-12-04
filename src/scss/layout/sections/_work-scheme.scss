@@ -1,3 +1,4 @@
+@use '../../abstracts/inheritance/all' as *;
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../palette/palette' as *;
 
@@ -22,7 +23,7 @@
   }
 
   &__title {
-    @include subtitle-h2;
+    @extend .subtitle-h2;
     margin-bottom: 17px;
   }
 

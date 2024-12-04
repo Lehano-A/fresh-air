@@ -1,5 +1,5 @@
 @use '../../palette/palette' as *;
-@use '../../abstracts/mixins/mixins' as *;
+@use '../../abstracts/inheritance/all' as *;
 
 .advantages {
   display: flex;
@@ -16,7 +16,7 @@
   }
 
   &__subtitle {
-    @include subtitle-h2;
+    @extend .subtitle-h2;
     white-space: pre;
   }
 

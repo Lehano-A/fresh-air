@@ -1,4 +1,4 @@
-@use '../../abstracts/mixins/mixins' as *;
+@use '../../abstracts/inheritance/all' as *;
 @use '../../palette/palette' as *;
 
 .customers {
@@ -34,7 +34,7 @@
     margin: 0 66px 0 135px;
 
     & > h2 {
-      @include subtitle-h2;
+      @extend .subtitle-h2;
       position: relative;
       width: 622px;
       margin-bottom: 32px;

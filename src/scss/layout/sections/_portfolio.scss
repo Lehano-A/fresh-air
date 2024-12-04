@@ -1,4 +1,4 @@
-@use '../../abstracts/mixins/mixins' as *;
+@use '../../abstracts/inheritance/all' as *;
 @use '../../palette/palette' as *;
 
 .portfolio {
@@ -31,7 +31,7 @@
   }
 
   &__title {
-    @include subtitle-h2;
+    @extend .subtitle-h2;
     width: 394px;
     margin-right: 135px;
   }
