@@ -1,6 +1,6 @@
 import React from 'react';
 import Features from './Features/Features';
-import Achievements from './Achievements';
+import Achievements from './Achievements/Achievements';
 
 function About() {
   return (
