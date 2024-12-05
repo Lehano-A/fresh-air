@@ -2,14 +2,14 @@ import React from 'react';
 
 function CompanyActivities() {
   return (
-    <div className='company-activities'>
-      <div className='company-activities__decoration-box'>
-        <div className='company-activities__decoration-figure'></div>
-        <div className='company-activities__decoration-figure'></div>
-        <div className='company-activities__decoration-figure'></div>
+    <div className='hero__company-activities'>
+      <div className='hero__decoration-box'>
+        <div className='hero__decoration-figure'></div>
+        <div className='hero__decoration-figure'></div>
+        <div className='hero__decoration-figure'></div>
       </div>
 
-      <p className='company-activities__text'>
+      <p className='hero__description-activities'>
         Проектирование, поставка и монтаж систем вентиляции и кондиционирования
       </p>
     </div>
