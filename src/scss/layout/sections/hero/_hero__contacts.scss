@@ -1,0 +1,154 @@
+@use '../../../palette/palette' as *;
+
+$font-size-contacts: 1.4rem;
+
+.hero {
+  &__contacts {
+    max-width: 477px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 47px 0 15px;
+    margin-bottom: 62px;
+  }
+
+  &__box-number-phones,
+  &__address {
+    color: $green-neutral-700;
+    font-style: normal;
+  }
+
+  &__wrapper-number-phones {
+    margin: 0;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    white-space: normal;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('/images/common/icons/pin.svg');
+      background-size: contain;
+    }
+  }
+
+  &__number-phone {
+    display: flex;
+    line-height: 1.5;
+    text-decoration: none;
+    color: $green-neutral-700;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  $font-size: 1.4rem;
+
+  .hero {
+    &__contacts {
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+      margin-bottom: 45px;
+    }
+
+    &__box-number-phones {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.4rem;
+    }
+
+    &__wrapper-number-phones {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__number-phone {
+      font-size: $font-size-contacts;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+        background-image: url('/images/common/icons/telephone-handle.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &__address {
+      font-size: $font-size-contacts;
+      margin-bottom: 30px;
+
+      &::before {
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  $size-icon: 32px;
+  $font-size-contacts: 1.6rem;
+
+  .hero {
+    &__contacts {
+      flex-direction: row;
+      margin-bottom: 62px;
+    }
+
+    &__box-number-phones {
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: $size-icon;
+        height: $size-icon;
+        margin-right: 20px;
+        background-image: url('/images/common/icons/telephone-handle.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &__wrapper-number-phones {
+      flex-direction: column;
+      width: auto;
+    }
+
+    &__number-phone {
+      display: block;
+      font-size: $font-size-contacts;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &__address {
+      font-size: $font-size-contacts;
+      white-space: pre-line;
+      line-height: 1.5;
+      margin: 0;
+
+      &::before {
+        width: $size-icon;
+        height: $size-icon;
+      }
+    }
+  }
+}

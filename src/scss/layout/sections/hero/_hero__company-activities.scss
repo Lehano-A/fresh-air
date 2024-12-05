@@ -1,0 +1,95 @@
+@use '../../../abstracts/mixins/mixins';
+@use '../../../palette/palette' as *;
+@use 'sass:map';
+
+$font-size-description: 22px;
+
+.hero {
+  &__company-activities {
+    display: flex;
+    margin-bottom: 51px;
+  }
+
+  &__decoration-box {
+    margin-right: 12px;
+  }
+
+  &__description-activities {
+    font-size: $font-size-description;
+    line-height: 1.45;
+    margin: 0;
+    color: $green-neutral-500;
+  }
+
+  &__decoration-box {
+    display: inline-block;
+    position: relative;
+    flex-shrink: 0;
+    top: calc($font-size-description / 2);
+  }
+
+  &__decoration-figure {
+    &:nth-child(1n):not(:last-child) {
+      margin-right: 10px;
+    }
+    &:nth-child(1) {
+      @include mixins.donut-figure(
+        rgba($green-secondary-500, 0.45),
+        rgba($green-secondary-500, 0)
+      );
+    }
+
+    &:nth-child(2) {
+      @include mixins.donut-figure(
+        rgba($green-secondary-500, 0.75),
+        rgba($green-secondary-500, 0.45)
+      );
+    }
+
+    &:nth-child(3) {
+      @include mixins.donut-figure(
+        rgba($green-secondary-500, 1),
+        rgba($green-secondary-500, 0.75)
+      );
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .hero {
+    $font-size-description: 1.8rem;
+
+    &__company-activities {
+      width: 100%;
+      margin-bottom: 29px;
+    }
+
+    &__decoration-box {
+      margin-right: 15px;
+    }
+
+    &__description-activities {
+      font-size: $font-size-description;
+      line-height: 1.55;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  $font-size-description: 2.2rem;
+
+  .hero {
+    &__company-activities {
+      margin-bottom: 52px;
+    }
+
+    &__decoration-box {
+      margin-right: 12px;
+    }
+
+    &__description-activities {
+      font-size: $font-size-description;
+      line-height: 1.45;
+    }
+  }
+}
