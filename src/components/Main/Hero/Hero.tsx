@@ -3,11 +3,11 @@ import ButtonSubmit from '../../common/ButtonSubmit/ButtonSubmit';
 import CompanyActivities from './CompanyActivities/CompanyActivities';
 import Contacts from './Contacts/Contacts';
 import { useContext, useEffect, useRef } from 'react';
-import InnerWidthWindowContext from '../../../context/innerWidthWindowContext';
+import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
 import { regexDigit } from '../../../constants';
 
-const minBottom = -472;
-const maxBottom = -668;
+const MIN_BOTTOM = -472;
+const MAX_BOTTOM = -668;
 
 function Hero() {
   const bgHeroRef = useRef<HTMLDivElement>(null);
@@ -42,16 +42,16 @@ function Hero() {
       if (isFirstRender.current) {
         if (innerWidth >= 375 && innerWidth <= 767) {
           isFirstRender.current = false;
-          return minBottom - (innerWidth - 375) / 2;
+          return MIN_BOTTOM - (innerWidth - 375) / 2;
         }
       }
 
       if (innerWidth <= 374) {
-        return minBottom;
+        return MIN_BOTTOM;
       }
 
       if (innerWidth >= 768) {
-        return maxBottom;
+        return MAX_BOTTOM;
       }
 
       const currentBottom = getCurrentBottomElement(bgHeroRef);
