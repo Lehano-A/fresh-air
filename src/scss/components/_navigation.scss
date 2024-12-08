@@ -1,0 +1,49 @@
+@use '../palette/palette' as *;
+
+.navigation {
+  display: flex;
+
+  &_hidden {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+
+    &_direction_row {
+      flex-direction: row;
+    }
+
+    &_direction_column {
+      flex-direction: column;
+    }
+
+    &_align-items_center {
+      align-items: center;
+    }
+
+    &_justify-content_space-between {
+      justify-content: space-between;
+    }
+
+    &-item {
+      cursor: pointer;
+
+      & a {
+        text-decoration: none;
+        color: $green-primary-900;
+      }
+
+      &_margin-right_40 {
+        &:nth-child(1n):not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
