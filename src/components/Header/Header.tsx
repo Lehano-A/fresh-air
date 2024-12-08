@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import ButtonSubmit from '../common/ButtonSubmit/ButtonSubmit';
 import Logo from '../common/Logo/Logo';
-import Navigation from '../Main/Hero/Navigation/Navigation';
+import Navigation from './Navigation/Navigation';
 
 function Header() {
   const [scrollY, setScrollY] = useState(window.scrollY);
