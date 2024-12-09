@@ -1,6 +1,7 @@
 @use '../palette/palette' as *;
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins/mixins' as *;
+@use '../abstracts/inheritance/all';
 @use 'sass:map';
 
 .button-action {
@@ -9,7 +10,8 @@
   background-color: rgba($white, 0.45);
 
   &__button {
-    @include active-button-action();
+    @extend .active-button-action;
+
     opacity: 100%;
     position: absolute;
     top: 50%;
@@ -22,10 +24,11 @@
     line-height: 1.37;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    padding: 0;
     cursor: pointer;
 
     &:hover {
-      @include hover-button-action();
+      background-color: $green-accent-500;
     }
 
     &:disabled {
@@ -34,12 +37,24 @@
     }
   }
 
-  &_color_white {
+  &_bg-color_white {
     background-color: rgba($white, 0.45);
   }
 
-  &_color_green {
+  &_bg-color_green {
     background-color: rgba($green-secondary-500, 0.25);
+  }
+
+  &_size_xs {
+    width: 69px;
+    height: 69px;
+    border-radius: 20px;
+
+    & > button {
+      width: 49px;
+      height: 49px;
+      border-radius: 15px;
+    }
   }
 
   &_size_s {
@@ -77,6 +92,72 @@
       height: 85px;
       border-radius: 30px;
       font-size: 17px;
+    }
+  }
+
+  &_in-navigation-menu {
+    & > button {
+      box-shadow: 0px 4px 10px 0px rgba($green-primary-900, 0.15);
+      background-image: url('/images/layout/header/icons/menu.svg');
+      background-size: 25px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+        background-color: $gray-200;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  $padding-bg-button-action: 15px;
+
+  .button-action {
+    &_size_xl {
+      width: 319px;
+      height: 90px;
+      border-radius: 30px;
+      padding: $padding-bg-button-action;
+
+      & > button {
+        width: calc(100% - $padding-bg-button-action * 2);
+        height: calc(100% - $padding-bg-button-action * 2);
+        border-radius: 20px;
+        letter-spacing: 0;
+      }
+    }
+
+    &_in-header {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  $padding-bg-button-action: 15px;
+
+  .button-action {
+    &_size_xl {
+      width: 477px;
+      height: 115px;
+      border-radius: 40px;
+      padding: $padding-bg-button-action;
+
+      & > button {
+        width: calc(100% - $padding-bg-button-action * 2);
+        height: calc(100% - $padding-bg-button-action * 2);
+        border-radius: 30px;
+        letter-spacing: 0.55px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .button-action {
+    &_in-header {
+      display: block;
     }
   }
 }
