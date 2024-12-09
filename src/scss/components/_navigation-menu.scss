@@ -1,0 +1,30 @@
+@use '../palette/palette' as *;
+
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 50px;
+
+  &_active {
+    width: 254px;
+    min-height: 484px;
+    border-radius: 30px;
+    background-color: $green-light-200;
+  }
+
+  &__wrapper-button-menu {
+    position: absolute;
+    right: 28px;
+    top: 14px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation-menu {
+    display: none;
+  }
+}
