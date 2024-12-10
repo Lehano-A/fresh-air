@@ -9,11 +9,6 @@
   border-bottom-right-radius: 70px;
   transition: background-color 0.1s ease;
   z-index: 100;
-
-  &__logo {
-    width: 168px;
-    height: 53px;
-  }
 }
 
 @media screen and (min-width: 375px) {
@@ -22,6 +17,11 @@
     top: 0;
     left: 0;
     padding: 26px 28px 20px;
+
+    &__box-logo {
+      width: 168px;
+      height: 53px;
+    }
 
     &__box-navigation {
       display: none;
@@ -39,6 +39,11 @@
 
     &_bg-color_green {
       background-color: $green-light-200;
+    }
+
+    &__box-logo {
+      width: 196px;
+      height: 61px;
     }
 
     &__box-navigation {

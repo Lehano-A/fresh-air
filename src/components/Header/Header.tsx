@@ -22,7 +22,9 @@ function Header() {
 
   return (
     <header className={`header ${bgColorClass}`}>
-      <Logo className='header__logo' />
+      <div className='header__box-logo'>
+        <Logo />
+      </div>
 
       <div className='header__box-navigation'>
         <Navigation
