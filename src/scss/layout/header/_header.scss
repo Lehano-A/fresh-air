@@ -1,45 +1,49 @@
 @use '../../palette/palette' as *;
 
 .header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 19px 45px 20px;
+  width: 100%;
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
-  z-index: 100;
   transition: background-color 0.1s ease;
+  z-index: 100;
 
-  &_bg-color {
-    background-color: $green-light-200;
+  &__logo {
+    width: 168px;
+    height: 53px;
   }
+}
 
-  &__nav {
-    flex-shrink: 0;
-    max-width: 646px;
-    width: 100%;
+@media screen and (min-width: 375px) {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 26px 28px 20px;
 
-    &-list {
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      font-size: 15px;
-      padding: 0;
-      margin: 0;
+    &__box-navigation {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 26px 45px 20px;
+
+    &_bg-color_green {
+      background-color: $green-light-200;
     }
 
-    &-item-list {
-      cursor: pointer;
-
-      & a {
-        text-decoration: none;
-        color: $green-primary-900;
-      }
+    &__box-navigation {
+      display: flex;
+      justify-content: end;
     }
   }
 }

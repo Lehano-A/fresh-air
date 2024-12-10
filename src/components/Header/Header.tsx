@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import ButtonSubmit from '../common/ButtonSubmit/ButtonSubmit';
+import ButtonContact from '../common/ButtonAction/ButtonAction';
 import Logo from '../common/Logo/Logo';
-import Navigation from './Navigation/Navigation';
+import Navigation from '../common/Navigation/Navigation';
 
 function Header() {
   const [scrollY, setScrollY] = useState(window.scrollY);
@@ -17,19 +17,27 @@ function Header() {
     return () => changeBgColor();
   }, []);
 
-  const bgColorClass = scrollY > 0 ? 'header_bg-color' : '';
+  const bgColorClass = scrollY > 0 ? 'header_bg-color_green' : '';
   const outerBgColorButtonSubmit = scrollY > 0 ? 'green' : 'white';
 
   return (
-    <div className={`header ${bgColorClass}`}>
-      <Logo />
-      <Navigation />
-      <ButtonSubmit
+    <header className={`header ${bgColorClass}`}>
+      <Logo className='header__logo' />
+
+      <div className='header__box-navigation'>
+        <Navigation
+          listJustifyContent='space-between'
+          listItemMarginRight={40}
+        />
+      </div>
+
+      <ButtonContact
+        layout='header'
         name='связаться'
-        variant='s'
+        size='s'
         outerBgColor={outerBgColorButtonSubmit}
       />
-    </div>
+    </header>
   );
 }
 
