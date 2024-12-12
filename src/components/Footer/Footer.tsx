@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className='footer'>
       <div className='footer__wrapper'>
-        <Logo styleClass='footer__logo' />
+        <Logo />
         <div className='footer__about'>
           <p className='footer__description'>
             Компания "Pascal Vent" входит в число лучших специализированных
@@ -41,7 +41,7 @@ function Footer() {
           <h2 className='footer__application-title'>Заполнить заявку</h2>
           <FormFeedback
             layoutClass='footer'
-            buttonSubmitStyle={{ variant: 'm' }}
+            buttonSubmitStyle={{ size: 'm' }}
           />
         </div>
       </div>

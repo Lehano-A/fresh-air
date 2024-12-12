@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from 'react';
 import Slider from '../../common/Slider/Slider';
 
 import gallery from './gallery';
-import CommonMarginLeftContext from '../../../context/commonMarginLeftContext';
+import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
 
 function Customers() {
   const commonMarginLeft = useContext(CommonMarginLeftContext);

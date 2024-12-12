@@ -1,5 +1,5 @@
 import Slogan from './Slogan/Slogan';
-import ButtonSubmit from '../../common/ButtonSubmit/ButtonSubmit';
+import ButtonAction from '../../common/ButtonAction/ButtonAction';
 import CompanyActivities from './CompanyActivities/CompanyActivities';
 import Contacts from './Contacts/Contacts';
 import { useContext, useEffect, useRef } from 'react';
@@ -83,9 +83,9 @@ function Hero() {
           <CompanyActivities />
           <Contacts />
 
-          <ButtonSubmit
+          <ButtonAction
             name='оставить заявку'
-            variant='xl'
+            size='xl'
           />
         </div>
       </div>

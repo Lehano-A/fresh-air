@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import FormFeedback from '../../common/FormFeedback/FormFeedback';
-import CommonMarginLeftContext from '../../../context/commonMarginLeftContext';
+import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
 
 function SubmitApplication() {
   const commonMarginLeft = useContext(CommonMarginLeftContext);
@@ -24,7 +24,7 @@ function SubmitApplication() {
 
         <FormFeedback
           layoutClass='submit-application'
-          buttonSubmitStyle={{ variant: 'm', disabled: true }}
+          buttonSubmitStyle={{ size: 'm', disabled: true }}
         />
       </div>
     </section>

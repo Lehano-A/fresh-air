@@ -1,17 +1,17 @@
 import React from 'react';
-import ButtonSubmit from '../ButtonSubmit/ButtonSubmit';
+import ButtonAction, { ButtonActionProps } from '../ButtonAction/ButtonAction';
 import InputText from '../InputText/InputText';
 
 interface FormFeedbackProps {
   layoutClass?: string;
   buttonSubmitStyle?: {
     disabled?: boolean;
-    variant?: string;
+    size?: ButtonActionProps['size'];
   };
 }
 
 function FormFeedback({ layoutClass, buttonSubmitStyle }: FormFeedbackProps) {
-  const { variant = '', disabled = false } = buttonSubmitStyle || {};
+  const { size, disabled = false } = buttonSubmitStyle || {};
 
   return (
     <form
@@ -26,9 +26,9 @@ function FormFeedback({ layoutClass, buttonSubmitStyle }: FormFeedbackProps) {
         placeholder='Номер телефона'
       />
 
-      <ButtonSubmit
+      <ButtonAction
         name='отправить'
-        variant={variant}
+        size={size}
         disabled={disabled}
       />
     </form>

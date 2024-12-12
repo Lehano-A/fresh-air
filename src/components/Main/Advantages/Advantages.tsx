@@ -1,7 +1,7 @@
 import React from 'react';
 import IconsList from './IconsList/IconsList';
 import DetailsList from './DetailsList/DetailsList';
-import ButtonSubmit from '../../common/ButtonSubmit/ButtonSubmit';
+import ButtonAction from '../../common/ButtonAction/ButtonAction';
 import ProductImages from './ProductImages/ProductImages';
 
 function Advantages() {
@@ -21,9 +21,9 @@ function Advantages() {
           близких.
         </p>
 
-        <ButtonSubmit
+        <ButtonAction
           name='заполнить заявку'
-          variant='xl'
+          size='xl'
         />
       </div>
 
