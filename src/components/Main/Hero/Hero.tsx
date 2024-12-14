@@ -2,7 +2,7 @@ import Slogan from './Slogan/Slogan';
 import ButtonAction from '../../common/ButtonAction/ButtonAction';
 import CompanyActivities from './CompanyActivities/CompanyActivities';
 import Contacts from './Contacts/Contacts';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
 import { regexDigit } from '../../../constants';
 
@@ -13,51 +13,63 @@ function Hero() {
   const bgHeroRef = useRef<HTMLDivElement>(null);
   const isFirstRender = useRef(true); // для strict mode
   const { prevInnerWidth, innerWidth } = useContext(InnerWidthWindowContext);
+  const [sizeScreen, setSizeScreen] = useState({
+    prevWidth: prevInnerWidth,
+    lastWidth: innerWidth,
+  });
 
-  // вычисление при первом рендере
+  /* определение значений ширины окна для последующих вычислений исходя от текущей действительной ширины окна */
   useEffect(() => {
-    if (isFirstRender.current) {
-      calcAndSetBottom();
-    }
-  }, []);
+    setSizeScreen((prevState) => ({
+      prevWidth: prevInnerWidth <= 375 ? 375 : prevState.lastWidth,
+      lastWidth: innerWidth >= 767 ? 767 : innerWidth,
+    }));
+  }, [innerWidth]);
 
   // вычисления, при изменении ширины экрана
   useEffect(() => {
-    if (prevInnerWidth > 0) {
+    if (isFirstRender.current || sizeScreen.prevWidth > 0) {
       calcAndSetBottom();
     }
-  }, [innerWidth]);
+  }, [sizeScreen.lastWidth]);
 
   // вычислить и установить bottom
   function calcAndSetBottom() {
     if (bgHeroRef.current) {
-      const newBottom = calcNewBottom();
+      const newBottom = calcBottom();
       bgHeroRef.current.style.bottom = `${newBottom}px`;
     }
   }
 
-  // вычислить новый bottom
-  function calcNewBottom() {
+  // вычислить bottom
+  function calcBottom() {
     if (bgHeroRef.current) {
       if (isFirstRender.current) {
-        if (innerWidth >= 375 && innerWidth <= 767) {
+        // если это первый рендер
+        if (sizeScreen.lastWidth >= 375 && sizeScreen.lastWidth <= 767) {
           isFirstRender.current = false;
-          return MIN_BOTTOM - (innerWidth - 375) / 2;
+          return MIN_BOTTOM - (sizeScreen.lastWidth - 375) / 2;
         }
       }
 
-      if (innerWidth <= 374) {
+      if (sizeScreen.lastWidth <= 374) {
         return MIN_BOTTOM;
       }
 
-      if (innerWidth >= 768) {
+      if (sizeScreen.lastWidth >= 768) {
         return MAX_BOTTOM;
       }
 
       const currentBottom = getCurrentBottomElement(bgHeroRef);
 
-      if (innerWidth >= 375 && innerWidth <= 767 && currentBottom) {
-        return currentBottom - (innerWidth - prevInnerWidth) / 2;
+      if (
+        sizeScreen.lastWidth >= 375 &&
+        sizeScreen.lastWidth <= 767 &&
+        currentBottom
+      ) {
+        return (
+          currentBottom - (sizeScreen.lastWidth - sizeScreen.prevWidth) / 2
+        );
       }
     }
   }
