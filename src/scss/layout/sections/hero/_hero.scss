@@ -8,21 +8,9 @@
   overflow: hidden;
   padding: 0 135px;
 
-  &__bg {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-image: url('/images/bg/leavesInCircle.png');
-      background-repeat: no-repeat;
-    }
+  &::after {
+    background-image: url('/images/bg/leavesInCircle.png');
+    background-repeat: no-repeat;
   }
 
   &__wrapper {
@@ -42,7 +30,6 @@
   .hero {
     height: 100vh;
     justify-content: center;
-    padding: 0 28px;
     background-image: linear-gradient(
       -90deg,
       rgba(241, 241, 241, 1),
@@ -51,8 +38,14 @@
       rgba(230, 232, 231, 1),
       rgba(222, 226, 225, 1)
     );
+    padding: 0 28px;
 
-    &__bg::after {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0; /* а bottom управляется через js */
+      bottom: -472px;
+      top: unset;
       width: 100%;
       height: 100%;
       background-size: contain;
@@ -73,36 +66,63 @@
   }
 }
 
+@media screen and (min-width: 540px) {
+  .hero {
+    &::after {
+      bottom: -650px;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
+    padding: 0 45px;
+    &::after {
+      bottom: -850px;
+    }
+
+    &__info {
+      max-width: 516px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
     background-image: linear-gradient(
+      -180deg,
       rgba(241, 241, 241, 1),
       rgba(240, 242, 241, 1),
-      rgba(235, 237, 236, 1),
+      rgba(233, 235, 234, 1),
       rgba(230, 232, 231, 1),
       rgba(222, 226, 225, 1)
     );
 
-    &__bg::after {
+    &::after {
       display: block;
       width: 810px;
       z-index: 0;
       bottom: auto;
       left: auto;
       top: 0;
-      right: 0;
+      right: -300px;
       background-size: cover;
       background-position: left;
       transform: rotate(0deg) scale(100%);
     }
+  }
+}
 
-    &__wrapper {
-      max-width: 1170px;
-      width: 100%;
+@media screen and (min-width: 1280px) {
+  .hero {
+    &::after {
+      right: 0;
     }
 
-    &__info {
-      max-width: 516px;
+    &__wrapper {
+      display: block;
+      max-width: 1170px;
       width: 100%;
     }
   }
