@@ -4,8 +4,7 @@ import iconExtractor from '../../../images/icons/listServices/systemVentilation/
 import iconHumidity from '../../../images/icons/listServices/systemVentilation/humidity.svg';
 import iconAirCooler from '../../../images/icons/listServices/systemVentilation/air-cooler.svg';
 import iconVentilation from '../../../images/icons/listServices/systemVentilation/ventilation.svg';
-import contentImageSystemVentilation from '../../../images/components/ListServices/system-ventilation.jpg';
-import contentMinImageSystemVentilation from '../../../images/components/ListServices/system-ventilation-min.jpg';
+import contentImageSystemVentilation from '../../../images/components/ListServices/system-ventilation.jpeg';
 
 import iconAirConditioner from '../../../images/icons/listServices/conditioning/air-conditioner.svg';
 import iconAirFilter from '../../../images/icons/listServices/conditioning/air-filter.svg';
@@ -13,15 +12,12 @@ import iconCeiling from '../../../images/icons/listServices/conditioning/ceiling
 import iconCondenser from '../../../images/icons/listServices/conditioning/condenser.svg';
 import iconSplit from '../../../images/icons/listServices/conditioning/split.svg';
 import contentImageConditioning from '../../../images/components/ListServices/conditioning.jpeg';
-import contentMinImageConditioning from '../../../images/components/ListServices/conditioning-min.jpg';
 
 const listForSystemVentilation = {
   contentImage: {
-    size: {
-      default: contentImageSystemVentilation,
-      min: contentMinImageSystemVentilation,
-    },
+    path: contentImageSystemVentilation,
     alt: 'Изображение, на котором рабочий монтирует вентиляцию',
+    name: 'system-ventilation',
   },
 
   data: [
@@ -66,11 +62,9 @@ const listForSystemVentilation = {
 
 const listForConditioning = {
   contentImage: {
-    size: {
-      default: contentImageConditioning,
-      min: contentMinImageConditioning,
-    },
+    path: contentImageConditioning,
     alt: 'Изображение смонтированного блока за окном квартиры в новостройке',
+    name: 'conditioning',
   },
   data: [
     {
@@ -104,8 +98,7 @@ const listForConditioning = {
     },
 
     {
-      text: `Монтаж настенных, канальных
-и кассетных кондиционеров`,
+      text: 'Монтаж настенных, канальных и кассетных кондиционеров',
       icon: iconAirFilter,
       alt: 'Иконка - блок воздушного фильтра',
     },

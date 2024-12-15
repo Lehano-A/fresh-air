@@ -1,9 +1,10 @@
 @use '../palette/palette' as *;
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins/mixins' as *;
-@use '../abstracts/inheritance/all' as *;
+@use '../abstracts/inheritance/button-action' as *;
+@use '../abstracts/variables' as variables;
 
-$corner-radius: 65px;
+$corner-radius-content: 65px;
 $corner-radius-bookmark: 40px;
 
 @mixin icon-button() {
@@ -17,7 +18,7 @@ $corner-radius-bookmark: 40px;
   display: flex;
   align-items: center;
 
-  &__bookmarks {
+  &__box-bookmarks {
     display: flex;
     background-color: $green-light-200;
   }
@@ -33,7 +34,7 @@ $corner-radius-bookmark: 40px;
     &-name {
       display: flex;
       align-items: center;
-      font-size: 13px;
+      font-size: 1.3rem;
       white-space: nowrap;
       line-height: 1.21;
     }
@@ -60,7 +61,7 @@ $corner-radius-bookmark: 40px;
 
     /* выбранная закладка */
     &_active {
-      @extend .active-button-action;
+      @include active-button-action;
       color: $white;
 
       &::after {
@@ -87,36 +88,28 @@ $corner-radius-bookmark: 40px;
     }
   }
 
-  &__box-list {
+  &__box-content {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 676px;
-    background-color: $green-light-200;
-    border-radius: $corner-radius 0px 0px $corner-radius;
-    padding-left: 40px;
-  }
-
-  &__image-list {
     width: 100%;
-    height: 100%;
+    background-color: $green-light-200;
+    border-radius: $corner-radius-content 0px 0px $corner-radius-content;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 356px;
+    flex-shrink: 0;
     height: 428px;
     list-style: none;
-    font-size: 20px;
     margin: 0;
     color: $green-primary-900;
 
     &-item {
       display: flex;
-      align-items: flex-start;
       white-space: pre-line;
       line-height: 1.5;
 
@@ -133,25 +126,44 @@ $corner-radius-bookmark: 40px;
       }
     }
   }
+
+  &__demo-image {
+    &_position {
+      &_system-ventilation {
+        object-position: 61%;
+      }
+
+      &_conditioning {
+        object-position: 43%;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 375px) {
+  $corner-radius-content: 50px;
+
   .list-services {
     flex-direction: column;
+    max-width: 500px;
+    width: calc(
+      100% + variables.$padding-section-min-size-screen * 2
+    ); // * 2, поскольку padding справа и слева
 
-    &__box-list {
+    &__box-content {
       flex-direction: column;
       border-top-left-radius: 0;
-      border-bottom-right-radius: $corner-radius-bookmark;
-      padding: 25px 15px 15px 40px;
+      border-bottom-right-radius: $corner-radius-content;
+      border-bottom-left-radius: $corner-radius-content;
+      padding: 25px variables.$padding-section-min-size-screen 20px;
     }
 
-    &__bookmarks {
+    &__box-bookmarks {
       flex-direction: row-reverse;
       width: 100%;
       height: 80px;
-      border-top-left-radius: $corner-radius-bookmark;
-      border-top-right-radius: $corner-radius-bookmark;
+      border-top-left-radius: $corner-radius-content;
+      border-top-right-radius: $corner-radius-content;
       padding: 15px 15px 0;
     }
 
@@ -180,16 +192,19 @@ $corner-radius-bookmark: 40px;
     }
 
     &__list {
+      width: 317px;
+      font-size: 1.6rem;
       margin-bottom: 20px;
     }
 
-    &__box-image-list {
-      width: 345px;
+    &__demo-image {
+      min-width: 344px;
+      max-width: 550px;
+      width: 100%;
       height: 170px;
-    }
+      object-fit: cover;
 
-    &__image-list {
-      border-radius: 50px;
+      border-radius: $corner-radius-content;
       box-shadow: 0px -4px 8px 0px rgba($green-dark-800, 0.35);
     }
   }
@@ -197,25 +212,94 @@ $corner-radius-bookmark: 40px;
 
 @media screen and (min-width: 768px) {
   .list-services {
-    flex-direction: row;
+    max-width: 676px;
+    width: 100%;
 
-    &__box-list {
-      min-width: 375px;
+    &__box-content {
+      flex-direction: row;
+    }
+
+    &__wrapper-list {
+      display: flex;
+      justify-content: center;
       width: 100%;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: $corner-radius-bookmark;
+      margin-right: clamp(20px, 2vw, 40px);
+    }
+
+    &__list {
+      width: 356px;
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+
+    &__demo-image {
+      min-width: 240px;
+      max-width: 440px;
+      height: 655px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list-services {
+    &__box-content {
+      flex-direction: column;
       padding: 30px 30px 15px 30px;
     }
 
-    &__bookmarks {
+    &__list {
+      min-width: 340px;
+      max-width: 356px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__demo-image {
+      max-width: 550px;
+      height: 170px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .list-services {
+    justify-content: end; /* прижимаем блок к правому краю */
+
+    &__box-content {
+      flex-direction: row;
+    }
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    &__demo-image {
+      max-width: 100%;
+      height: 655px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list-services {
+    flex-direction: row;
+
+    &__box-content {
+      border-bottom-right-radius: 0;
+      border-top-left-radius: $corner-radius-bookmark;
+      padding: 0 0 0 40px;
+    }
+
+    &__box-bookmarks {
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
       width: 75px;
       height: 486px;
       border-top-right-radius: 0;
-      border-top-left-radius: $corner-radius-bookmark;
-      border-bottom-left-radius: $corner-radius-bookmark;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px;
       padding: 10px 0 10px 10px;
     }
 
@@ -251,24 +335,10 @@ $corner-radius-bookmark: 40px;
         }
       }
     }
-  }
-}
 
-@media screen and (min-width: 1440px) {
-  .list-services {
-    &__box-list {
-      flex-direction: row;
-      padding: 0 0 0 40px;
-    }
-
-    &__box-image-list {
-      width: 240px;
-      height: 655px;
-    }
-
-    &__image-list {
+    &__demo-image {
       box-shadow: -4px 0px 8px 0px rgba($green-dark-800, 0.3);
-      border-radius: $corner-radius 0px 0px $corner-radius;
+      border-radius: $corner-radius-content 0px 0px $corner-radius-content;
     }
   }
 }
