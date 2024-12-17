@@ -1,75 +1,48 @@
 @use '../../abstracts/inheritance/all' as *;
+@use '../../abstracts/variables' as *;
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../palette/palette' as *;
+
+$top-bg: 16px;
 
 .gallery-working-objects {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 55px;
-    left: 0;
-    display: inline-block;
-    width: 470px;
-    height: 100%;
-    background-image: url('../../../images//components/GalleryWorkingObjects/bg/lung.svg');
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
 
   &__wrapper {
     max-width: 1170px;
-    margin: 0 auto;
   }
 
   &__subtitle {
     @extend .subtitle-h2;
-    max-width: 890px;
-    margin: 0;
-
-    &::after {
-      @include long-hyphen(236px, 3px, 0 0 10px 28px);
-    }
   }
 
   &__grid {
     position: relative;
-    padding: 90px 0 100px 0;
     display: grid;
-    grid-template-columns: repeat(4, 257px);
-    grid-template-rows: 135px;
-    grid-auto-rows: 135px;
-    gap: 35px 48px;
+    justify-content: center;
 
     &::after {
       content: '';
       position: absolute;
-      top: 12px;
-      left: 170px;
-      width: 100%;
-      height: 100%;
-      background-image: url('/images/components/GalleryWorkingObjects/bg/leaves.svg');
-      background-repeat: no-repeat;
-      z-index: -1;
     }
   }
 
   &__card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    height: 135px;
-    position: relative;
     box-shadow: 0px 0px 10px 0px rgba(73, 94, 76, 0.1);
-    border-radius: 25px;
     background-color: $white;
+    border-radius: 25px;
+    overflow: hidden;
 
     &-price {
       position: absolute;
-      top: 14px;
+      top: 15px;
       left: 0;
       font-size: 15px;
       font-family: 'Proxima Nova Semibold';
@@ -78,6 +51,7 @@
       background-color: $green-light-200;
       padding: 5px 15px;
       border-radius: 0 10px 10px 0;
+      z-index: 1;
 
       &::after {
         content: '₽';
@@ -88,20 +62,223 @@
     }
 
     &-image {
-      min-height: 40px;
-      max-height: 92px;
       height: 100%;
+      width: 100%;
       object-fit: cover;
+      transform: scale(1.2);
     }
 
     &-object-name {
-      font-size: 16px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      color: $green-secondary-500;
+      background-color: $white;
       font-family: 'Ruberoid ExtraLight';
       line-height: 1.34;
-      padding: 3px 0 4px 0;
-      margin: auto 0 auto 15px;
-      color: $green-secondary-500;
       letter-spacing: -0.35px;
+    }
+  }
+
+  &__box-card-image {
+    flex-grow: 0;
+    flex-shrink: 1;
+    max-height: 131px;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .gallery-working-objects {
+    &::before {
+      content: none;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 152px);
+      grid-template-rows: 193px;
+      grid-auto-rows: 193px;
+      gap: 20px 15px;
+      padding: 60px 0 100px 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: $top-bg;
+        left: -60px;
+        background-image: url('../../../images/components/GalleryWorkingObjects/bg/leaves-vertical-1.svg');
+        background-repeat: no-repeat;
+        width: 220px;
+        height: 100%;
+        z-index: -1;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: $top-bg;
+        right: -30px;
+        width: 220px;
+        height: 100%;
+        background-image: url('../../../images/components/GalleryWorkingObjects/bg/leaves-vertical-2.svg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        z-index: -1;
+      }
+    }
+
+    &__card {
+      &-object-name {
+        font-size: 1.4rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+
+    &__subtitle {
+      max-width: 339px;
+
+      &-span {
+        display: inline-block;
+        position: relative;
+        margin: 14px 0;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          @include long-hyphen(106px, 2px, 0 0 0 17px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-working-objects {
+    &__grid {
+      grid-template-columns: repeat(3, 152px);
+
+      &::after {
+        width: 100%;
+        height: 100%;
+        left: 0;
+      }
+    }
+    &__subtitle {
+      max-width: 550px;
+      margin: 0;
+
+      &-span {
+        &::after {
+          @include long-hyphen(170px, 3px, 0 0 10px 28px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery-working-objects {
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__grid {
+      width: 100%;
+      grid-template-columns: repeat(4, 152px);
+      gap: 35px 48px;
+
+      &::before {
+        left: 0;
+        width: 100%;
+        background-image: url('../../../images/components/GalleryWorkingObjects/bg/leaves-horizontal-1.svg');
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__subtitle {
+      max-width: 855px;
+
+      &::after {
+        @include long-hyphen(236px, 3px, 0 0 10px 28px);
+      }
+
+      &-span {
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery-working-objects {
+    &__wrapper {
+      align-items: start;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 257px);
+      grid-template-rows: 135px;
+      grid-auto-rows: 135px;
+      padding: 90px 0 100px 0;
+    }
+
+    &__card {
+      &-price {
+        min-width: 119px;
+      }
+
+      &-object-name {
+        width: 100%;
+        min-height: 43px;
+        font-size: 1.6rem;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+    }
+
+    &__box-card-image {
+      max-height: 92px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gallery-working-objects {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 55px;
+      left: 0;
+      display: inline-block;
+      width: 470px;
+      height: 100%;
+      background-image: url('../../../images//components/GalleryWorkingObjects/bg/lung.svg');
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &__grid {
+      &::before {
+        top: 6px;
+        left: auto;
+        right: -170px;
+      }
     }
   }
 }

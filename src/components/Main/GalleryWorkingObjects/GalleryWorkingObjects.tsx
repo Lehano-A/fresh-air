@@ -7,7 +7,9 @@ function GalleryWorkingObjects() {
     <section className='gallery-working-objects'>
       <div className='gallery-working-objects__wrapper'>
         <h2 className='gallery-working-objects__subtitle'>
-          Комплексное решение по монтажу и вентиляции под ключ
+          Комплексное решение по монтажу {''}
+          <span className='gallery-working-objects__subtitle-span'>и</span>
+          {''} вентиляции под ключ
         </h2>
 
         <div className='gallery-working-objects__grid'>

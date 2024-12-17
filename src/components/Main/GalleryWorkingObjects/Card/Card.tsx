@@ -16,11 +16,13 @@ function Card({ data }: CardProps) {
     <article className='gallery-working-objects__card'>
       <span className='gallery-working-objects__card-price'>{price}&nbsp;</span>
 
-      <img
-        src={image}
-        alt={alt}
-        className='gallery-working-objects__card-image'
-      />
+      <div className='gallery-working-objects__box-card-image'>
+        <img
+          src={image}
+          alt={alt}
+          className='gallery-working-objects__card-image'
+        />
+      </div>
 
       <h3 className='gallery-working-objects__card-object-name'>
         {objectName}
