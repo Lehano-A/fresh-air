@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface StepProps {
+  className?: string;
   text: string;
   image: string;
   alt: string;

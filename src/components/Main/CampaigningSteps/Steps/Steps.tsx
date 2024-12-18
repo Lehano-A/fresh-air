@@ -22,6 +22,11 @@ function Steps() {
         image={iconFan}
         alt='Иконка - крыльчатка в кожухе'
       />
+
+      <span className='campaigning-steps__arrow-1'></span>
+      <span className='campaigning-steps__arrow-2'></span>
+      <span className='campaigning-steps__arrow-3'></span>
+      <span className='campaigning-steps__arrow-4'></span>
     </div>
   );
 }
