@@ -23,10 +23,10 @@ function Steps() {
         alt='Иконка - крыльчатка в кожухе'
       />
 
-      <span className='campaigning-steps__arrow-1'></span>
-      <span className='campaigning-steps__arrow-2'></span>
-      <span className='campaigning-steps__arrow-3'></span>
-      <span className='campaigning-steps__arrow-4'></span>
+      <span className='campaigning-steps__arrow campaigning-steps__arrow_step-1'></span>
+      <span className='campaigning-steps__arrow campaigning-steps__arrow_step-2'></span>
+      <span className='campaigning-steps__arrow campaigning-steps__arrow_step-3'></span>
+      <span className='campaigning-steps__arrow campaigning-steps__arrow_step-4'></span>
     </div>
   );
 }
