@@ -40,7 +40,7 @@ function Footer() {
         <div className='footer__application'>
           <h2 className='footer__application-title'>Заполнить заявку</h2>
           <FormFeedback
-            layoutClass='footer'
+            layout='footer'
             buttonSubmitStyle={{ size: 'm' }}
           />
         </div>

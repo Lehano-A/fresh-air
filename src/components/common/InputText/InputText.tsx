@@ -2,13 +2,13 @@ import React from 'react';
 
 interface InputTextProps {
   placeholder: string;
-  layoutClass?: string;
+  layout?: string;
 }
 
-function InputText({ placeholder, layoutClass }: InputTextProps) {
+function InputText({ placeholder, layout }: InputTextProps) {
   return (
     <input
-      className={`input-text ${layoutClass ? `input-text_layout_${layoutClass}` : ''}`}
+      className={`input-text ${layout ? `input-text_in_${layout}` : ''}`}
       placeholder={placeholder}
     />
   );

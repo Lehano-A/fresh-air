@@ -4,7 +4,6 @@ export interface ButtonActionProps {
   name?: string;
   size?: 'xs' | 's' | 'm' | 'xl';
   layout?: string;
-  // className?: string;
   outerBgColor?: string;
   innerBgColor?: string;
   disabled?: boolean;
@@ -14,7 +13,6 @@ export interface ButtonActionProps {
 function ButtonAction({
   name = '',
   size = 'm',
-  // className = '',
   disabled = false,
   layout,
   outerBgColor,

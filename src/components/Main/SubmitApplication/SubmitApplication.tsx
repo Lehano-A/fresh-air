@@ -1,14 +1,20 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import FormFeedback from '../../common/FormFeedback/FormFeedback';
 import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
+import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
 
 function SubmitApplication() {
   const commonMarginLeft = useContext(CommonMarginLeftContext);
+  const innerWidthWindow = useContext(InnerWidthWindowContext);
   const submitApplicationWrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (submitApplicationWrapperRef.current) {
-      submitApplicationWrapperRef.current.style.marginLeft = commonMarginLeft;
+      if (innerWidthWindow >= 1440) {
+        submitApplicationWrapperRef.current.style.marginLeft = commonMarginLeft;
+      } else {
+        submitApplicationWrapperRef.current.style.marginLeft = '0';
+      }
     }
   }, [commonMarginLeft]);
 
@@ -18,12 +24,12 @@ function SubmitApplication() {
         className='submit-application__wrapper'
         ref={submitApplicationWrapperRef}
       >
-        <h2 className='submit-application__title'>
+        <h2 className='submit-application__subtitle'>
           Оставьте заявку и мы с вами свяжемся
         </h2>
 
         <FormFeedback
-          layoutClass='submit-application'
+          layout='submit-application'
           buttonSubmitStyle={{ size: 'm', disabled: true }}
         />
       </div>
