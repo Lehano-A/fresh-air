@@ -141,6 +141,15 @@ $field-button: 10px;
       width: 100%;
       margin-top: 45px;
     }
+
+    &_in-advantages {
+      $field-button: 15px;
+
+      & > button {
+        width: calc(100% - $field-button * 2);
+        height: calc(100% - $field-button * 2);
+      }
+    }
   }
 }
 

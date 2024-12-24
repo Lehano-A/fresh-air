@@ -22,6 +22,7 @@ function Advantages() {
         </p>
 
         <ButtonAction
+          layout='advantages'
           name='заполнить заявку'
           size='xl'
         />

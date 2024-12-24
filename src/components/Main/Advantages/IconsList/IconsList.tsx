@@ -1,10 +1,10 @@
 import React from 'react';
-import airFlowIcon from '../../../../images/components/Advantages/air-flow.svg';
-import tempIcon from '../../../../images/components/Advantages/temp.svg';
-import greenHouseIcon from '../../../../images/components/Advantages/green-house.svg';
-import noGermsIcon from '../../../../images/components/Advantages/no-germs.svg';
-import humidityIcon from '../../../../images/components/Advantages/humidity.svg';
-import pollutionIcon from '../../../../images/components/Advantages/pollution.svg';
+import airFlowIcon from '../../../../images/components/Advantages/icons/air-flow.svg';
+import tempIcon from '../../../../images/components/Advantages/icons/temp.svg';
+import greenHouseIcon from '../../../../images/components/Advantages/icons/green-house.svg';
+import noGermsIcon from '../../../../images/components/Advantages/icons/no-germs.svg';
+import humidityIcon from '../../../../images/components/Advantages/icons/humidity.svg';
+import pollutionIcon from '../../../../images/components/Advantages/icons/pollution.svg';
 
 function ListIcons() {
   return (
