@@ -2,19 +2,26 @@ import React from 'react';
 
 function SliderNavigation({
   swiperRef,
-  isActivePrev,
+  isActivePrevSlide,
   isLastSlide,
   navigationClass,
+  coordinatesForTransition,
 }) {
+  // перейти на следующий слайд
   const goToNextSlide = () => {
     if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext();
+      const swiper = swiperRef.current.swiper;
+
+      swiper.snapGrid = coordinatesForTransition.current;
+      swiper.slideNext();
     }
   };
 
+  // перейти на предыдущий слайд
   const goToPrevSlide = () => {
     if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev();
+      const swiper = swiperRef.current.swiper;
+      swiper.slidePrev();
     }
   };
 
@@ -23,7 +30,7 @@ function SliderNavigation({
       className={`slider__navigation ${navigationClass ? navigationClass : ''}`}
     >
       <button
-        className={`${isActivePrev ? '' : 'slider__button-navigation_disabled'} slider__button-navigation slider__button-navigation_prev`}
+        className={`${isActivePrevSlide ? '' : 'slider__button-navigation_disabled'} slider__button-navigation slider__button-navigation_prev`}
         onClick={goToPrevSlide}
       ></button>
 
