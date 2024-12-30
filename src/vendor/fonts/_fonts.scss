@@ -6,12 +6,22 @@
     url('./ProximaNova/ProximaNova-Semibold.woff') format('woff');
   font-weight: normal;
 }
+
 @font-face {
   font-family: 'Proxima Nova Regular';
   src:
     local('ProximaNova-Regular'),
     url('./ProximaNova/ProximaNova-Regular.woff2') format('woff2'),
     url('./ProximaNova/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src:
+    local('ProximaNova-Regular'),
+    url('./ProximaNova/ProximaNova-Light.woff2') format('woff2'),
+    url('./ProximaNova/ProximaNova-Light.woff') format('woff');
   font-weight: normal;
 }
 

@@ -41,3 +41,44 @@
     }
   }
 }
+
+@media screen and (min-width: 375px) {
+  .slider {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0 auto;
+
+    &_in-portfolio {
+      align-self: self-start;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    flex-direction: column;
+    align-items: end;
+    margin: 0;
+
+    &_in-portfolio {
+      position: relative;
+      width: 100%;
+      padding-left: 28px;
+    }
+
+    &__navigation {
+      &_in-portfolio {
+        align-self: self-start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .slider {
+    &_in-portfolio {
+      padding-left: 0;
+    }
+  }
+}

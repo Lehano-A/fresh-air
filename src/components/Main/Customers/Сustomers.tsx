@@ -40,6 +40,9 @@ function Customers() {
           swiperClass='customers__swiper'
           sliderClass='customers__slider'
           slideClass='customers__slide'
+          slideActiveClass='customers__slide-activeqqq'
+          slidePrevClass='customers__slide-prevqqq'
+          slideNextClass='customers__slide-nextqqq'
           spaceBetween={20}
         />
       </div>
