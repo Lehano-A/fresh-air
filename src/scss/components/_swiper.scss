@@ -2,7 +2,6 @@
 @use '../abstracts/inheritance/subtitle-h2' as *;
 
 .swiper {
-  padding-top: 25px;
   max-width: 100%;
   margin: 0;
 }
@@ -52,6 +51,12 @@
   .swiper {
     &_in-portfolio {
       overflow: hidden;
+      padding-top: 25px;
+    }
+
+    &_in-customers {
+      overflow: hidden;
+      margin-bottom: 30px;
     }
   }
 
@@ -59,39 +64,13 @@
     &_in-portfolio {
       width: 319px;
       height: 419px;
+    }
 
-      & > img {
-        width: 100%;
-        border-radius: 35px;
-        object-fit: cover;
-      }
-
-      &-text-box {
-        position: absolute;
-        bottom: 46px;
-        left: 40px;
-        color: $white;
-        text-align: start;
-        transition: 1s ease;
-
-        & > h2 {
-          font-family: 'Ruberoid SemiBold';
-          font-size: 24px;
-          text-transform: capitalize;
-          line-height: 1.41;
-          margin: 0;
-        }
-
-        & > p {
-          width: 400px;
-          color: $white;
-          margin: 10px 0 0 0;
-          font-size: 16px;
-        }
-      }
-
-      &::before {
-        content: '';
+    &__logo {
+      &_in-portfolio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         top: 35px;
         left: 0;
@@ -100,10 +79,36 @@
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         background-color: $green-light-200;
-        background-image: url('/images/logo/logo.svg');
-        background-size: 94px 29px;
-        background-repeat: no-repeat;
-        background-position: 40px 50%;
+
+        & > img {
+          width: 94px;
+          height: 29px;
+        }
+      }
+    }
+
+    &__image {
+      &_in-portfolio {
+        width: 100%;
+        border-radius: 35px;
+        object-fit: cover;
+      }
+    }
+
+    &_in-customers {
+      width: 258px;
+      height: 116px;
+
+      & > img {
+        width: 100%;
+        border-radius: 30px;
+        object-fit: contain;
+        padding: 38px 35px;
+        background-color: $white;
+      }
+
+      &::before {
+        display: none;
       }
     }
 
@@ -128,6 +133,7 @@
   .swiper-wrapper {
     &_in-portfolio {
       width: 100%;
+      margin-bottom: 0;
     }
   }
 
@@ -138,6 +144,7 @@
 
     &_in-portfolio {
       width: 270px;
+      height: 456px;
     }
 
     &-active_in-porfolio {
@@ -151,11 +158,5 @@
     &-next_in-porfolio {
       width: 270px;
     }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .swiper-slide {
-    height: 456px;
   }
 }

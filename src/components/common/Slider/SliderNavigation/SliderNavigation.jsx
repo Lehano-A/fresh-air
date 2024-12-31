@@ -4,8 +4,9 @@ function SliderNavigation({
   swiperRef,
   isActivePrevSlide,
   isLastSlide,
-  navigationClass,
   coordinatesForTransition,
+  buttonNavigationClass,
+  wrapperNavigationClass,
 }) {
   // перейти на следующий слайд
   const goToNextSlide = () => {
@@ -13,6 +14,8 @@ function SliderNavigation({
       const swiper = swiperRef.current.swiper;
 
       swiper.snapGrid = coordinatesForTransition.current;
+      swiper.snapGrid = swiper.slidesGrid;
+
       swiper.slideNext();
     }
   };
@@ -27,15 +30,15 @@ function SliderNavigation({
 
   return (
     <div
-      className={`slider__navigation ${navigationClass ? navigationClass : ''}`}
+      className={`slider__wrapper-navigation ${wrapperNavigationClass ? wrapperNavigationClass : ''}`}
     >
       <button
-        className={`${isActivePrevSlide ? '' : 'slider__button-navigation_disabled'} slider__button-navigation slider__button-navigation_prev`}
+        className={`${isActivePrevSlide ? '' : 'slider__button-navigation_disabled'} ${buttonNavigationClass ? buttonNavigationClass : ''} slider__button-navigation slider__button-navigation_prev`}
         onClick={goToPrevSlide}
       ></button>
 
       <button
-        className={`${isLastSlide ? 'slider__button-navigation_disabled' : ''}  slider__button-navigation slider__button-navigation_next`}
+        className={`${isLastSlide ? 'slider__button-navigation_disabled' : ''} ${buttonNavigationClass ? buttonNavigationClass : ''} slider__button-navigation slider__button-navigation_next`}
         onClick={goToNextSlide}
       ></button>
     </div>

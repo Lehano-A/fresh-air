@@ -3,13 +3,15 @@ import Slider from '../../common/Slider/Slider';
 
 import gallery from './gallery';
 import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
+import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
 
 function Customers() {
+  const innerWidthWindow = useContext(InnerWidthWindowContext);
   const commonMarginLeft = useContext(CommonMarginLeftContext);
   const customerWrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (customerWrapperRef.current) {
+    if (customerWrapperRef.current && innerWidthWindow >= 1280) {
       customerWrapperRef.current.style.marginLeft = commonMarginLeft;
     }
   }, [commonMarginLeft]);
@@ -21,30 +23,46 @@ function Customers() {
         ref={customerWrapperRef}
       >
         <div className='customers__text-box'>
-          <h2>
-            Известные <span>клиенты</span> которые нам доверились
+          <h2 className='customers__subtitle'>
+            Известные{' '}
+            <span className='customers__span-subtitle-with-long-hyphen'>
+              клиенты
+            </span>{' '}
+            <span
+              className={
+                innerWidthWindow < 768 ? 'customers__span-subtitle_hidden' : ''
+              }
+            >
+              которые нам доверились
+            </span>
           </h2>
-          <p>
-            {`Реализованы проекты квартир и коммерческих помещений в жилых комплексах
-от крупных застройщиков таких как: Level, ФСК, MR групп, ПИК, Самолет, Гранель,
-Донстрой, Пионер, Эталон, А101, Sminex, Vesper, Инград, КРОСТ, МИЦ. Мы ценим каждого клиента`}{' '}
-            <span>Pascal Vent</span>
+          <p className='customers__text'>
+            Реализованы проекты квартир и коммерческих помещений в жилых
+            комплексах от крупных застройщиков таких как: Level, ФСК, MR групп,
+            ПИК, Самолет, Гранель, Донстрой, Пионер, Эталон, А101, Sminex,
+            Vesper, Инград, КРОСТ, МИЦ. Мы ценим каждого клиента{' '}
+            <span className='customers__span-text-name-company'>
+              Pascal Vent
+            </span>
             {` и с радостью готовы расширять нашу клиентскую базу.`}
           </p>
         </div>
 
-        <Slider
-          gallery={gallery}
-          slidesPerView='auto'
-          navigationClass='customers__slider-navigation'
-          swiperClass='customers__swiper'
-          sliderClass='customers__slider'
-          slideClass='customers__slide'
-          slideActiveClass='customers__slide-activeqqq'
-          slidePrevClass='customers__slide-prevqqq'
-          slideNextClass='customers__slide-nextqqq'
-          spaceBetween={20}
-        />
+        <div className='customers__wrapper-slider'>
+          <Slider
+            gallery={gallery}
+            buttonNavigationClass='slider__button-navigation_in-customers'
+            slidesPerView='auto'
+            swiperClass='swiper_in-customers'
+            sliderClass='slider_in-customers'
+            slideClass='swiper-slide_in-customers'
+            slideActiveClass='swiper-slide-active_in-customers'
+            slidePrevClass='swiper-slide-prev_in-customers'
+            slideNextClass='swiper-slide-next_in-customers'
+            slidesParams={{ active: 258, others: 258 }}
+            spaceBetween={20}
+          />
+        </div>
       </div>
     </section>
   );

@@ -14,8 +14,12 @@ import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
 */
 function Slider({
   gallery,
+  buttonNavigationClass = '',
+  imageSlideClass = '',
+  logoSlide = '',
+  logoSlideClass = '',
   spaceBetween = 30,
-  navigationClass = '',
+  wrapperNavigationClass = '',
   sliderClass = '',
   slidesPerView,
   swiperClass = '',
@@ -26,6 +30,7 @@ function Slider({
   slideBoxDescriptionClass = '',
   slideSubtitleClass = '',
   slideTextClass = '',
+  slidesParams,
   wrapperClass = '',
 }) {
   const swiperRef = useRef(null);
@@ -66,8 +71,8 @@ function Slider({
   function createCoordinatesForTransition() {
     const swiper = swiperRef.current.swiper;
 
-    const sizeActiveSlide = innerWidthWindow < 768 ? 319 : 500;
-    const sizeOtherSlides = innerWidthWindow < 768 ? 319 : 270;
+    const sizeActiveSlide = slidesParams.active;
+    const sizeOtherSlides = slidesParams.others;
 
     const spaceBetween = swiper.params.spaceBetween;
     const outputData = [];
@@ -104,13 +109,19 @@ function Slider({
     setIdPrevActiveSlide(null); // сбрасываем айди предыдущего активного слайда
   }
 
+  // нужно ли показывать параграф
+  const doNeedToShowParagraph = (index) =>
+    idCurrentActiveSlide === index ||
+    (innerWidthWindow < 768 && idPrevActiveSlide === index);
+
   return (
     <div className={`slider ${sliderClass ? sliderClass : ''}`}>
       <SliderNavigation
         swiperRef={swiperRef}
         isActivePrevSlide={idCurrentActiveSlide}
         isLastSlide={gallery.length - 1 === idCurrentActiveSlide}
-        navigationClass={navigationClass}
+        wrapperNavigationClass={wrapperNavigationClass}
+        buttonNavigationClass={buttonNavigationClass}
         coordinatesForTransition={coordinatesForTransition}
       />
 
@@ -134,18 +145,27 @@ function Slider({
             key={index}
             className={slideClass}
           >
+            {logoSlideClass && (
+              <div className={logoSlideClass}>
+                <img
+                  src={logoSlide}
+                  alt='Логотип слайда'
+                />
+              </div>
+            )}
+
             <img
               src={item.image}
               alt='Изображение выполненной работы из портфолио'
+              className={imageSlideClass}
             />
 
             {item.title && (
               <div className={slideBoxDescriptionClass}>
                 <h3 className={slideSubtitleClass}>{item.title}</h3>
-                {(idCurrentActiveSlide === index ||
-                  (innerWidthWindow < 768 && idPrevActiveSlide === index)) && (
+                {doNeedToShowParagraph(index) && (
                   <p className={slideTextClass}>{item.description}</p>
-                )}{' '}
+                )}
                 {/* Если текущий активный слайд или предыдущий активный слайд с разрешением < 768. Предыдущий здесь, чтобы при смене активного слайда, демонтирование параграфа происходило незаметно */}
               </div>
             )}

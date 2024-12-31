@@ -1,14 +1,12 @@
 @use '../../abstracts/inheritance/all' as *;
 @use '../../palette/palette' as *;
+@use '../../abstracts/mixins/mixins' as *;
 
 .customers {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  height: 515px;
   max-width: 100%;
   padding-top: 156px;
-  overflow: hidden;
   border-bottom: 2px solid rgba($green-neutral-500, 0.29);
 
   &::before {
@@ -16,7 +14,6 @@
     position: absolute;
     top: 0;
     display: inline-block;
-
     width: 100%;
     height: 100%;
     background-image: url('/images/components/Customers/bg/curved-bg.svg');
@@ -32,86 +29,146 @@
   &__text-box {
     font-size: 1.6rem;
     margin: 0 66px 0 135px;
-
-    & > h2 {
-      @extend .subtitle-h2;
-      position: relative;
-      width: 622px;
-      margin-bottom: 32px;
-
-      & > span {
-        display: inline-block;
-        margin-bottom: 10px;
-
-        &::after {
-          content: '';
-          position: absolute;
-          right: 0;
-          top: 27%;
-
-          display: inline-block;
-          width: 105px;
-          height: 2px;
-          background-color: $green-secondary-500;
-        }
-      }
-    }
-
-    & > p {
-      color: $gray-700;
-      max-width: 627px;
-      line-height: 1.62;
-      white-space: pre-line;
-
-      & > span {
-        font-weight: bold;
-      }
-    }
   }
 
-  &__slider {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: start;
-    margin-top: 65px;
+  &__subtitle {
+    @extend .subtitle-h2;
+
+    position: relative;
+    margin-bottom: 32px;
   }
 
-  &__slider-navigation {
-    width: 101px;
-    margin-top: 20px;
-    margin-left: 23px;
-
-    & button {
-      width: 38px;
-      height: 38px;
-
-      &::after {
-        width: 28px;
-        height: 28px;
-      }
-    }
+  &__span-subtitle-with-long-hyphen {
+    display: inline-block;
   }
 
-  &__swiper {
-    padding: 31px 0 0 5px;
+  &__text {
+    color: $gray-700;
+    max-width: 627px;
+    line-height: 1.62;
+    white-space: pre-line;
   }
 
-  &__slide {
-    transform: translateX(-288px) !important;
-    width: 258px;
-    height: 116px;
+  &__span-text-name-company {
+    font-weight: bold;
+  }
 
-    & > img {
-      width: 100%;
-      border-radius: 30px;
-      object-fit: contain;
-      padding: 38px 35px;
-      background-color: $white;
-    }
+  &__wrapper-slider {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .customers {
+    flex-direction: column;
+    padding-top: 55px;
 
     &::before {
-      display: none;
+      background-size: contain;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 45px;
+      background-color: $green-light-200;
+    }
+
+    &__wrapper-slider {
+      align-self: self-end;
+      max-width: 402px;
+      width: 100%;
+      padding-left: 28px;
+    }
+
+    &__text-box {
+      max-width: 650px;
+      width: 100%;
+      padding: 0 28px;
+      margin: 0;
+    }
+
+    &__subtitle {
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+    }
+
+    &__span-subtitle {
+      &_hidden {
+        display: none;
+      }
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      margin: 0 0 35px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customers {
+    padding-top: 156px;
+
+    &::before {
+      background-size: cover;
+    }
+
+    &__wrapper {
+      justify-content: space-between;
+    }
+
+    &__subtitle {
+      width: 622px;
+      font-size: 4.5rem;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+    }
+
+    &__span-subtitle-with-long-hyphen {
+      margin-bottom: 10px;
+
+      &::after {
+        @include long-hyphen(105px, 2px, 0);
+        position: absolute;
+        right: 0;
+        top: 27%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .customers {
+    &__wrapper {
+      flex-direction: row;
+      padding-bottom: 100px;
+    }
+
+    &__wrapper-slider {
+      max-width: 612px;
+    }
+
+    &__text-box {
+      padding-right: 0;
+    }
+
+    &__text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .customers {
+    &__wrapper {
+      padding-left: 45px;
+    }
+
+    &__text-box {
+      padding-left: 0;
     }
   }
 }

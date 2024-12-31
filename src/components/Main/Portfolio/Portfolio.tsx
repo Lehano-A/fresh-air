@@ -3,6 +3,7 @@ import Slider from '../../common/Slider/Slider';
 import gallery from './gallery';
 import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
 import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
+import Logo from '../../../images/logo/logo.svg';
 
 function Portfolio() {
   const commonMarginLeft = useContext(CommonMarginLeftContext);
@@ -39,8 +40,11 @@ function Portfolio() {
 
         <Slider
           gallery={gallery}
+          imageSlideClass='swiper-slide__image_in-portfolio'
+          logoSlide={Logo}
+          logoSlideClass='swiper-slide__logo_in-portfolio'
           slidesPerView='auto'
-          navigationClass='slider__navigation_in-portfolio'
+          wrapperNavigationClass='slider__wrapper-navigation_in-portfolio'
           swiperClass='swiper_in-portfolio'
           sliderClass='slider_in-portfolio'
           slideClass='swiper-slide_in-portfolio'
@@ -50,6 +54,10 @@ function Portfolio() {
           slideBoxDescriptionClass='swiper-slide__box-description'
           slideSubtitleClass='swiper-slide__subtitle'
           slideTextClass='swiper-slide__text'
+          slidesParams={{
+            active: innerWidthWindow < 768 ? 319 : 500,
+            others: innerWidthWindow < 768 ? 319 : 270,
+          }}
           spaceBetween={30}
           wrapperClass='swiper-wrapper swiper-wrapper_in-portfolio'
         />
