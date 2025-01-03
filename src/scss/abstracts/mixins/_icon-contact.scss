@@ -1,8 +1,6 @@
-@mixin icon-contact($width, $height, $path) {
+@mixin icon-contact($path) {
   content: '';
   display: inline-block;
-  width: $width;
-  height: $height;
   background-image: url($path);
   background-size: cover;
   background-repeat: no-repeat;

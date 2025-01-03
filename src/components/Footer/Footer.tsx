@@ -6,7 +6,10 @@ function Footer() {
   return (
     <footer className='footer'>
       <div className='footer__wrapper'>
-        <Logo />
+        <div className='footer__box-logo'>
+          <Logo />
+        </div>
+
         <div className='footer__about'>
           <p className='footer__description'>
             Компания "Pascal Vent" входит в число лучших специализированных
@@ -16,23 +19,30 @@ function Footer() {
             клиентам.
           </p>
           <p className='footer__slogan'>
-            Чистый воздух вместе с <span>Pascal Vent</span>
+            Чистый воздух вместе с{' '}
+            <span className='footer__slogan-company-name'>Pascal Vent</span>
           </p>
         </div>
 
         <div className='footer__contacts'>
           <h2 className='footer__contacts-title'>Контакты</h2>
           <ul className='footer__contacts-list'>
-            <li className='footer__number-phone'>+ 7 492 373 63 31</li>
-            <li className='footer__number-phone'>+ 7 424 367 89 29</li>
-            <li className='footer__email'>PascalVent@mail.ru</li>
-            <li className='footer__work-time'>
+            <li className='footer__contacts-item footer__number-phone'>
+              + 7 492 373 63 31
+            </li>
+            <li className='footer__contacts-item footer__number-phone'>
+              + 7 424 367 89 29
+            </li>
+            <li className='footer__contacts-item footer__email'>
+              PascalVent@mail.ru
+            </li>
+            <li className='footer__contacts-item footer__work-time'>
               {`Пн - Сб: 9:00 - 19:00
 Вс: выходной`}
             </li>
-            <li className='footer__address'>
-              {`Московский регион, Москва
-ул. Плеханова, 28А`}
+            <li className='footer__contacts-item footer__address'>
+              {`Москва ул.
+              Плеханова, 28А`}
             </li>
           </ul>
         </div>
@@ -41,7 +51,7 @@ function Footer() {
           <h2 className='footer__application-title'>Заполнить заявку</h2>
           <FormFeedback
             layout='footer'
-            buttonSubmitStyle={{ size: 'm' }}
+            buttonSubmitStyle={{ size: 'm', disabled: true }}
           />
         </div>
       </div>

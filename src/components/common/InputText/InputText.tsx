@@ -8,7 +8,7 @@ interface InputTextProps {
 function InputText({ placeholder, layout }: InputTextProps) {
   return (
     <input
-      className={`input-text ${layout ? `input-text_in_${layout}` : ''}`}
+      className={`input-text ${layout ? `input-text_in-${layout}` : ''}`}
       placeholder={placeholder}
     />
   );

@@ -36,6 +36,7 @@ $field-button: 10px;
     &:disabled {
       background-color: $green-neutral-300;
       box-shadow: 2px -2px 12px 0px rgba(34, 111, 33, 0.36) inset;
+      cursor: default;
     }
   }
 
@@ -112,6 +113,11 @@ $field-button: 10px;
       }
     }
   }
+
+  &_in-footer {
+    width: 100%;
+    background-color: rgba($green-secondary-500, 0.25);
+  }
 }
 
 @media screen and (min-width: 375px) {
@@ -187,6 +193,10 @@ $field-button: 10px;
   .button-action {
     &_in-header {
       display: block;
+    }
+
+    &_in-footer {
+      max-width: 229px;
     }
   }
 }

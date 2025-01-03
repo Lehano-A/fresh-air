@@ -23,8 +23,14 @@
   }
 }
 
-.input-text_in_footer {
-  height: 49px;
+.input-text {
+  &_in-footer {
+    height: 49px;
+
+    &:where(:nth-of-type(1n):not(:last-of-type)) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media screen and (min-width: 375px) {
@@ -32,6 +38,12 @@
     &_in_submit-application {
       &:where(:nth-of-type(1n):not(:last-of-type)) {
         margin-bottom: 25px;
+      }
+    }
+
+    &_in-footer {
+      &:where(:last-of-type) {
+        margin-bottom: 40px;
       }
     }
   }
@@ -45,6 +57,16 @@
       &:where(:nth-of-type(1n):not(:last-of-type)) {
         margin-right: 30px;
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .input-text {
+    &_in-footer {
+      &:where(:last-of-type) {
+        margin-bottom: 35px;
       }
     }
   }
