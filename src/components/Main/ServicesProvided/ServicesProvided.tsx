@@ -2,21 +2,15 @@ import React, { useContext, useEffect, useRef } from 'react';
 import ListServices from './ListServices/ListServices';
 import InfoText from './InfoText/InfoText';
 import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
-import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
+import useCommonMarginLeft from '../../../hooks/useCommonMarginLeft';
 
 function ServicesProvided() {
   const commonMarginLeft = useContext(CommonMarginLeftContext);
-  const innerWidthWindow = useContext(InnerWidthWindowContext);
   const servicesProvidedRef = useRef<HTMLElement>(null);
+  const setCommonMarginLeft = useCommonMarginLeft();
 
   useEffect(() => {
-    if (servicesProvidedRef.current) {
-      if (innerWidthWindow >= 1280) {
-        servicesProvidedRef.current.style.marginLeft = commonMarginLeft;
-      } else {
-        servicesProvidedRef.current.style.marginLeft = '0';
-      }
-    }
+    setCommonMarginLeft(servicesProvidedRef, 1280);
   }, [commonMarginLeft]);
 
   return (

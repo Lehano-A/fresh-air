@@ -4,21 +4,16 @@ import gallery from './gallery';
 import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
 import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
 import Logo from '../../../images/logo/logo.svg';
+import useCommonMarginLeft from '../../../hooks/useCommonMarginLeft';
 
 function Portfolio() {
   const commonMarginLeft = useContext(CommonMarginLeftContext);
   const innerWidthWindow = useContext(InnerWidthWindowContext);
   const portfolioRef = useRef<HTMLDivElement>(null);
+  const setCommonMarginLeft = useCommonMarginLeft();
 
   useEffect(() => {
-    if (portfolioRef.current) {
-      if (innerWidthWindow >= 1280) {
-        portfolioRef.current.style.marginLeft = commonMarginLeft;
-      }
-      if (innerWidthWindow < 1280) {
-        portfolioRef.current.style.marginLeft = '0';
-      }
-    }
+    setCommonMarginLeft(portfolioRef, 1280);
   }, [commonMarginLeft]);
 
   return (

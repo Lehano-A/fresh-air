@@ -1,21 +1,15 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import FormFeedback from '../../common/FormFeedback/FormFeedback';
 import CommonMarginLeftContext from '../../../context/CommonMarginLeftContext';
-import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
+import useCommonMarginLeft from '../../../hooks/useCommonMarginLeft';
 
 function SubmitApplication() {
   const commonMarginLeft = useContext(CommonMarginLeftContext);
-  const innerWidthWindow = useContext(InnerWidthWindowContext);
   const submitApplicationWrapperRef = useRef<HTMLDivElement>(null);
+  const setCommonMarginLeft = useCommonMarginLeft();
 
   useEffect(() => {
-    if (submitApplicationWrapperRef.current) {
-      if (innerWidthWindow >= 1440) {
-        submitApplicationWrapperRef.current.style.marginLeft = commonMarginLeft;
-      } else {
-        submitApplicationWrapperRef.current.style.marginLeft = '0';
-      }
-    }
+    setCommonMarginLeft(submitApplicationWrapperRef, 1440);
   }, [commonMarginLeft]);
 
   return (
