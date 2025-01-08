@@ -5,8 +5,10 @@ import Achievements from './Achievements/Achievements';
 function About() {
   return (
     <section className='about'>
-      <Features />
-      <Achievements />
+      <div className='about__wrapper'>
+        <Features />
+        <Achievements />
+      </div>
     </section>
   );
 }

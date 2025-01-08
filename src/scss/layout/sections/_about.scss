@@ -4,31 +4,28 @@
 @use '../../abstracts/mixins/box-shadow-container';
 
 .about {
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1170px;
+  overflow-x: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 100px;
-    left: 0px;
-    width: 656px;
-    height: 499px;
-    background-color: rgba($green-light-500, 0.5);
-    border-radius: 50%;
-    z-index: -1;
-    filter: blur(100px);
+  &__wrapper {
+    display: flex;
+    max-width: 1170px;
   }
 
   &__info {
     @include box-shadow-container($green-primary-900);
+    position: relative;
     max-width: 531px;
     border-radius: 50px;
     background-color: $white;
     padding: 33px 44px 33px 46px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
   }
 
   &__us {
@@ -85,7 +82,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    // width: max-content;
     height: 118px;
 
     &::before {
@@ -127,8 +123,14 @@
 
 @media screen and (min-width: 375px) {
   .about {
-    flex-direction: column;
-    margin: 0 28px;
+    justify-content: center;
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 70px 28px;
+    }
 
     &__us {
       &-brand {
@@ -145,6 +147,16 @@
     &__info {
       margin-bottom: 32px;
       padding: 35px 25px 25px;
+
+      &::before {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 508px;
+        height: 387px;
+        background-color: rgba($green-light-500, 0.7);
+        filter: blur(100px);
+      }
     }
 
     &__list {
@@ -185,9 +197,12 @@
 @media screen and (min-width: 1024px) {
   .about {
     flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 100%;
+
+    &__wrapper {
+      flex-direction: row;
+      padding: 100px 45px;
+      width: 100%;
+    }
 
     &__us {
       &-brand {
@@ -202,6 +217,16 @@
     &__info {
       width: 100%;
       margin-right: 30px;
+
+      &::before {
+        width: 656px;
+        height: 450px;
+        top: 0;
+        left: 0;
+        transform: translateX(-20%);
+        background-color: rgba($green-light-500, 0.5);
+        filter: blur(50px);
+      }
     }
   }
 }
