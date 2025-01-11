@@ -5,6 +5,7 @@
 .work-scheme {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   &__wrapper {
     max-width: 1170px;
@@ -204,17 +205,17 @@
       grid-row: 7;
       justify-items: center;
       text-align: center;
+      min-height: 110px;
 
       /* рукопожатие */
       &::before {
         content: '';
         position: absolute;
-        top: 75%;
+        top: 49%;
         left: 50%;
         transform: translate(-50%, -15%);
         width: 264px;
         height: 65px;
-        padding-bottom: 12px;
         background-image: url('/images/components/WorkScheme/shaking-hands.svg');
         background-repeat: no-repeat;
         background-size: contain;
