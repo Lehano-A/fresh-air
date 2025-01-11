@@ -35,9 +35,13 @@
 
 @media screen and (min-width: 375px) {
   .input-text {
-    &_in_submit-application {
+    &_in-submit-application {
       &:where(:nth-of-type(1n):not(:last-of-type)) {
         margin-bottom: 25px;
+      }
+
+      &:where(:last-of-type) {
+        margin-bottom: 45px;
       }
     }
 
@@ -51,11 +55,16 @@
 
 @media screen and (min-width: 1024px) {
   .input-text {
-    &_in_submit-application {
+    &_in-submit-application {
       max-width: 290px;
 
       &:where(:nth-of-type(1n):not(:last-of-type)) {
         margin-right: 30px;
+        margin-bottom: 0;
+      }
+
+      &:where(:last-of-type) {
+        margin-right: 60px;
         margin-bottom: 0;
       }
     }
