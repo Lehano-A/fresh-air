@@ -1,5 +1,6 @@
 @use '../../palette/palette' as *;
 @use '../../abstracts/inheritance/all' as *;
+@use '../../abstracts/variables' as *;
 
 .advantages {
   display: flex;
@@ -8,17 +9,15 @@
   width: 100%;
   overflow: hidden;
   font-size: 1.6rem;
-  padding: 100px 28px;
+  padding: 0 28px;
 
   &__info {
     display: flex;
     flex-direction: column;
-    margin-top: 56px;
   }
 
   &__subtitle {
     @extend .subtitle-h2;
-    max-width: 319px;
     width: 100%;
     white-space: pre;
   }
@@ -88,7 +87,7 @@
       transform: translateY(-50%);
       width: 718px;
       height: 718px;
-      filter: blur(100px);
+      filter: blur(55px);
       background-color: $green-light-500;
       border-radius: 50%;
       z-index: -1;
@@ -108,6 +107,9 @@
 
 @media screen and (min-width: 375px) {
   .advantages {
+    padding-top: $pt-375-media;
+    padding-bottom: $pb-375-media;
+
     &__info {
       align-items: center;
       max-width: 500px;
@@ -160,6 +162,9 @@
 
 @media screen and (min-width: 1024px) {
   .advantages {
+    padding-top: $pt-1024-media;
+    padding-bottom: $pb-1024-media;
+
     &__product-images {
       display: flex;
       align-items: center;
@@ -178,6 +183,10 @@
 
 @media screen and (min-width: 1280px) {
   .advantages {
+    &__info {
+      margin-top: 56px;
+    }
+
     &__product-images {
       align-items: start;
       margin-left: 100px;
