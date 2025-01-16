@@ -17,7 +17,7 @@ function Portfolio() {
   }, [commonMarginLeft]);
 
   return (
-    <section className='portfolio mb-100'>
+    <section className='portfolio'>
       <div
         className='portfolio__wrapper'
         ref={portfolioRef}

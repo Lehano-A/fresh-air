@@ -15,7 +15,7 @@ function ServicesProvided() {
 
   return (
     <section
-      className='services-provided mb-100'
+      className='services-provided'
       ref={servicesProvidedRef}
     >
       <InfoText />

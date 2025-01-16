@@ -87,7 +87,7 @@
       transform: translateY(-50%);
       width: 718px;
       height: 718px;
-      filter: blur(55px);
+      filter: blur(50px);
       background-color: $green-light-500;
       border-radius: 50%;
       z-index: -1;
@@ -107,8 +107,8 @@
 
 @media screen and (min-width: 375px) {
   .advantages {
-    padding-top: $pt-375-media;
-    padding-bottom: $pb-375-media;
+    padding-top: $pt-section-375-media;
+    padding-bottom: $pb-section-375-media;
 
     &__info {
       align-items: center;
@@ -162,8 +162,8 @@
 
 @media screen and (min-width: 1024px) {
   .advantages {
-    padding-top: $pt-1024-media;
-    padding-bottom: $pb-1024-media;
+    padding-top: $pt-section-1024-media;
+    padding-bottom: $pb-section-1024-media;
 
     &__product-images {
       display: flex;

@@ -1,5 +1,5 @@
 @use '../../abstracts/inheritance/all' as *;
-@use '../../abstracts/variables' as *;
+@use '../../abstracts/variables' as variables;
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../palette/palette' as *;
 
@@ -108,17 +108,17 @@ $top-bg: 16px;
       grid-template-rows: 193px;
       grid-auto-rows: 193px;
       gap: 20px 15px;
-      padding: 60px 0 100px 0;
+      padding: 60px 0 70px 0;
 
       &::before {
         content: '';
         position: absolute;
         top: $top-bg;
         left: -60px;
-        background-image: url('../../../images/components/GalleryWorkingObjects/bg/leaves-vertical-1.svg');
-        background-repeat: no-repeat;
         width: 220px;
         height: 100%;
+        background-image: url('../../../images/components/GalleryWorkingObjects/bg/leaves-vertical-1.svg');
+        background-repeat: no-repeat;
         z-index: -1;
       }
 
@@ -132,6 +132,7 @@ $top-bg: 16px;
         background-image: url('../../../images/components/GalleryWorkingObjects/bg/leaves-vertical-2.svg');
         background-repeat: no-repeat;
         background-position: right top;
+        background-size: contain;
         z-index: -1;
       }
     }
@@ -170,6 +171,7 @@ $top-bg: 16px;
       &::after {
         width: 100%;
         height: 100%;
+        top: 0;
         left: 0;
       }
     }

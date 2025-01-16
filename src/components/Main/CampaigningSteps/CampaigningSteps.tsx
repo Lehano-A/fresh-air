@@ -4,7 +4,7 @@ import ListAgitation from './ListAgitation/ListAgitation';
 
 function CampaigningSteps() {
   return (
-    <section className='campaigning-steps mb-100'>
+    <section className='campaigning-steps'>
       <h2 className='campaigning-steps__subtitle'>
         <span className='campaigning-steps__subtitle-span'>3 простых шага</span>
         к очищению воздуха

@@ -5,7 +5,7 @@ import Contacts from './Contacts/Contacts';
 
 function Hero() {
   return (
-    <section className='hero mb-100'>
+    <section className='hero'>
       <div className='hero__wrapper'>
         <div className='hero__info'>
           <Slogan />

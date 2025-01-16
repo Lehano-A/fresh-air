@@ -1,6 +1,7 @@
 @use '../../palette/palette' as *;
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../abstracts/inheritance/all' as *;
+@use '../../abstracts/variables' as variables;
 
 $margin-top-block: 19px;
 
@@ -30,7 +31,7 @@ $margin-top-block: 19px;
 
 @media screen and (min-width: 375px) {
   .footer {
-    padding: 45px 0 70px;
+    padding: 45px 0 variables.$pb-section-375-media;
 
     &__wrapper {
       justify-content: center;
@@ -50,6 +51,8 @@ $margin-top-block: 19px;
 
 @media screen and (min-width: 1024px) {
   .footer {
+    padding-bottom: variables.$pb-section-1024-media;
+
     &__wrapper {
       column-gap: 80px;
     }

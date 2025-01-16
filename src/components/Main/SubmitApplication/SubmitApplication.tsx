@@ -13,7 +13,7 @@ function SubmitApplication() {
   }, [commonMarginLeft]);
 
   return (
-    <section className='submit-application mb-100'>
+    <section className='submit-application'>
       <div
         className='submit-application__wrapper'
         ref={submitApplicationWrapperRef}

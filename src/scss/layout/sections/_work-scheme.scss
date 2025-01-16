@@ -1,6 +1,7 @@
 @use '../../abstracts/inheritance/all' as *;
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../palette/palette' as *;
+@use '../../abstracts/variables' as variables;
 
 .work-scheme {
   display: flex;
@@ -50,7 +51,7 @@
 
 @media screen and (min-width: 375px) {
   .work-scheme {
-    padding: 0 28px;
+    padding: 0 28px variables.$pb-section-375-media;
 
     &__wrapper {
       max-width: 400px;
@@ -251,6 +252,8 @@
 
 @media screen and (min-width: 1024px) {
   .work-scheme {
+    padding: 0 28px variables.$pb-section-1024-media;
+
     &__wrapper {
       max-width: 995px;
     }

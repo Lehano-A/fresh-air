@@ -2,6 +2,7 @@
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../palette/palette' as *;
 @use '../../abstracts/mixins/box-shadow-container';
+@use '../../abstracts/variables' as variables;
 
 .about {
   display: flex;
@@ -124,12 +125,12 @@
 @media screen and (min-width: 375px) {
   .about {
     justify-content: center;
+    padding: variables.$pt-section-375-media 28px 0;
 
     &__wrapper {
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 70px 28px;
     }
 
     &__us {
@@ -197,10 +198,10 @@
 @media screen and (min-width: 1024px) {
   .about {
     flex-direction: row;
+    padding: variables.$pt-section-1024-media 45px 0;
 
     &__wrapper {
       flex-direction: row;
-      padding: 100px 45px;
       width: 100%;
     }
 

@@ -1,5 +1,6 @@
 @use '../../../palette/palette' as *;
 @use '../../../abstracts/mixins/mixins';
+@use '../../../abstracts/variables' as variables;
 
 .hero {
   display: flex;
@@ -39,6 +40,7 @@
       rgba(222, 226, 225, 1)
     );
     padding: 0 28px;
+    margin-bottom: variables.$mb-section-375-media;
 
     &::after {
       content: '';
@@ -90,6 +92,7 @@
 
 @media screen and (min-width: 1024px) {
   .hero {
+    margin-bottom: variables.$mb-section-1024-media;
     background-image: linear-gradient(
       -180deg,
       rgba(241, 241, 241, 1),

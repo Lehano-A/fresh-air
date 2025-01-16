@@ -1,6 +1,7 @@
 @use '../../abstracts/inheritance/all' as *;
 @use '../../abstracts/mixins/mixins' as *;
 @use '../../palette/palette' as *;
+@use '../../abstracts/variables' as variables;
 
 $width-pseudo: 100%;
 $height-pseudo: 100%;
@@ -96,6 +97,7 @@ $height-pseudo: 100%;
     display: grid;
     grid-template-rows: repeat(3, auto);
     justify-items: center;
+    margin-bottom: variables.$mb-section-375-media;
 
     &__subtitle {
       grid-row: 1;
@@ -233,6 +235,8 @@ $height-pseudo: 100%;
 
 @media screen and (min-width: 1024px) {
   .campaigning-steps {
+    margin-bottom: variables.$mb-section-1024-media;
+
     &__agitation {
       &-list-item {
         &:where(:nth-child(1)) {
