@@ -147,7 +147,7 @@ $corner-radius-bookmark: 40px;
     flex-direction: column;
     max-width: 500px;
     width: calc(
-      100% + variables.$padding-section-min-size-screen * 2
+      100% + variables.$min-pl-section * 2
     ); // * 2, поскольку padding справа и слева
 
     &__box-content {
@@ -155,7 +155,7 @@ $corner-radius-bookmark: 40px;
       border-top-left-radius: 0;
       border-bottom-right-radius: $corner-radius-content;
       border-bottom-left-radius: $corner-radius-content;
-      padding: 25px variables.$padding-section-min-size-screen 20px;
+      padding: 25px variables.$min-plr-section 20px;
     }
 
     &__box-bookmarks {

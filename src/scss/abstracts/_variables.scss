@@ -10,19 +10,31 @@ $width-page: 1095px;
 $box-shadow-button-accent: 2px 2px 12px 0px $rgba-green-secondary-800 inset;
 $box-shadow-button-disabled: 2px -2px 12px 0px $rgba-green-secondary-800 inset;
 
-$padding-section-min-size-screen: 28px;
-
 $font-size-subtitle-h2-375-media: 2.8rem;
 $font-size-subtitle-h2-768-media: 4.5rem;
 
-// padding-top
-$pt-section-375-media: 70px;
-$pt-section-1024-media: 100px;
+// MIN padding-left-right
+$min-plr-section: 28px;
+$min-pl-section: $min-plr-section;
+$min-pr-section: $min-plr-section;
 
-// padding-bottom
-$pb-section-375-media: 70px;
-$pb-section-1024-media: 100px;
+// MAX padding-left-right
+$max-plr-section: 45px;
+$max-pl-section: $max-plr-section;
+$max-pr-section: $max-plr-section;
 
-// margin-bottom
-$mb-section-375-media: 70px;
-$mb-section-1024-media: 100px;
+// MIN padding-top-bottom
+$min-ptb-section: 70px;
+$min-pt-section: $min-ptb-section;
+$min-pb-section: $min-ptb-section;
+
+// MAX padding-top-bottom
+$max-ptb-section: 100px;
+$max-pt-section: $max-ptb-section;
+$max-pb-section: $max-ptb-section;
+
+// MIN margin-bottom
+$min-mb-section: $min-ptb-section;
+
+// MAX margin-bottom
+$max-mb-section: $max-ptb-section;

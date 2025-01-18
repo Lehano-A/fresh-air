@@ -1,5 +1,6 @@
 @use '../abstracts/mixins/mixins' as *;
 @use '../palette/palette' as *;
+@use '../abstracts/variables' as variables;
 
 .slider {
   display: flex;
@@ -68,7 +69,7 @@
     &_in-portfolio {
       position: relative;
       width: 100%;
-      padding-left: 28px;
+      padding-left: variables.$min-pl-section;
       flex-direction: column;
       align-items: end;
       margin: 0;

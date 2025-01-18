@@ -31,11 +31,11 @@ $margin-top-block: 19px;
 
 @media screen and (min-width: 375px) {
   .footer {
-    padding: 45px 0 variables.$pb-section-375-media;
+    padding: 45px 0 variables.$min-pb-section;
 
     &__wrapper {
       justify-content: center;
-      padding: 0 28px;
+      padding: 0 variables.$min-plr-section;
     }
   }
 }
@@ -51,7 +51,7 @@ $margin-top-block: 19px;
 
 @media screen and (min-width: 1024px) {
   .footer {
-    padding-bottom: variables.$pb-section-1024-media;
+    padding-bottom: variables.$max-pb-section;
 
     &__wrapper {
       column-gap: 80px;

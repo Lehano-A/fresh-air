@@ -13,8 +13,6 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    max-width: variables.$width-page;
-    margin: 55px 0 58px variables.$main-margin-side-page;
     z-index: 1;
   }
 
@@ -28,7 +26,7 @@
   .submit-application {
     align-items: center;
     justify-content: center;
-    padding: 0 28px;
+    padding: 0 variables.$min-plr-section;
 
     &__wrapper {
       max-width: 400px;
@@ -94,6 +92,6 @@
 @media screen and (min-width: 1440px) {
   .submit-application {
     align-items: start;
-    padding: 0 45px;
+    padding: 0 variables.$max-plr-section;
   }
 }

@@ -29,8 +29,8 @@
   .services-provided {
     flex-direction: column;
     align-items: center;
-    padding: 0 28px;
-    margin-bottom: variables.$mb-section-375-media;
+    padding: 0 variables.$min-plr-section;
+    margin-bottom: variables.$min-mb-section;
 
     &__subtitle {
       &::after {
@@ -74,8 +74,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 variables.$padding-section-min-size-screen;
-    margin-bottom: variables.$mb-section-1024-media;
+    padding: 0 variables.$max-plr-section;
+    margin-bottom: variables.$max-mb-section;
 
     &__description {
       margin: 0 clamp(40px, 5%, 110px) 0 0;
@@ -91,12 +91,6 @@
 
 @media screen and (min-width: 1280px) {
   .services-provided {
-    padding: 0 variables.$padding-section-min-size-screen 0 45px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .services-provided {
-    padding: 0 0 0 45px;
+    padding: 0;
   }
 }

@@ -51,7 +51,7 @@
 
 @media screen and (min-width: 375px) {
   .work-scheme {
-    padding: 0 28px variables.$pb-section-375-media;
+    padding: 0 variables.$min-plr-section variables.$min-pb-section;
 
     &__wrapper {
       max-width: 400px;
@@ -252,7 +252,7 @@
 
 @media screen and (min-width: 1024px) {
   .work-scheme {
-    padding: 0 28px variables.$pb-section-1024-media;
+    padding-bottom: variables.$max-pb-section;
 
     &__wrapper {
       max-width: 995px;

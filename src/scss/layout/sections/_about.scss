@@ -125,7 +125,7 @@
 @media screen and (min-width: 375px) {
   .about {
     justify-content: center;
-    padding: variables.$pt-section-375-media 28px 0;
+    padding: variables.$min-pt-section variables.$min-plr-section 0;
 
     &__wrapper {
       flex-direction: column;
@@ -198,7 +198,7 @@
 @media screen and (min-width: 1024px) {
   .about {
     flex-direction: row;
-    padding: variables.$pt-section-1024-media 45px 0;
+    padding: variables.$max-pt-section variables.$max-plr-section 0;
 
     &__wrapper {
       flex-direction: row;
