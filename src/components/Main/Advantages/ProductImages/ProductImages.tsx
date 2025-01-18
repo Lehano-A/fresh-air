@@ -7,7 +7,7 @@ import SquareTubeImage from '../../../../images/components/Advantages/content/sq
 function ProductImages() {
   return (
     <div className='advantages__product-images'>
-      <div className='advantages__images-group gap_20'>
+      <div className='advantages__images-group advantages__images-group_gap_20'>
         <img
           src={CeilingSplitSystemImage}
           className='advantages__image'
@@ -20,7 +20,7 @@ function ProductImages() {
         />
       </div>
 
-      <div className='advantages__images-group gap_30 mt_68'>
+      <div className='advantages__images-group advantages__images-group_gap_30'>
         <img
           src={RoundTubeImage}
           className='advantages__image'
