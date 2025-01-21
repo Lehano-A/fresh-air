@@ -207,7 +207,7 @@
 @media screen and (min-width: 1280px) {
   .advantages {
     &__wrapper {
-      max-width: 1170px;
+      max-width: variables.$max-width-section;
     }
 
     &__info {

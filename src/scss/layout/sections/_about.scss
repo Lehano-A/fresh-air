@@ -10,7 +10,7 @@
 
   &__wrapper {
     display: flex;
-    max-width: 1170px;
+    max-width: variables.$max-width-section;
   }
 
   &__info {

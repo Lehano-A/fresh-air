@@ -13,7 +13,7 @@ $top-bg: 16px;
   overflow: hidden;
 
   &__wrapper {
-    max-width: 1170px;
+    max-width: variables.$max-width-section;
   }
 
   &__subtitle {

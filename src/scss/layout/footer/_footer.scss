@@ -24,7 +24,7 @@ $margin-top-block: 19px;
 
   &__wrapper {
     display: grid;
-    max-width: 1170px;
+    max-width: variables.$max-width-section;
     width: 100%;
   }
 }
