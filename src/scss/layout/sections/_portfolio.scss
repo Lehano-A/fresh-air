@@ -95,10 +95,6 @@
 
 @media screen and (min-width: 1280px) {
   .portfolio {
-    &__wrapper {
-      padding-left: variables.$max-pl-section;
-    }
-
     &__box-subtitle-text {
       padding: 0;
     }
