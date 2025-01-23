@@ -45,6 +45,8 @@
 
 @media screen and (min-width: 768px) {
   .submit-application {
+    padding: 0;
+
     &__subtitle {
       max-width: 100%;
       font-size: 3.5rem;
@@ -92,6 +94,5 @@
 @media screen and (min-width: 1440px) {
   .submit-application {
     align-items: start;
-    padding: 0 variables.$max-plr-section;
   }
 }
