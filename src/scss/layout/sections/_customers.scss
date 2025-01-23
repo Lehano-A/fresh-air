@@ -83,7 +83,7 @@
     }
 
     &__text-box {
-      max-width: 650px;
+      max-width: 655px;
       width: 100%;
       padding: 0 variables.$min-pl-section;
       margin: 0;
@@ -166,6 +166,11 @@
   .customers {
     &__text-box {
       padding-left: 0;
+      padding-right: variables.$min-pr-section;
+    }
+
+    &__wrapper-slider {
+      padding: 0;
     }
   }
 }
