@@ -164,10 +164,6 @@
 
 @media screen and (min-width: 1280px) {
   .customers {
-    &__wrapper {
-      padding-left: variables.$max-pl-section;
-    }
-
     &__text-box {
       padding-left: 0;
     }
