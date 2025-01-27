@@ -1,8 +1,10 @@
 import React from 'react';
+import IconClose from '../../../images/common/icons/close.svg';
 
 export interface ButtonActionProps {
   name?: string;
   size?: 'xs' | 's' | 'm' | 'xl';
+  icon?: 'close' | '';
   layout?: string;
   outerBgColor?: string;
   innerBgColor?: string;
@@ -10,10 +12,13 @@ export interface ButtonActionProps {
   handleOnClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
+const icons = { close: IconClose };
+
 function ButtonAction({
   name = '',
   size = 'm',
   disabled = false,
+  icon = '',
   layout,
   outerBgColor,
   innerBgColor,
@@ -38,6 +43,12 @@ function ButtonAction({
         type='button'
         onClick={handleOnClick}
       >
+        {icon && (
+          <img
+            src={icons[icon]}
+            alt='Иконка кнопки'
+          />
+        )}
         {name}
       </button>
     </div>

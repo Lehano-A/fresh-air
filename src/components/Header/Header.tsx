@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ButtonContact from '../common/ButtonAction/ButtonAction';
 import Logo from '../common/Logo/Logo';
 import Navigation from '../common/Navigation/Navigation';
+import ContactWithUsContext from '../../context/ModalContactWithUsContext';
 
 function Header() {
   const [scrollY, setScrollY] = useState(window.scrollY);
+  const { changeVisibility } = useContext(ContactWithUsContext);
 
   useEffect(() => {
     const changeBgColor = () => {
@@ -38,6 +40,7 @@ function Header() {
         name='связаться'
         size='s'
         outerBgColor={outerBgColorButtonSubmit}
+        handleOnClick={changeVisibility}
       />
     </header>
   );
