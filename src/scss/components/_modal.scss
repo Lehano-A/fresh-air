@@ -1,0 +1,47 @@
+@use '../palette/palette' as *;
+@use '../abstracts/inheritance/subtitle-h2';
+@use '../abstracts/mixins/mixins' as mixins;
+
+.modal {
+  @include mixins.box-shadow-container($green-primary-900);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 445px;
+  overflow: visible;
+  border-radius: 50px;
+  border: none;
+  background-color: $green-light-200;
+  padding: 35px;
+
+  &::backdrop {
+    backdrop-filter: blur(6px);
+    background-color: rgba($green-light-200, 55%);
+  }
+
+  &__subtitle {
+    @extend .subtitle-h2;
+
+    width: 319px;
+    font-size: 4rem;
+    margin-bottom: 30px;
+
+    &::after {
+      @include mixins.long-hyphen(136px, 2px, 0 0 0 20px);
+      position: relative;
+      top: -10px;
+    }
+  }
+
+  &__content-box {
+    background-color: $white;
+    border-radius: 35px 35px 50px 50px;
+    padding: 35px;
+    margin: 0 -35px -35px;
+    font-size: 16px;
+    color: $green-neutral-500;
+  }
+}
