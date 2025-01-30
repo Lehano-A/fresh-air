@@ -15,3 +15,16 @@
 @mixin disabled-button-action() {
   background-color: $green-neutral-300;
 }
+
+@mixin button-size($size, $field-button) {
+  @if $size == m {
+    height: 75px;
+    border-radius: 20px;
+
+    & > button {
+      width: calc(100% - $field-button * 2);
+      height: calc(100% - $field-button * 2);
+      border-radius: 17px;
+    }
+  }
+}

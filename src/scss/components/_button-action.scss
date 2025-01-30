@@ -76,15 +76,13 @@ $field-button: 10px;
   }
 
   &_size_m {
+    @include button-size(m, $field-button);
     width: 229px;
-    height: 75px;
-    border-radius: 20px;
+  }
 
-    & > button {
-      width: calc(100% - $field-button * 2);
-      height: calc(100% - $field-button * 2);
-      border-radius: 17px;
-    }
+  &_size_m-full-width {
+    @include button-size(m, $field-button);
+    width: 100%;
   }
 
   &_size_xl {

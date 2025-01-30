@@ -6,12 +6,14 @@ interface FormFeedbackProps {
   layout?: string;
   buttonSubmitStyle?: {
     disabled?: boolean;
+    outerBgColor?: ButtonActionProps['outerBgColor'];
     size?: ButtonActionProps['size'];
   };
+  outerBgColorSubmit?: string;
 }
 
 function FormFeedback({ layout, buttonSubmitStyle }: FormFeedbackProps) {
-  const { size, disabled = false } = buttonSubmitStyle || {};
+  const { size, outerBgColor, disabled = false } = buttonSubmitStyle || {};
 
   return (
     <form
@@ -31,6 +33,7 @@ function FormFeedback({ layout, buttonSubmitStyle }: FormFeedbackProps) {
         name='отправить'
         size={size}
         disabled={disabled}
+        outerBgColor={outerBgColor}
       />
     </form>
   );

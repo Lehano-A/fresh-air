@@ -1,18 +1,22 @@
 import React, { forwardRef, useContext, useEffect } from 'react';
 import ButtonAction from '../ButtonAction/ButtonAction';
 import InnerWidthWindowContext from '../../../context/InnerWidthWindowContext';
+import Logo from '../Logo/Logo';
 
 interface ModalProps {
   subtitle?: string;
-  children: React.ReactNode;
+  logo?: boolean;
   layout: string;
+  children: React.ReactNode;
 }
 
 const Modal = forwardRef<HTMLDialogElement, ModalProps>(function Modal(
-  { subtitle, layout, children },
+  { logo = false, subtitle, layout, children },
   ref,
 ) {
   const innerWidthWindow = useContext(InnerWidthWindowContext);
+
+  const longHyphenClass = `modal__long-hyphen_in-${layout}`;
 
   function handleClose() {
     if (ref && 'current' in ref && ref.current) {
@@ -40,9 +44,18 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(function Modal(
         handleOnClick={handleClose}
       />
 
-      <h2 className='modal__subtitle'>{subtitle}</h2>
+      <h2 className='modal__subtitle'>
+        {subtitle}
+        <span className={`modal__long-hyphen ${longHyphenClass}`}></span>
+      </h2>
 
       <div className='modal__content-box'>{children}</div>
+
+      {logo && (
+        <div className='modal__logo-box'>
+          <Logo />
+        </div>
+      )}
     </dialog>
   );
 });

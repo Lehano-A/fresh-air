@@ -3,7 +3,7 @@ import IconClose from '../../../images/common/icons/close.svg';
 
 export interface ButtonActionProps {
   name?: string;
-  size?: 'xs' | 's' | 'm' | 'xl';
+  size?: 'xs' | 's' | 'm' | 'xl' | 'm-full-width';
   icon?: 'close' | '';
   layout?: string;
   outerBgColor?: string;

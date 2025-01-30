@@ -6,12 +6,14 @@ import CommonMarginLeftContext from '../../context/CommonMarginLeftContext';
 import InnerWidthWindowContext from '../../context/InnerWidthWindowContext';
 import NavigationMenu from '../NavigationMenu/NavigationMenu';
 import ModalContactWithUs from '../ModalContactWithUs/ModalContactWithUs';
-import ModalContactWithUsContext from '../../context/ModalContactWithUsContext';
+import ModalCallMeBack from '../ModalCallMeBack/ModalCallMeBack';
+import ModalContext from '../../context/ModalContext';
 
 function App() {
   const [commonMarginLeft, setCommonMarginLeft] = useState('0');
   const [innerWidthWindow, setInnerWidthWindow] = useState(window.innerWidth);
   const refDialogContactWithUs = useRef<HTMLDialogElement>(null);
+  const refDialogCallMeBack = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     const getAndSet = {
@@ -43,24 +45,35 @@ function App() {
     return () => listenResize();
   }, []);
 
-  function changeVisibilityContactWithUs() {
-    if (refDialogContactWithUs.current) {
-      refDialogContactWithUs.current.showModal();
+  function changeModalVisibility(refModal: React.RefObject<HTMLDialogElement>) {
+    if (refModal.current) {
+      refModal.current.showModal();
     }
   }
 
   return (
     <CommonMarginLeftContext.Provider value={commonMarginLeft}>
       <InnerWidthWindowContext.Provider value={innerWidthWindow}>
-        <ModalContactWithUsContext.Provider
-          value={{ changeVisibility: changeVisibilityContactWithUs }}
+        <ModalContext.Provider
+          value={{
+            changeVisibility: {
+              contactWithUs: () => {
+                changeModalVisibility(refDialogContactWithUs);
+              },
+
+              callMeBack: () => {
+                changeModalVisibility(refDialogCallMeBack);
+              },
+            },
+          }}
         >
           <NavigationMenu />
           <Header />
           <Main />
           <Footer />
           <ModalContactWithUs ref={refDialogContactWithUs} />
-        </ModalContactWithUsContext.Provider>
+          <ModalCallMeBack ref={refDialogCallMeBack} />
+        </ModalContext.Provider>
       </InnerWidthWindowContext.Provider>
     </CommonMarginLeftContext.Provider>
   );

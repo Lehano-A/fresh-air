@@ -28,20 +28,41 @@
     width: 319px;
     font-size: 4rem;
     margin-bottom: 30px;
+  }
 
+  &__long-hyphen {
     &::after {
-      @include mixins.long-hyphen(136px, 2px, 0 0 0 20px);
       position: relative;
       top: -10px;
+    }
+
+    &_in-contact-with-us {
+      &::after {
+        @include mixins.long-hyphen(136px, 2px, 0 0 0 20px);
+      }
+    }
+
+    &_in-call-me-back {
+      &::after {
+        @include mixins.long-hyphen(126px, 2px, 0 0 0 20px);
+      }
     }
   }
 
   &__content-box {
+    @include mixins.box-shadow-container($green-primary-900);
+
     background-color: $white;
     border-radius: 35px 35px 50px 50px;
     padding: 35px;
     margin: 0 -35px -35px;
     font-size: 16px;
     color: $green-neutral-500;
+  }
+
+  &__logo-box {
+    width: 228px;
+    height: 68px;
+    margin: 50px auto -20px;
   }
 }

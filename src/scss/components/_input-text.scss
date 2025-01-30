@@ -24,7 +24,8 @@
 }
 
 .input-text {
-  &_in-footer {
+  &_in-footer,
+  &_in-call-me-back {
     height: 49px;
 
     &:where(:nth-of-type(1n):not(:last-of-type)) {
@@ -45,7 +46,8 @@
       }
     }
 
-    &_in-footer {
+    &_in-footer,
+    &_in-call-me-back {
       &:where(:last-of-type) {
         margin-bottom: 40px;
       }
