@@ -10,12 +10,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  width: 445px;
+  width: 100%;
   overflow: visible;
   border-radius: 50px;
   border: none;
   background-color: $green-light-200;
-  padding: 35px;
 
   &::backdrop {
     backdrop-filter: blur(6px);
@@ -24,27 +23,16 @@
 
   &__subtitle {
     @extend .subtitle-h2;
-
-    width: 319px;
-    font-size: 4rem;
-    margin-bottom: 30px;
   }
 
   &__long-hyphen {
     &::after {
       position: relative;
-      top: -10px;
     }
 
     &_in-contact-with-us {
       &::after {
         @include mixins.long-hyphen(136px, 2px, 0 0 0 20px);
-      }
-    }
-
-    &_in-call-me-back {
-      &::after {
-        @include mixins.long-hyphen(126px, 2px, 0 0 0 20px);
       }
     }
   }
@@ -54,8 +42,6 @@
 
     background-color: $white;
     border-radius: 35px 35px 50px 50px;
-    padding: 35px;
-    margin: 0 -35px -35px;
     font-size: 16px;
     color: $green-neutral-500;
   }
@@ -63,6 +49,81 @@
   &__logo-box {
     width: 228px;
     height: 68px;
-    margin: 50px auto -20px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  $padding-modal: 25px;
+  $margin-compensation: -$padding-modal;
+
+  .modal {
+    max-width: 400px;
+
+    padding: $padding-modal;
+
+    &__subtitle {
+      width: 270px;
+      font-size: 3.2rem;
+      margin: 0 auto 30px;
+    }
+
+    &__long-hyphen {
+      &::after {
+        top: -7px;
+      }
+
+      &_in-call-me-back {
+        &::after {
+          @include mixins.long-hyphen(98px, 2px, 0 0 0 20px);
+        }
+      }
+    }
+
+    &__content-box {
+      padding: $padding-modal;
+      margin: 0 $margin-compensation $margin-compensation;
+    }
+
+    &__logo-box {
+      margin: 40px auto -10px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    $padding-modal: 35px;
+    $margin-compensation: -$padding-modal;
+
+    max-width: 445px;
+    padding: 35px;
+
+    &__subtitle {
+      width: 319px;
+      font-size: 4rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__long-hyphen {
+      &::after {
+        top: -10px;
+      }
+
+      &_in-call-me-back {
+        &::after {
+          @include mixins.long-hyphen(126px, 2px, 0 0 0 20px);
+        }
+      }
+    }
+
+    &__content-box {
+      padding: $padding-modal;
+      margin: 0 $margin-compensation $margin-compensation;
+    }
+
+    &__logo-box {
+      margin: 50px auto -20px;
+    }
   }
 }
