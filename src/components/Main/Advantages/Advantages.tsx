@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import IconsList from './IconsList/IconsList';
 import DetailsList from './DetailsList/DetailsList';
 import ButtonAction from '../../common/ButtonAction/ButtonAction';
 import ProductImages from './ProductImages/ProductImages';
+import ModalContext from '../../../context/ModalContext';
 
 function Advantages() {
+  const { changeVisibility } = useContext(ModalContext);
+
   return (
     <section className='advantages'>
       <div className='advantages__wrapper'>
@@ -26,6 +29,7 @@ function Advantages() {
             layout='advantages'
             name='заполнить заявку'
             size='xl'
+            handleOnClick={changeVisibility.callMeBack}
           />
         </div>
 
