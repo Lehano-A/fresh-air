@@ -6,7 +6,7 @@ import ModalContext from '../../context/ModalContext';
 
 function Header() {
   const [scrollY, setScrollY] = useState(window.scrollY);
-  const { changeVisibility } = useContext(ModalContext);
+  const { changeModalVisibility } = useContext(ModalContext);
 
   useEffect(() => {
     const changeBgColor = () => {
@@ -40,7 +40,7 @@ function Header() {
         name='связаться'
         size='s'
         outerBgColor={outerBgColorButtonSubmit}
-        handleOnClick={changeVisibility.contactWithUs}
+        handleOnClick={changeModalVisibility.contactWithUs}
       />
     </header>
   );

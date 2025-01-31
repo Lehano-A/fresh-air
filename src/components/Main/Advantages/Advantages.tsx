@@ -6,7 +6,7 @@ import ProductImages from './ProductImages/ProductImages';
 import ModalContext from '../../../context/ModalContext';
 
 function Advantages() {
-  const { changeVisibility } = useContext(ModalContext);
+  const { changeModalVisibility } = useContext(ModalContext);
 
   return (
     <section className='advantages'>
@@ -29,7 +29,7 @@ function Advantages() {
             layout='advantages'
             name='заполнить заявку'
             size='xl'
-            handleOnClick={changeVisibility.callMeBack}
+            handleOnClick={changeModalVisibility.callMeBack}
           />
         </div>
 

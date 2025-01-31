@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import ModalContext from '../../../context/ModalContext';
 
 function Hero() {
-  const { changeVisibility } = useContext(ModalContext);
+  const { changeModalVisibility } = useContext(ModalContext);
 
   return (
     <section className='hero'>
@@ -19,7 +19,7 @@ function Hero() {
           <ButtonAction
             name='оставить заявку'
             size='xl'
-            handleOnClick={changeVisibility.callMeBack}
+            handleOnClick={changeModalVisibility.callMeBack}
           />
         </div>
       </div>

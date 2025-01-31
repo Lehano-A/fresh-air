@@ -56,7 +56,7 @@ function App() {
       <InnerWidthWindowContext.Provider value={innerWidthWindow}>
         <ModalContext.Provider
           value={{
-            changeVisibility: {
+            changeModalVisibility: {
               contactWithUs: () => {
                 changeModalVisibility(refDialogContactWithUs);
               },
