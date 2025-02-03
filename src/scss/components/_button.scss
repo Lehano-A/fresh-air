@@ -6,13 +6,13 @@
 
 $field-button: 10px;
 
-.button-action {
+.button {
   flex-shrink: 0;
   position: relative;
   background-color: rgba($white, 0.45);
 
   &__button {
-    @extend .active-button-action;
+    @extend .active-button;
 
     position: absolute;
     top: 50%;
@@ -128,9 +128,9 @@ $field-button: 10px;
 }
 
 @media screen and (min-width: 375px) {
-  $padding-bg-button-action: 15px;
+  $padding-bg-button: 15px;
 
-  .button-action {
+  .button {
     &_size_xl {
       width: 319px;
       height: 90px;
@@ -168,7 +168,7 @@ $field-button: 10px;
 @media screen and (min-width: 768px) {
   $field-button: 15px;
 
-  .button-action {
+  .button {
     &_size_xl {
       width: 477px;
       height: 115px;
@@ -186,7 +186,7 @@ $field-button: 10px;
 }
 
 @media screen and (min-width: 1024px) {
-  .button-action {
+  .button {
     &_in-submit-application {
       max-width: 229px;
     }
@@ -194,7 +194,7 @@ $field-button: 10px;
 }
 
 @media screen and (min-width: 1280px) {
-  .button-action {
+  .button {
     &_in-header {
       display: block;
     }

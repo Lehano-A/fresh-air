@@ -1,10 +1,10 @@
 import React from 'react';
 import ButtonAction, {
-  ButtonActionProps,
+  ButtonProps,
 } from '../../common/ButtonAction/ButtonAction';
 
 interface ButtonMenuProps {
-  handleOnClick: ButtonActionProps['handleOnClick'];
+  handleOnClick: ButtonProps['handleOnClick'];
 }
 function ButtonMenu({ handleOnClick }: ButtonMenuProps) {
   return (

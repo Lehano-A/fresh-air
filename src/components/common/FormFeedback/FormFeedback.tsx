@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import ButtonAction, { ButtonActionProps } from '../ButtonAction/ButtonAction';
+import ButtonSubmit, { ButtonProps } from '../ButtonAction/ButtonAction';
 import InputText from '../InputText/InputText';
 
 interface FormFeedbackProps {
   layout?: string;
   buttonSubmitStyle?: {
     disabled?: boolean;
-    outerBgColor?: ButtonActionProps['outerBgColor'];
-    size?: ButtonActionProps['size'];
+    outerBgColor?: ButtonProps['outerBgColor'];
+    size?: ButtonProps['size'];
   };
   outerBgColorSubmit?: string;
 }
@@ -90,7 +90,7 @@ function FormFeedback({ layout, buttonSubmitStyle }: FormFeedbackProps) {
         value={inputsValues.numberPhone.value}
       />
 
-      <ButtonAction
+      <ButtonSubmit
         layout={layout}
         name='отправить'
         size={size}

@@ -1,17 +1,17 @@
 @use '../../palette/palette' as *;
 @use '../../abstracts/variables' as *;
 
-.active-button-action {
+.active-button {
   color: $white;
   background-color: $green-primary-500;
   box-shadow: $box-shadow-button-accent;
   transition: background-color $transition-time-change-color;
 }
 
-.hover-button-action {
+.hover-button {
   background-color: $green-accent-500;
 }
 
-.disabled-button-action {
+.disabled-button {
   background-color: $green-neutral-300;
 }

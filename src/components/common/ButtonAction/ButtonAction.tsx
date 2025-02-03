@@ -1,7 +1,7 @@
 import React from 'react';
 import IconClose from '../../../images/common/icons/close.svg';
 
-export interface ButtonActionProps {
+export interface ButtonProps {
   name?: string;
   size?: 'xs' | 's' | 'm' | 'xl' | 'm-full-width';
   icon?: 'close' | '';
@@ -14,7 +14,7 @@ export interface ButtonActionProps {
 
 const icons = { close: IconClose };
 
-function ButtonAction({
+function Button({
   name = '',
   size = 'm',
   disabled = false,
@@ -23,23 +23,21 @@ function ButtonAction({
   outerBgColor,
   innerBgColor,
   handleOnClick,
-}: ButtonActionProps) {
-  const sizeClass = `button-action_size_${size}`;
-  const layoutClass = layout ? `button-action_in-${layout}` : '';
+}: ButtonProps) {
+  const sizeClass = `button_size_${size}`;
+  const layoutClass = layout ? `button_in-${layout}` : '';
   const outerBgColorClass = outerBgColor
-    ? `button-action_bg-color_${outerBgColor}`
+    ? `button_bg-color_${outerBgColor}`
     : '';
   const innerBgColorClass = innerBgColor
-    ? `button-action_bg-color_${innerBgColor}`
+    ? `button_bg-color_${innerBgColor}`
     : '';
 
   return (
-    <div
-      className={`button-action ${sizeClass} ${layoutClass} ${outerBgColorClass}`}
-    >
+    <div className={`button ${sizeClass} ${layoutClass} ${outerBgColorClass}`}>
       <button
         disabled={disabled}
-        className={`button-action__button ${innerBgColorClass}`}
+        className={`button__button ${innerBgColorClass}`}
         type='button'
         onClick={handleOnClick}
       >
@@ -55,4 +53,4 @@ function ButtonAction({
   );
 }
 
-export default ButtonAction;
+export default Button;
