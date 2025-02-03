@@ -25,7 +25,7 @@ function Footer() {
         </div>
 
         <div className='footer__contacts'>
-          <h2 className='footer__contacts-title'>Контакты</h2>
+          <h2 className='footer__contacts-subtitle'>Контакты</h2>
           <ul className='footer__contacts-list'>
             <li className='footer__contacts-item footer__number-phone'>
               + 7 492 373 63 31
@@ -48,7 +48,7 @@ function Footer() {
         </div>
 
         <div className='footer__application'>
-          <h2 className='footer__application-title'>Заполнить заявку</h2>
+          <h2 className='footer__application-subtitle'>Заполнить заявку</h2>
           <FormFeedback
             layout='footer'
             buttonSubmitStyle={{ size: 'm', disabled: true }}

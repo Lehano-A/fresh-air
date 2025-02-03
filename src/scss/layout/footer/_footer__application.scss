@@ -1,4 +1,4 @@
-@use '../../abstracts/inheritance/footer-title';
+@use '../../abstracts/inheritance/footer-subtitle';
 @use './footer' as *;
 
 .footer {
@@ -7,8 +7,8 @@
     grid-row: 1/3;
     width: 100%;
 
-    &-title {
-      @extend .footer-title;
+    &-subtitle {
+      @extend .footer-subtitle;
     }
   }
 }
@@ -20,8 +20,7 @@
       grid-column: 1/3;
       margin-bottom: 40px;
 
-      &-title {
-        font-size: 2.2rem;
+      &-subtitle {
         margin-bottom: 15px;
       }
     }
@@ -33,10 +32,6 @@
     &__application {
       grid-row: 2/4;
       grid-column: 2;
-
-      &-title {
-        font-size: 2.6rem;
-      }
     }
   }
 }
@@ -50,7 +45,7 @@
       margin: 20px auto 0;
       max-width: 290px;
 
-      &-title {
+      &-subtitle {
         margin-bottom: 28px;
       }
     }

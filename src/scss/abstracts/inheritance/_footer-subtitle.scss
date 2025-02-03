@@ -1,0 +1,22 @@
+@use '../../palette/palette' as *;
+
+.footer-subtitle {
+  font-family: 'Ruberoid Light';
+  // font-size: 2.6rem;
+  color: $green-primary-900;
+  letter-spacing: -0.35px;
+  line-height: 1.34;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 375px) {
+  .footer-subtitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-subtitle {
+    font-size: 2.6rem;
+  }
+}
