@@ -27,14 +27,29 @@ function Footer() {
         <div className='footer__contacts'>
           <h2 className='footer__contacts-subtitle'>Контакты</h2>
           <ul className='footer__contacts-list'>
-            <li className='footer__contacts-item footer__number-phone'>
-              + 7 492 373 63 31
+            <li className='footer__contacts-item'>
+              <a
+                className='footer__number-phone'
+                href='tel:+7492376331'
+              >
+                + 7 492 373 63 31
+              </a>
             </li>
-            <li className='footer__contacts-item footer__number-phone'>
-              + 7 424 367 89 29
+            <li className='footer__contacts-item'>
+              <a
+                className='footer__number-phone'
+                href='tel:+74243678929'
+              >
+                + 7 424 367 89 29
+              </a>
             </li>
-            <li className='footer__contacts-item footer__email'>
-              PascalVent@mail.ru
+            <li className='footer__contacts-item'>
+              <a
+                className='footer__email'
+                href='mailto:PascalVent@mail.ru'
+              >
+                PascalVent@mail.ru
+              </a>
             </li>
             <li className='footer__contacts-item footer__work-time'>
               {`Пн - Сб: 9:00 - 19:00

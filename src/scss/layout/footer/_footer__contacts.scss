@@ -1,5 +1,6 @@
 @use '../../palette/palette' as *;
 @use '../../abstracts/mixins/mixins' as *;
+@use '../../abstracts/inheritance/all' as *;
 @use './footer' as *;
 
 $margin-right-icon-list-item: 12px;
@@ -24,6 +25,8 @@ $margin-right-icon-list-item: 12px;
   }
 
   &__number-phone {
+    color: inherit;
+
     &::before {
       @include icon-contact(
         '../../../images/common/icons/telephone-handle.svg'
@@ -33,6 +36,8 @@ $margin-right-icon-list-item: 12px;
   }
 
   &__email {
+    color: inherit;
+
     &::before {
       @include icon-contact('../../../images/common/icons/envelope.svg');
       margin-right: $margin-right-icon-list-item;
