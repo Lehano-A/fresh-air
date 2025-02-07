@@ -21,47 +21,73 @@ $margin-right-icon-list-item: 12px;
 
     &-item {
       display: flex;
+      align-items: center;
+
+      &_icon {
+        &_number-phone {
+          &::before {
+            @include icon-contact(
+              '../../../images/common/icons/telephone-handle.svg'
+            );
+          }
+        }
+
+        &_email {
+          &::before {
+            @include icon-contact('../../../images/common/icons/envelope.svg');
+          }
+        }
+
+        &_work-time {
+          &::before {
+            @include icon-contact('../../../images/common/icons/calendar.svg');
+          }
+        }
+
+        &_address {
+          &::before {
+            @include icon-contact('../../../images/common/icons/pin.svg');
+          }
+        }
+
+        &_number-phone,
+        &_email,
+        &_work-time,
+        &_address {
+          &::before {
+            margin-right: $margin-right-icon-list-item;
+          }
+        }
+
+        &_work-time,
+        &_address {
+          align-self: self-start;
+
+          &::before {
+            align-self: self-start;
+            margin-right: $margin-right-icon-list-item;
+          }
+        }
+      }
     }
   }
 
   &__number-phone {
     color: inherit;
-
-    &::before {
-      @include icon-contact(
-        '../../../images/common/icons/telephone-handle.svg'
-      );
-      margin-right: $margin-right-icon-list-item;
-    }
   }
 
   &__email {
     color: inherit;
-
-    &::before {
-      @include icon-contact('../../../images/common/icons/envelope.svg');
-      margin-right: $margin-right-icon-list-item;
-    }
   }
 
   &__work-time {
     white-space: pre-line;
     line-height: 1.42;
-
-    &::before {
-      @include icon-contact('../../../images/common/icons/calendar.svg');
-      margin-right: $margin-right-icon-list-item;
-    }
   }
 
   &__address {
     white-space: pre-line;
     line-height: 1.42;
-
-    &::before {
-      @include icon-contact('../../../images/common/icons/pin.svg');
-      margin-right: $margin-right-icon-list-item;
-    }
   }
 }
 
@@ -87,53 +113,65 @@ $margin-right-icon-list-item: 12px;
         font-size: 1.3rem;
         margin: 0;
       }
-    }
 
-    &__number-phone {
-      &::before {
-        width: 16px;
-        height: 16px;
-      }
+      &-item {
+        &_grid-position {
+          &_email {
+            grid-row: 3;
+            grid-column: 1;
+          }
 
-      &:where(:nth-child(1)) {
-        grid-row: 1;
-        grid-column: 1;
-      }
+          &_work-time {
+            grid-row: 1/3;
+            grid-column: 2;
+          }
 
-      &:where(:nth-child(2)) {
-        grid-row: 2;
-        grid-column: 1;
-      }
-    }
+          &_address {
+            grid-row: 2/5;
+            grid-column: 2;
+            align-self: self-end;
+          }
+        }
 
-    &__email {
-      grid-row: 3;
-      grid-column: 1;
+        &_icon {
+          &_number-phone {
+            &::before {
+              width: 16px;
+              height: 16px;
+            }
 
-      &::before {
-        width: 16px;
-        height: 13px;
-      }
-    }
+            &:where(:nth-child(1)) {
+              grid-row: 1;
+              grid-column: 1;
+            }
 
-    &__work-time {
-      grid-row: 1/3;
-      grid-column: 2;
+            &:where(:nth-child(2)) {
+              grid-row: 2;
+              grid-column: 1;
+            }
+          }
 
-      &::before {
-        width: 16px;
-        height: 16px;
-      }
-    }
+          &_email {
+            &::before {
+              width: 16px;
+              height: 13px;
+            }
+          }
 
-    &__address {
-      grid-row: 2/5;
-      grid-column: 2;
-      align-self: self-end;
+          &_work-time {
+            &::before {
+              width: 16px;
+              height: 16px;
+            }
+          }
 
-      &::before {
-        width: 16px;
-        height: 20px;
+          &_address {
+            &::before {
+              width: 16px;
+              height: 20px;
+            }
+          }
+        }
       }
     }
   }
@@ -141,43 +179,51 @@ $margin-right-icon-list-item: 12px;
 
 @media screen and (min-width: 768px) {
   .footer {
+    &__work-time {
+      margin-top: 3px;
+    }
+
     &__contacts {
       grid-column: 1;
 
       &-list {
         font-size: 1.6rem;
       }
-    }
 
-    &__number-phone {
-      &::before {
-        width: 22px;
-        height: 22px;
-      }
-    }
+      &-item {
+        &_icon {
+          &_number-phone {
+            &::before {
+              width: 22px;
+              height: 22px;
+            }
+          }
 
-    &__email {
-      &::before {
-        width: 24px;
-        height: 18px;
-      }
-    }
+          &_email {
+            &::before {
+              width: 24px;
+              height: 18px;
+            }
+          }
 
-    &__work-time {
-      font-size: 1.4rem;
+          &_work-time {
+            font-size: 1.4rem;
 
-      &::before {
-        width: 22px;
-        height: 22px;
-      }
-    }
+            &::before {
+              width: 22px;
+              height: 22px;
+            }
+          }
 
-    &__address {
-      font-size: 1.4rem;
+          &_address {
+            font-size: 1.4rem;
 
-      &::before {
-        width: 24px;
-        height: 31px;
+            &::before {
+              width: 24px;
+              height: 31px;
+            }
+          }
+        }
       }
     }
   }
@@ -200,27 +246,35 @@ $margin-right-icon-list-item: 12px;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 0;
       }
-
       &-item {
-        padding: 15px 0;
+        &:where(:nth-child(1n):not(:last-child)) {
+          padding: 15px 0;
+        }
+        &_border {
+          &_bottom {
+            border-bottom: 1px $green-light-400 solid;
+          }
+        }
+
+        &_padding-top {
+          &_work-time {
+            padding-top: 27px;
+          }
+        }
+
+        &_grid-position {
+          &_work-time {
+            grid-row: 4;
+            grid-column: 1;
+          }
+
+          &_address {
+            grid-row: 5;
+            grid-column: 1;
+            padding: 0;
+          }
+        }
       }
-    }
-
-    &__number-phone,
-    &__email {
-      border-bottom: 1px $green-light-400 solid;
-    }
-
-    &__work-time {
-      grid-row: 4;
-      grid-column: 1;
-      padding: 27px 0 15px 0;
-    }
-
-    &__address {
-      grid-row: 5;
-      grid-column: 1;
-      padding: 0;
     }
   }
 }
