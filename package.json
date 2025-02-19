@@ -1,7 +1,8 @@
 {
-  "name": "fresh-air",
+  "name": "pascal-vent",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lehano-a.github.io/pascal-vent",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -18,6 +19,7 @@
     "typescript": "^4.9.5"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3"
@@ -27,7 +29,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky"
+    "prepare": "husky",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
