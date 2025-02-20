@@ -1,4 +1,4 @@
-# Pascal vent
+# Pascal Vent
 
 URL: https://pascal-vent.lehano.ru/
 
@@ -6,7 +6,7 @@ URL: https://pascal-vent.lehano.ru/
 
 ## Тип проекта
 
-**Pascal vent** - это landing page pet-проект
+**Pascal Vent** - это landing page pet-проект
 
 ## Для чего
 
