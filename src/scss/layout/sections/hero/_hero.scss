@@ -26,9 +26,20 @@
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 375px) and (orientation: portrait) {
   .hero {
     height: 100vh;
+  }
+}
+
+@media screen and (min-width: 375px) and (orientation: landscape) {
+  .hero {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .hero {
     justify-content: center;
     background-image: linear-gradient(
       -90deg,
