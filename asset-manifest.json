@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.15bfeaad.css",
-    "main.js": "/static/js/main.8e61086d.js",
+    "main.js": "/static/js/main.69969456.js",
     "static/media/country-houses-cottages-townhouses.jpeg": "/static/media/country-houses-cottages-townhouses.bc428c442cf5e0ba190f.jpeg",
     "static/media/fitness-centers.jpeg": "/static/media/fitness-centers.626095795cc4b040ce4f.jpeg",
     "static/media/ducted-air-conditioner-1.jpeg": "/static/media/ducted-air-conditioner-1.58f76c2c4e3247b3fe9a.jpeg",
@@ -102,10 +102,10 @@
     "static/media/path-3.svg": "/static/media/path-3.c5811a14f1638d7f8dbe.svg",
     "static/media/item-marker.svg": "/static/media/item-marker.defe96cb547f89beb69c.svg",
     "main.15bfeaad.css.map": "/static/css/main.15bfeaad.css.map",
-    "main.8e61086d.js.map": "/static/js/main.8e61086d.js.map"
+    "main.69969456.js.map": "/static/js/main.69969456.js.map"
   },
   "entrypoints": [
     "static/css/main.15bfeaad.css",
-    "static/js/main.8e61086d.js"
+    "static/js/main.69969456.js"
   ]
 }
