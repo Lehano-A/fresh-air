@@ -1,4 +1,15 @@
 import React from 'react';
+import { SwiperRef } from 'swiper/react';
+import { KeySwiperOfSwiperRef } from '../Slider';
+
+interface SliderNavigationProps {
+  swiperRef: null | React.RefObject<SwiperRef>;
+  isActivePrevSlide: boolean;
+  isLastSlide: boolean;
+  coordinatesForTransition: React.RefObject<number[]>;
+  buttonNavigationClass: string;
+  wrapperNavigationClass: string;
+}
 
 function SliderNavigation({
   swiperRef,
@@ -7,23 +18,25 @@ function SliderNavigation({
   coordinatesForTransition,
   buttonNavigationClass,
   wrapperNavigationClass,
-}) {
+}: SliderNavigationProps) {
   // перейти на следующий слайд
   const goToNextSlide = () => {
-    if (swiperRef.current) {
-      const swiper = swiperRef.current.swiper;
+    if (swiperRef) {
+      const swiper = swiperRef.current?.swiper as KeySwiperOfSwiperRef;
 
-      swiper.snapGrid = coordinatesForTransition.current;
-      swiper.snapGrid = swiper.slidesGrid;
+      if (coordinatesForTransition.current) {
+        swiper.snapGrid = coordinatesForTransition.current;
+        swiper.snapGrid = swiper.slidesGrid;
 
-      swiper.slideNext();
+        swiper.slideNext();
+      }
     }
   };
 
   // перейти на предыдущий слайд
   const goToPrevSlide = () => {
-    if (swiperRef.current) {
-      const swiper = swiperRef.current.swiper;
+    if (swiperRef) {
+      const swiper = swiperRef.current?.swiper as KeySwiperOfSwiperRef;
       swiper.slidePrev();
     }
   };
